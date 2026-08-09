@@ -967,249 +967,766 @@ footer{background:#F4F5F0}.powered::before{background:var(--accent-primary)}
   </div>
 </nav>
 
-<!-- ================= 1 · HERO ================= -->
-<header class="hero" id="platform">
-  <div class="hero-canvas" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="hero-lead">
-      <h1 class="reveal"><span>Customer memory,</span><span>redefined.</span></h1>
-      <p class="hero-lede reveal d1">An ambient agent that learns from every customer interaction, building a persistent memory of <b>what they wanted, what changed, what was promised,</b> and what your company learned over time.</p>
-      <div class="hero-ctas reveal d2">
-        <button class="btn btn-primary" id="watchBtn">See how it works <span class="arr">→</span></button>
+<!-- ===== VELORB REDESIGN: hero + Cortex + approach (generated) ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;650&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style id="velorb-cortex-css">
+#velorb-cortex,#velorb-cortex *{box-sizing:border-box}
+#velorb-cortex{font-family:'Geist',-apple-system,'Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased}
+#velorb-cortex h1,#velorb-cortex h2,#velorb-cortex h3,#velorb-cortex p{margin:0}
+#velorb-cortex a{text-decoration:none}
+
+@keyframes vlPulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes vlFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes vlMarq{to{transform:translateX(-50%)}}
+@keyframes vlFlow{0%{left:0%;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes vlIn1{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(170px,120px) scale(.55)}}
+@keyframes vlIn2{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(-90px,124px) scale(.55)}}
+@keyframes vlIn3{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(190px,10px) scale(.55)}}
+@keyframes vlIn4{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(-110px,0) scale(.55)}}
+@keyframes vlIn5{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(150px,-100px) scale(.55)}}
+@keyframes vlIn6{0%{opacity:0;transform:translate(0,0) scale(.9)}16%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(-80px,-100px) scale(.55)}}
+@keyframes vlRing{0%{transform:translate(-50%,-50%) scale(.6);opacity:.55}100%{transform:translate(-50%,-50%) scale(2.2);opacity:0}}
+@keyframes vlDash{to{stroke-dashoffset:-56}}
+@keyframes vlType{0%{width:0}45%{width:100%}92%{width:100%}100%{width:0}}
+@keyframes vlCaret{50%{opacity:0}}
+@keyframes vlDraw3{0%{stroke-dashoffset:260;opacity:0}8%{opacity:1}26%{stroke-dashoffset:0;opacity:1}82%{stroke-dashoffset:0;opacity:1}94%{opacity:0}100%{opacity:0;stroke-dashoffset:260}}
+@keyframes vlLit3{0%,100%{opacity:.28;r:4}18%,84%{opacity:1;r:6}}
+@keyframes vlRise3{0%{opacity:0;transform:translateY(10px)}30%{opacity:0;transform:translateY(10px)}44%{opacity:1;transform:translateY(0)}88%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@keyframes vlSweep3{0%{transform:translateX(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateX(318px);opacity:0}}
+@keyframes vlPop{0%{opacity:0;transform:translateY(6px) scale(.9)}60%{transform:translateY(0) scale(1.06)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes vlFeed{0%,12%{transform:translateY(0)}25%,37%{transform:translateY(-46px)}50%,62%{transform:translateY(-92px)}75%,87%{transform:translateY(-138px)}100%{transform:translateY(-184px)}}
+@keyframes vlDraw{0%{stroke-dashoffset:var(--len)}60%,100%{stroke-dashoffset:0}}
+@keyframes vlBlink{0%,100%{opacity:0.35}50%{opacity:1}}
+
+.vlh1:hover{color:#F4F7FA !important}
+.vlh2:hover{color:#F4F7FA !important}
+.vlh3:hover{color:#F4F7FA !important}
+.vlh4:hover{color:#F4F7FA !important}
+.vlh5:hover{background:rgba(94,234,212,0.12) !important;border-color:rgba(94,234,212,0.45) !important;color:#CCFBF1 !important}
+.vlh6:hover{transform:translateY(-1px) !important;background:#FFFFFF !important;color:#0A1018 !important}
+.vlh7:hover{border-color:rgba(94,234,212,0.5) !important;color:#CCFBF1 !important}
+</style>
+<div id="velorb-cortex">
+<div style="background:#04070D;color:#E8EDF2;overflow-x:clip;position:relative">
+  <div data-ref="refHero" style="position:relative">
+    <canvas data-ref="refCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none"></canvas>
+
+    <header style="position:relative;z-index:10;max-width:1200px;margin:0 auto;padding:96px 32px 0;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:#4FD8C4;margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:#4FD8C4;box-shadow:0 0 10px rgba(79,216,196,0.9);animation:vlPulse 2.6s infinite"></span>
+        Ambient customer memory
       </div>
-    </div>
-
-    <!-- Cortex, live — customer-story network (visible on first paint) -->
-    <div class="hviz" id="hviz">
-      <div class="hviz-bar">
-        <h3>Cortex, live</h3>
-        <span class="live-dot" style="margin-left:auto">Following the relationship</span>
+      <h1 style="margin:0 auto;font-size:clamp(48px,6.4vw,86px);line-height:1.0;letter-spacing:-0.04em;font-weight:600;max-width:11em;color:#F4F7FA;text-wrap:balance">Customer memory,<br>redefined.</h1>
+      <p style="margin:26px auto 0;max-width:37em;font-size:18px;line-height:1.65;color:#93A2B4;text-wrap:pretty">An ambient agent that learns from every customer interaction — <b style="color:#DCE5EE;font-weight:550">what they wanted, what changed, what was promised</b> — and carries the relationship forward.</p>
+      <div style="display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap">
+        <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 26px;border-radius:99px;background:#F4F7FA;color:#0A1018;font-size:15px;font-weight:600;letter-spacing:-0.01em;box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 12px 40px -12px rgba(94,234,212,0.35);transition:transform 0.18s ease" class="vlh6">Book a demo</a>
+        <a href="#how" style="display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 24px;border-radius:99px;border:1px solid rgba(255,255,255,0.16);color:#C9D4E0;font-size:15px;font-weight:500" class="vlh7">See how it works →</a>
       </div>
-      <div class="hviz-body">
-
-        <!-- network canvas: static, meaningful first frame -->
-                <!-- orbital canvas: real tools streaming into the Cortex planet -->
-        <div class="orbit" id="orbit">
-          <svg class="orbit-svg" id="orbitSvg" aria-hidden="true"></svg>
-
-          <!-- Cortex mark: the Orbital O (also the O in the Velorb wordmark) -->
-          <div class="planet-wrap" id="planetWrap">
-            <div class="cmark-glow"></div>
-            <canvas class="cortex-globe" id="cortexHeroCanvas" aria-label="Living Cortex network transforming customer signals into revenue intelligence"></canvas>
-            <svg class="cmark" viewBox="0 0 220 220" aria-hidden="true">
-              <defs>
-                <radialGradient id="core-glass" cx="35%" cy="30%">
-                  <stop offset="0" stop-color="#FFFFFF"/>
-                  <stop offset=".18" stop-color="#DCE3FF"/>
-                  <stop offset=".55" stop-color="#8298FF"/>
-                  <stop offset="1" stop-color="#2E3B86"/>
-                </linearGradient>
-                <linearGradient id="signal-ring" x1="0" x2="1">
-                  <stop offset="0" stop-color="#879CFF" stop-opacity="0"/>
-                  <stop offset=".45" stop-color="#C9D2FF"/>
-                  <stop offset=".72" stop-color="#8398FF" stop-opacity=".8"/>
-                  <stop offset="1" stop-color="#879CFF" stop-opacity="0"/>
-                </linearGradient>
-                <filter id="core-blur" x="-80%" y="-80%" width="260%" height="260%">
-                  <feGaussianBlur stdDeviation="8"/>
-                </filter>
-              </defs>
-              <circle class="core-aura" cx="110" cy="110" r="47" fill="#7188FF" opacity=".18" filter="url(#core-blur)"/>
-              <circle class="field-ring field-ring-a" cx="110" cy="110" r="72" fill="none" stroke="#8398FF" stroke-opacity=".18" stroke-width=".8" stroke-dasharray="2 7"/>
-              <ellipse class="field-ring field-ring-b" cx="110" cy="110" rx="104" ry="43" transform="rotate(-20 110 110)" fill="none" stroke="#8398FF" stroke-opacity=".24" stroke-width=".8"/>
-              <ellipse class="field-ring field-ring-c" cx="110" cy="110" rx="92" ry="29" transform="rotate(39 110 110)" fill="none" stroke="#8398FF" stroke-opacity=".12" stroke-width=".7" stroke-dasharray="1 6"/>
-              <ellipse id="ringPath" cx="110" cy="110" rx="102" ry="39" transform="rotate(-20 110 110)" fill="none" stroke="url(#signal-ring)" stroke-width="1.25"/>
-              <circle id="planet" cx="110" cy="110" r="32" fill="url(#core-glass)" stroke="#B9C5FF" stroke-opacity=".72" stroke-width="1.2"/>
-              <circle cx="110" cy="110" r="22" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width=".7"/>
-              <path d="M98 110h24M110 98v24" stroke="#fff" stroke-opacity=".58" stroke-width=".8"/>
-              <circle cx="110" cy="110" r="3.4" fill="#FFFFFF"/>
-              <g id="ringDots"></g>
-            </svg>
-            <div class="planet-lab"><b>Cortex</b></div>
-          </div>
-
-          <!-- tool chips: real logos -->
-          <div class="chip" data-chip="salesforce" style="left:11%;top:22%;animation-delay:-1.2s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"/></svg></span>
-            <span class="cname">Salesforce</span>
-          </div>
-          <div class="chip" data-chip="gmail" style="left:7%;top:56%;animation-delay:-3.4s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></span>
-            <span class="cname">Gmail</span>
-          </div>
-          <div class="chip" data-chip="slack" style="left:16%;top:78%;animation-delay:-5.1s">
-            <span class="cbox"><svg viewBox="0 0 122.8 122.8">
-              <path fill="#E01E5A" d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zM32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z"/>
-              <path fill="#36C5F0" d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zM45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z"/>
-              <path fill="#2EB67D" d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zM90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z"/>
-              <path fill="#ECB22E" d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zM77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z"/>
-            </svg></span>
-            <span class="cname">Slack</span>
-          </div>
-          <div class="chip" data-chip="zoom" style="left:40%;top:10%;animation-delay:-2.2s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><rect x="1" y="3.5" width="22" height="17" rx="5" fill="#0B5CFF"/><path fill="#fff" d="M5.5 8.6c0-.6.5-1.1 1.1-1.1h6.1c1.4 0 2.5 1.1 2.5 2.5v5.4c0 .6-.5 1.1-1.1 1.1H8c-1.4 0-2.5-1.1-2.5-2.5V8.6zM16.2 10.9l2.9-2.2c.5-.4 1.2 0 1.2.6v5.5c0 .6-.7 1-1.2.6l-2.9-2.2v-2.3z"/></svg></span>
-            <span class="cname">Zoom</span>
-          </div>
-          <div class="chip" data-chip="gong" style="left:71%;top:14%;animation-delay:-4.6s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4" fill="#8039DF"/><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="2.3" fill="#fff"/></svg></span>
-            <span class="cname">Gong</span>
-          </div>
-          <div class="chip" data-chip="hubspot" style="left:89%;top:40%;animation-delay:-.8s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><path fill="#FF7A59" d="M17.2 8.2V5.6a1.9 1.9 0 1 0-1.6 0v2.6a5.3 5.3 0 0 0-2.5 1L6.6 4.9a2.1 2.1 0 1 0-1.1 1.3l6.3 4.2a5.3 5.3 0 1 0 5.4-2.2zm-.8 8.6a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8z"/><circle cx="6.8" cy="19.4" r="1.9" fill="#FF7A59"/><path fill="#FF7A59" d="m8.2 18.2 3-2.5.9 1.2-3 2.4z"/></svg></span>
-            <span class="cname">HubSpot</span>
-          </div>
-          <div class="chip" data-chip="teams" style="left:81%;top:80%;animation-delay:-3s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="#5059C9"/><path fill="#fff" d="M5 8.6h7v2H9.1v6H6.9v-6H5v-2z"/><circle cx="19" cy="8" r="2.6" fill="#7B83EB"/><path fill="#7B83EB" d="M15.8 12.2h5.1c.9 0 1.6.7 1.6 1.6v3.4a4.1 4.1 0 0 1-6.7 3.2V12.2z" opacity=".95"/></svg></span>
-            <span class="cname">Teams</span>
-          </div>
-          <div class="chip" data-chip="docs" style="left:50%;top:90%;animation-delay:-1.7s">
-            <span class="cbox"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"/><path fill="#A0C3FF" d="M14.5 1.5v5h5z"/><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"/></svg></span>
-            <span class="cname">Docs</span>
-          </div>
-
-          <!-- incoming evidence as an iOS-style notification (static first frame) -->
-          <div class="notif static" id="staticNotif">
-            <span class="nicon"><svg viewBox="0 0 24 24"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></span>
-            <span class="nmain">
-              <span class="nrow"><span class="napp">Gmail</span><span class="ntime">now</span></span>
-              <span class="nbody">Legal requested the DPA</span>
-            </span>
-          </div>
-
-          <!-- reasoning read-out -->
-          <div class="hreason"><span id="hreason">Security is now the primary blocker</span></div>
-        </div>
-
-        <!-- Cortex output: a live chat thread — signals arrive, Cortex writes the story -->
-        <div class="hout" id="cxOut">
-          <div class="cx-chat-head">
-            <span class="cx-avatar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="2.9"/><circle cx="5" cy="6" r="1.7"/><circle cx="19" cy="6.5" r="1.7"/><circle cx="5.5" cy="18" r="1.7"/><circle cx="18.5" cy="17.5" r="1.7"/>
-                <path d="m6.6 7 3.6 3.3m6.4-3.1-3.2 3.1m-.2 3.5 2.9 2.3m-6.1-2.3-2.8 2.1"/>
-              </svg>
-            </span>
-            <div class="cx-chat-id">
-              <b>Cortex</b>
-              <span class="cx-status"><i></i>Live · Acme Industrial</span>
-            </div>
-            <span class="cx-chat-count" id="cxCount">reading 4 sources</span>
-          </div>
-
-          <div class="cx-thread" id="cxThread">
-            <span class="cx-daymark">Today</span>
-            <ul class="cx-points" id="cxPoints">
-              <li class="cx-point" data-src="gmail">
-                <div class="cx-bubble">
-                  <span class="cx-bpp" style="--c:#EA4335"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>Gmail</span>
-                  <p>Legal asked for the DPA before security sign-off — <b>security is the real blocker</b>.</p>
-                  <span class="cx-bmeta">10:12 <i class="cx-tick">✓✓</i></span>
-                </div>
-              </li>
-              <li class="cx-point" data-src="teams">
-                <div class="cx-bubble">
-                  <span class="cx-bpp" style="--c:#5059C9"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="currentColor"/></svg>Teams</span>
-                  <p>A new VP of Operations entered the buying group <b>three weeks in</b>.</p>
-                  <span class="cx-bmeta">11:05 <i class="cx-tick">✓✓</i></span>
-                </div>
-              </li>
-              <li class="cx-point" data-src="gong">
-                <div class="cx-bubble">
-                  <span class="cx-bpp" style="--c:#8039DF"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4" fill="currentColor"/></svg>Gong</span>
-                  <p>Seats and multi-region rollout came up twice — this is <b>an expansion</b>, not a renewal.</p>
-                  <span class="cx-bmeta">12:20 <i class="cx-tick">✓✓</i></span>
-                </div>
-              </li>
-              <li class="cx-point" data-src="slack">
-                <div class="cx-bubble">
-                  <span class="cx-bpp" style="--c:#E01E5A"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/></svg>Slack</span>
-                  <p>The champion who has carried this since March is <b>changing roles next quarter</b>.</p>
-                  <span class="cx-bmeta">Yesterday <i class="cx-tick">✓✓</i></span>
-                </div>
-              </li>
-            </ul>
-
-            <div class="cx-typing" id="cxTyping"><i></i><i></i><i></i></div>
-
-            <div class="cx-story-bubble" id="cxStoryWrap">
-              <div class="cx-story-inner">
-                <span class="cx-bpp" style="--c:#AEBBFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 1-8.5 6.1"/><path d="M3 4.5V10h5.4"/></svg>The story so far</span>
-                <p class="cx-hand" id="cxHand"></p>
-                <span class="cx-bmeta">Just now <i class="cx-tick on">✓✓</i></span>
+    </header>
+    <div style="position:relative;z-index:5;max-width:1280px;margin:0 auto;padding:56px 32px 0">
+      <div style="text-align:center">
+        <div style="font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:#8BA3FF">Meet Cortex</div>
+        <p style="max-width:32em;margin:12px auto 0;font-size:15.5px;line-height:1.7;color:#93A2B4;text-wrap:pretty">The brain of Velorb. Cortex ingests every tool your team already works in and returns living context — <span style="color:#DCE5EE">what changed, why it matters, and the next move.</span></p>
+      </div>
+      <div data-ref="refStage" style="position:relative;height:620px">
+        <div data-ref="refChips" style="position:absolute;inset:0;pointer-events:none">
+          <div data-tool="Salesforce" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#00A1E0"><span style="font-size:10px;font-weight:600;color:#FFFFFF;letter-spacing:0.02em">Salesforce · Opportunity</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">18d ago</span></div>
+              <div style="padding:9px 11px;display:flex;flex-direction:column;gap:5px">
+                <div style="display:flex;justify-content:space-between;font-size:10.5px;color:#54698D"><span>Stage</span><b style="color:#16325C">Negotiation</b></div>
+                <div style="display:flex;justify-content:space-between;font-size:10.5px;color:#54698D"><span>Next step</span><b style="color:#16325C">—</b></div>
+                <div style="font-size:10.5px;line-height:1.4;color:#C23934;border-top:1px solid #E3E8EF;padding-top:5px">Untouched for 18 days — the record lags the relationship.</div>
               </div>
             </div>
+            <svg viewBox="0 0 24 24" style="width:23px;height:23px"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"></path></svg>
           </div>
-
-          <div class="cx-inputbar">
-            <span>Ask Cortex about Acme…</span>
-            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></i>
+          <div data-tool="Slack" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#4A154B"><span style="font-size:10px;font-weight:600;color:#FFFFFF">#acme-industrial</span><span style="font-size:9.5px;color:rgba(255,255,255,0.75)">Yesterday</span></div>
+              <div style="padding:10px 11px;display:flex;gap:8px">
+                <div style="width:26px;height:26px;border-radius:6px;background:#ECB22E;color:#1D1C1D;font-size:10px;font-weight:700;display:grid;place-items:center;flex:none">MR</div>
+                <div style="min-width:0">
+                  <div style="font-size:11px;color:#1D1C1D"><b>Maya Reyes</b> <span style="color:#616061;font-size:10px">4:12 PM</span></div>
+                  <div style="font-size:11px;line-height:1.45;color:#1D1C1D;margin-top:2px">Heads up — I'm moving to the platform org next quarter. Let's line up who takes Acme.</div>
+                </div>
+              </div>
+            </div>
+            <svg viewBox="0 0 122.8 122.8" style="width:21px;height:21px"><path fill="#E01E5A" d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zM32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z"></path><path fill="#36C5F0" d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zM45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z"></path><path fill="#2EB67D" d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zM90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z"></path><path fill="#ECB22E" d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zM77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z"></path></svg>
+          </div>
+          <div data-tool="Gong" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#8039DF"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Gong · Renewal call</span><span style="font-size:9.5px;color:rgba(255,255,255,0.8)">12:20</span></div>
+              <div style="padding:9px 11px">
+                <div style="display:flex;align-items:flex-end;gap:2px;height:18px">
+                  <span style="width:3px;height:6px;background:#D9C2F5;border-radius:2px"></span><span style="width:3px;height:12px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:17px;background:#8039DF;border-radius:2px"></span><span style="width:3px;height:9px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:15px;background:#8039DF;border-radius:2px"></span><span style="width:3px;height:7px;background:#D9C2F5;border-radius:2px"></span><span style="width:3px;height:12px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:5px;background:#D9C2F5;border-radius:2px"></span>
+                </div>
+                <div style="font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:#8039DF;font-weight:600;margin-top:6px">Tracker · Expansion ×2</div>
+                <div style="font-size:11px;line-height:1.45;color:#2E2E3A;margin-top:3px">Seats and multi-region rollout came up twice — expansion, not renewal.</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:23px;height:23px"><circle cx="12" cy="12" r="10.4" fill="#8039DF"></circle><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"></circle><circle cx="12" cy="12" r="2.3" fill="#fff"></circle></svg>
+          </div>
+          <div data-tool="Teams" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#F5F5F5;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#5059C9"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Teams · Acme QBR</span><span style="font-size:9.5px;color:rgba(255,255,255,0.8)">11:05</span></div>
+              <div style="padding:10px 11px;display:flex;gap:8px">
+                <div style="width:26px;height:26px;border-radius:50%;background:#7B83EB;color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center;flex:none">JL</div>
+                <div style="background:#FFFFFF;border-radius:0 10px 10px 10px;padding:7px 9px;box-shadow:0 1px 2px rgba(0,0,0,0.08)">
+                  <div style="font-size:10px;color:#616161">J. Lee, VP Operations <span style="color:#8A8A8A">· joined</span></div>
+                  <div style="font-size:11px;line-height:1.45;color:#242424;margin-top:2px">A new VP of Operations entered the buying group three weeks in.</div>
+                </div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:23px;height:23px"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="#5059C9"></rect><path fill="#fff" d="M5 8.6h7v2H9.1v6H6.9v-6H5v-2z"></path><circle cx="19" cy="8" r="2.6" fill="#7B83EB"></circle><path fill="#7B83EB" d="M15.8 12.2h5.1c.9 0 1.6.7 1.6 1.6v3.4a4.1 4.1 0 0 1-6.7 3.2V12.2z" opacity=".95"></path></svg>
+          </div>
+          <div data-tool="Gmail" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#EA4335"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Gmail · Inbox</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">10:12</span></div>
+              <div style="padding:9px 11px">
+                <div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:11.5px;color:#202124">DPA request before security sign-off</b></div>
+                <div style="font-size:10.5px;color:#5F6368;margin-top:2px">R. Feld · Legal Counsel, Acme</div>
+                <div style="font-size:11px;line-height:1.45;color:#5F6368;margin-top:5px;border-left:2px solid #EA4335;padding-left:7px">Legal needs the DPA before security sign-off — security is the real blocker.</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>
+          </div>
+          <div data-tool="Zoom" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#1A1D26;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#0B5CFF"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Zoom · Acme renewal</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">48:12</span></div>
+              <div style="padding:10px 11px">
+                <div style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#E02828"></span><span style="font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:#8B93A5">Rec · Transcript</span></div>
+                <div style="font-size:11.5px;line-height:1.5;color:#E8ECF5;margin-top:6px;font-style:italic">"If the EMEA rollout lands we'd need another forty seats."</div>
+                <div style="font-size:10px;color:#8B93A5;margin-top:5px">34:41 · Thursday is the decision point</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px"><rect x="1" y="3.5" width="22" height="17" rx="5" fill="#0B5CFF"></rect><path fill="#fff" d="M5.5 8.6c0-.6.5-1.1 1.1-1.1h6.1c1.4 0 2.5 1.1 2.5 2.5v5.4c0 .6-.5 1.1-1.1 1.1H8c-1.4 0-2.5-1.1-2.5-2.5V8.6zM16.2 10.9l2.9-2.2c.5-.4 1.2 0 1.2.6v5.5c0 .6-.7 1-1.2.6l-2.9-2.2v-2.3z"></path></svg>
+          </div>
+          <div data-tool="HubSpot" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#FF7A59"><span style="font-size:10px;font-weight:600;color:#FFFFFF">HubSpot · Activity</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">Mon</span></div>
+              <div style="padding:9px 11px">
+                <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:#7C98B6">Ops engagement</span><b style="font-size:12px;color:#00A38D">↑ 2×</b></div>
+                <div style="display:flex;align-items:flex-end;gap:3px;height:22px;margin-top:6px">
+                  <span style="width:14px;height:6px;background:#FBE0D8;border-radius:2px"></span><span style="width:14px;height:9px;background:#FBE0D8;border-radius:2px"></span><span style="width:14px;height:8px;background:#F5A88F;border-radius:2px"></span><span style="width:14px;height:13px;background:#F5A88F;border-radius:2px"></span><span style="width:14px;height:17px;background:#FF7A59;border-radius:2px"></span><span style="width:14px;height:22px;background:#FF7A59;border-radius:2px"></span>
+                </div>
+                <div style="font-size:10.5px;line-height:1.4;color:#33475B;margin-top:6px">Engagement from Operations contacts doubled this month.</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#FF7A59" d="M17.2 8.2V5.6a1.9 1.9 0 1 0-1.6 0v2.6a5.3 5.3 0 0 0-2.5 1L6.6 4.9a2.1 2.1 0 1 0-1.1 1.3l6.3 4.2a5.3 5.3 0 1 0 5.4-2.2zm-.8 8.6a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8z"></path><circle cx="6.8" cy="19.4" r="1.9" fill="#FF7A59"></circle><path fill="#FF7A59" d="m8.2 18.2 3-2.5.9 1.2-3 2.4z"></path></svg>
+          </div>
+          <div data-tool="Docs" style="position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(13,20,32,0.85);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(8px);will-change:transform;transition:border-color 0.4s,box-shadow 0.4s;pointer-events:auto;cursor:default">
+            <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#4285F4"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Docs · Shared with you</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">13:02</span></div>
+              <div style="padding:9px 11px">
+                <b style="font-size:11.5px;color:#202124">Security questionnaire — Acme IT.pdf</b>
+                <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px">
+                  <span style="height:4px;width:88%;background:#E8EAED;border-radius:2px"></span>
+                  <span style="height:4px;width:70%;background:#E8EAED;border-radius:2px"></span>
+                  <span style="height:4px;width:52%;background:#D2E3FC;border-radius:2px"></span>
+                </div>
+                <div style="font-size:10.5px;color:#5F6368;margin-top:8px">Uploaded by Acme IT · awaiting review</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"></path><path fill="#A0C3FF" d="M14.5 1.5v5h5z"></path><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"></path></svg>
           </div>
         </div>
-
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,96px);text-align:center;pointer-events:none;z-index:4">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#EDF1FE;text-shadow:0 0 24px rgba(139,163,255,0.8)">Cortex</div>
+        </div>
+      </div>
+      <div style="padding-bottom:110px"></div>
+    </div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(180deg,rgba(247,249,250,0),#F7F9FA);pointer-events:none;z-index:8"></div>
+  </div>
+  <section id="platform" style="background:#F7F9FA;color:#131A22;padding:110px 32px 130px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:#0E9384;margin-bottom:20px">
+        <span style="width:14px;height:2px;border-radius:2px;background:#14B8A6"></span>
+        The platform
+      </div>
+      <h2 style="margin:0 auto;font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-0.035em;font-weight:600;max-width:15em;color:#131A22;text-wrap:balance;text-align:center">The clues already live in your tools.</h2>
+      <p style="margin:20px auto 0;max-width:38em;font-size:17px;line-height:1.7;color:#4E5B69;text-wrap:pretty;text-align:center">Velorb brings customer signals together across conversations, CRM activity, documents, and support systems — turning scattered context into a memory your team can rely on before every conversation. No searching. No catching up. <b style="color:#131A22;font-weight:600">The context is already there.</b></p>
+      <div style="margin-top:64px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent)">
+        <div style="display:flex;gap:72px;width:max-content;align-items:center;animation:vlMarq 34s linear infinite;padding:8px 36px 8px 0">
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"></path></svg>Salesforce</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>Gmail</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 122.8 122.8" style="width:20px;height:20px"><path fill="#E01E5A" d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zM32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z"></path><path fill="#36C5F0" d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zM45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z"></path><path fill="#2EB67D" d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zM90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z"></path><path fill="#ECB22E" d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zM77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z"></path></svg>Slack</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><rect x="1" y="3.5" width="22" height="17" rx="5" fill="#0B5CFF"></rect><path fill="#fff" d="M5.5 8.6c0-.6.5-1.1 1.1-1.1h6.1c1.4 0 2.5 1.1 2.5 2.5v5.4c0 .6-.5 1.1-1.1 1.1H8c-1.4 0-2.5-1.1-2.5-2.5V8.6zM16.2 10.9l2.9-2.2c.5-.4 1.2 0 1.2.6v5.5c0 .6-.7 1-1.2.6l-2.9-2.2v-2.3z"></path></svg>Zoom</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><circle cx="12" cy="12" r="10.4" fill="#8039DF"></circle><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"></circle><circle cx="12" cy="12" r="2.3" fill="#fff"></circle></svg>Gong</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#FF7A59" d="M17.2 8.2V5.6a1.9 1.9 0 1 0-1.6 0v2.6a5.3 5.3 0 0 0-2.5 1L6.6 4.9a2.1 2.1 0 1 0-1.1 1.3l6.3 4.2a5.3 5.3 0 1 0 5.4-2.2zm-.8 8.6a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8z"></path><circle cx="6.8" cy="19.4" r="1.9" fill="#FF7A59"></circle><path fill="#FF7A59" d="m8.2 18.2 3-2.5.9 1.2-3 2.4z"></path></svg>HubSpot</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="#5059C9"></rect><path fill="#fff" d="M5 8.6h7v2H9.1v6H6.9v-6H5v-2z"></path><circle cx="19" cy="8" r="2.6" fill="#7B83EB"></circle><path fill="#7B83EB" d="M15.8 12.2h5.1c.9 0 1.6.7 1.6 1.6v3.4a4.1 4.1 0 0 1-6.7 3.2V12.2z" opacity=".95"></path></svg>Teams</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"></path><path fill="#A0C3FF" d="M14.5 1.5v5h5z"></path><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"></path></svg>Docs</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"></path></svg>Salesforce</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>Gmail</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 122.8 122.8" style="width:20px;height:20px"><path fill="#E01E5A" d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zM32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z"></path><path fill="#36C5F0" d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zM45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z"></path><path fill="#2EB67D" d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zM90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z"></path><path fill="#ECB22E" d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zM77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z"></path></svg>Slack</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><rect x="1" y="3.5" width="22" height="17" rx="5" fill="#0B5CFF"></rect><path fill="#fff" d="M5.5 8.6c0-.6.5-1.1 1.1-1.1h6.1c1.4 0 2.5 1.1 2.5 2.5v5.4c0 .6-.5 1.1-1.1 1.1H8c-1.4 0-2.5-1.1-2.5-2.5V8.6zM16.2 10.9l2.9-2.2c.5-.4 1.2 0 1.2.6v5.5c0 .6-.7 1-1.2.6l-2.9-2.2v-2.3z"></path></svg>Zoom</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><circle cx="12" cy="12" r="10.4" fill="#8039DF"></circle><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"></circle><circle cx="12" cy="12" r="2.3" fill="#fff"></circle></svg>Gong</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#FF7A59" d="M17.2 8.2V5.6a1.9 1.9 0 1 0-1.6 0v2.6a5.3 5.3 0 0 0-2.5 1L6.6 4.9a2.1 2.1 0 1 0-1.1 1.3l6.3 4.2a5.3 5.3 0 1 0 5.4-2.2zm-.8 8.6a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8z"></path><circle cx="6.8" cy="19.4" r="1.9" fill="#FF7A59"></circle><path fill="#FF7A59" d="m8.2 18.2 3-2.5.9 1.2-3 2.4z"></path></svg>HubSpot</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="#5059C9"></rect><path fill="#fff" d="M5 8.6h7v2H9.1v6H6.9v-6H5v-2z"></path><circle cx="19" cy="8" r="2.6" fill="#7B83EB"></circle><path fill="#7B83EB" d="M15.8 12.2h5.1c.9 0 1.6.7 1.6 1.6v3.4a4.1 4.1 0 0 1-6.7 3.2V12.2z" opacity=".95"></path></svg>Teams</span>
+          <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"></path><path fill="#A0C3FF" d="M14.5 1.5v5h5z"></path><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"></path></svg>Docs</span>
+        </div>
+      </div>
+      <p style="text-align:center;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#8A97A5;margin:28px 0 0">Velorb connects to the tools your team already uses — and closes deals faster with the context inside them</p>
+    </div>
+  </section>
+  <section id="how" style="background:linear-gradient(180deg,#F7F9FA,#F2F4FC 42%,#ECEFF9);color:#131A22;padding:118px 32px 150px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:#4C63D2;margin-bottom:20px">
+        <span style="width:14px;height:2px;border-radius:2px;background:#8BA3FF"></span>
+        Our approach
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
+        <h2 style="margin:0;font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-0.035em;font-weight:600;max-width:13em;color:#131A22;text-wrap:balance">How Cortex builds customer memory</h2>
+        <p style="margin:0;max-width:24em;font-size:16.5px;line-height:1.65;color:#4E5B69;text-wrap:pretty">One continuous loop, running quietly underneath the work your teams already do.</p>
+      </div>
+      <div>
+      <div data-reveal style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:104px;opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease">
+        <div style="order:1"><div style="text-align:left">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.16em;color:#4C63D2">STEP 01</span>
+            <span style="width:52px;height:1px;background:#C9D3E4"></span>
+          </div>
+          <h3 style="margin:22px 0 0;font-size:clamp(26px,2.8vw,36px);font-weight:600;letter-spacing:-0.03em;line-height:1.12;color:#131A22;text-wrap:balance">Capture every signal</h3>
+          <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#4E5B69;text-wrap:pretty;max-width:32em">Cortex continuously absorbs customer conversations, CRM activity, documents, support interactions, and internal decisions — from the tools your teams already work in. Nothing to log, nothing to remember.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px"><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Calls</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Email</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">CRM</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Docs</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Tickets</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Decisions</span></div>
+        </div></div>
+        <div style="order:2"><div style="position:relative;margin:0 auto;width:100%;max-width:480px;border-radius:26px;background:radial-gradient(120% 120% at 50% 30%,#E7ECFF,#F4F6FE);border:1px solid #E2E8F5;height:340px;overflow:hidden">
+            <div style="position:absolute;left:40px;top:34px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn1 4.6s ease-in-out 0s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#8BA3FF"></span>Call</div>
+            <div style="position:absolute;left:300px;top:28px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn2 4.6s ease-in-out 0.7s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#EA4335"></span>Email</div>
+            <div style="position:absolute;left:22px;top:150px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn3 4.6s ease-in-out 1.4s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#00A1E0"></span>CRM</div>
+            <div style="position:absolute;left:322px;top:158px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn4 4.6s ease-in-out 2.1s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#4285F4"></span>Doc</div>
+            <div style="position:absolute;left:56px;top:262px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn5 4.6s ease-in-out 2.8s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#FF7A59"></span>Ticket</div>
+            <div style="position:absolute;left:292px;top:262px;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;background:#FFFFFF;border:1px solid #E3E9F3;border-radius:99px;box-shadow:0 8px 20px -12px rgba(19,26,34,.3);font-size:12px;font-weight:600;color:#33404F;white-space:nowrap;animation:vlIn6 4.6s ease-in-out 3.5s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#8039DF"></span>Decision</div>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;pointer-events:none">
+              <span style="position:absolute;left:50%;top:50%;width:96px;height:96px;border-radius:50%;border:1px solid rgba(76,99,210,.5);animation:vlRing 3.4s ease-out infinite"></span>
+              <span style="position:absolute;left:50%;top:50%;width:96px;height:96px;border-radius:50%;border:1px solid rgba(76,99,210,.5);animation:vlRing 3.4s ease-out 1.7s infinite"></span>
+            </div>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:24px;background:linear-gradient(150deg,#4C63D2,#6E82E6);box-shadow:0 20px 44px -16px rgba(76,99,210,.7);display:grid;place-items:center">
+              <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#EEF1FE">Cortex</span>
+            </div>
+          </div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:104px;opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease">
+        <div style="order:2"><div style="text-align:left">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.16em;color:#4C63D2">STEP 02</span>
+            <span style="width:52px;height:1px;background:#C9D3E4"></span>
+          </div>
+          <h3 style="margin:22px 0 0;font-size:clamp(26px,2.8vw,36px);font-weight:600;letter-spacing:-0.03em;line-height:1.12;color:#131A22;text-wrap:balance">Build the memory</h3>
+          <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#4E5B69;text-wrap:pretty;max-width:32em">It connects changing needs, preferences, stakeholders, commitments, risks, and opportunities to the full history of the relationship — a living memory, not a static record.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px"><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Needs</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Stakeholders</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Promises</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Risks</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #DDE4EA;color:#5A6B7A">Timing</span></div>
+        </div></div>
+        <div style="order:1"><div style="position:relative;margin:0 auto;width:100%;max-width:480px;border-radius:26px;background:radial-gradient(120% 120% at 50% 35%,#ECEAFE,#F5F5FE);border:1px solid #E7E4F6;height:340px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <svg viewBox="0 0 440 300" style="width:92%;height:auto">
+              <g stroke="#B9C6F5" stroke-width="1.6" fill="none" stroke-dasharray="6 8" style="animation:vlDash 2.4s linear infinite">
+                <line x1="210" y1="150" x2="86" y2="70"></line>
+                <line x1="210" y1="150" x2="334" y2="72"></line>
+                <line x1="210" y1="150" x2="60" y2="210"></line>
+                <line x1="210" y1="150" x2="360" y2="206"></line>
+                <line x1="210" y1="150" x2="210" y2="256"></line>
+              </g>
+              <g stroke="#D9D5F3" stroke-width="1.1" fill="none" stroke-dasharray="3 7" style="animation:vlDash 3.6s linear infinite">
+                <line x1="86" y1="70" x2="334" y2="72"></line>
+                <line x1="60" y1="210" x2="210" y2="256"></line>
+                <line x1="360" y1="206" x2="210" y2="256"></line>
+              </g>
+              <circle cx="210" cy="150" r="34" fill="#4C63D2"></circle>
+              <circle cx="210" cy="150" r="34" fill="none" stroke="#8BA3FF" stroke-width="2" opacity="0.5" style="transform-box:fill-box;transform-origin:center;animation:vlPulse 2.6s ease-out infinite"></circle>
+              <text x="210" y="147" font-family="'Geist Mono',monospace" font-size="10" fill="#EEF1FE" text-anchor="middle">ACME</text>
+              <text x="210" y="160" font-family="'Geist Mono',monospace" font-size="7.5" fill="#C7D0F5" text-anchor="middle">MEMORY</text>
+              <g><circle cx="86" cy="70" r="26" fill="#FFFFFF" stroke="#D3DCF5" stroke-width="1.5"></circle><text x="86" y="73" font-family="'Geist Mono',monospace" font-size="9" fill="#4C63D2" text-anchor="middle">Needs</text></g>
+              <g><circle cx="334" cy="72" r="26" fill="#FFFFFF" stroke="#D3DCF5" stroke-width="1.5"></circle><text x="334" y="75" font-family="'Geist Mono',monospace" font-size="9" fill="#4C63D2" text-anchor="middle">Stake</text></g>
+              <g><circle cx="60" cy="210" r="24" fill="#FFFFFF" stroke="#D3DCF5" stroke-width="1.5"></circle><text x="60" y="213" font-family="'Geist Mono',monospace" font-size="9" fill="#4C63D2" text-anchor="middle">Risks</text></g>
+              <g><circle cx="360" cy="206" r="26" fill="#FFFFFF" stroke="#D3DCF5" stroke-width="1.5"></circle><text x="360" y="209" font-family="'Geist Mono',monospace" font-size="9" fill="#4C63D2" text-anchor="middle">Timing</text></g>
+              <g><circle cx="210" cy="256" r="27" fill="#FFFFFF" stroke="#D3DCF5" stroke-width="1.5"></circle><text x="210" y="259" font-family="'Geist Mono',monospace" font-size="9" fill="#4C63D2" text-anchor="middle">Promise</text></g>
+            </svg>
+          </div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:104px;opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease">
+        <div style="order:1"><div style="text-align:left">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.16em;color:#4C63D2">STEP 03</span>
+            <span style="width:52px;height:1px;background:#C9D3E4"></span>
+          </div>
+          <h3 style="margin:22px 0 0;font-size:clamp(26px,2.8vw,36px);font-weight:600;letter-spacing:-0.03em;line-height:1.12;color:#131A22;text-wrap:balance">Recall and act</h3>
+          <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#4E5B69;text-wrap:pretty;max-width:32em">The right context arrives the moment it matters — before a call, inside a thread. Cortex recommends the next move, explains why now, and links every insight to the evidence behind it.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px"><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #C6D2FF;color:#4C63D2">Pre-call recall</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #C6D2FF;color:#4C63D2">Next move</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #C6D2FF;color:#4C63D2">Why now</span><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid #C6D2FF;color:#4C63D2">Evidence</span></div>
+        </div></div>
+        <div style="order:2"><div style="position:relative;margin:0 auto;width:100%;max-width:480px;border-radius:26px;background:radial-gradient(120% 120% at 70% 20%,#E6ECFF,#F2F5FE);border:1px solid #E1E8F6;height:340px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 440 300" style="width:94%;height:auto">
+              <line x1="16" y1="214" x2="424" y2="214" stroke="#CFD9EC" stroke-width="1.5"></line>
+              <g style="animation:vlSweep3 7s linear infinite">
+                <line x1="20" y1="196" x2="20" y2="232" stroke="#8BA3FF" stroke-width="1.5" opacity="0.7"></line>
+              </g>
+              <path d="M 52 214 C 52 150, 330 150, 356 104" fill="none" stroke="#8BA3FF" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="260" style="animation:vlDraw3 7s ease-in-out 0s infinite"></path>
+                <path d="M 132 214 C 132 150, 330 150, 356 104" fill="none" stroke="#8BA3FF" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="260" style="animation:vlDraw3 7s ease-in-out 0.45s infinite"></path>
+                <path d="M 212 214 C 212 150, 330 150, 356 104" fill="none" stroke="#8BA3FF" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="260" style="animation:vlDraw3 7s ease-in-out 0.9s infinite"></path>
+                <path d="M 286 214 C 286 150, 330 150, 356 104" fill="none" stroke="#8BA3FF" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="260" style="animation:vlDraw3 7s ease-in-out 1.35s infinite"></path>
+              <circle cx="52" cy="214" r="4" fill="#4C63D2" style="animation:vlLit3 7s ease-in-out 0s infinite"></circle>
+                <text x="52" y="240" font-family="'Geist Mono',monospace" font-size="9.5" fill="#8A97A5" text-anchor="middle">MAR</text>
+                <text x="52" y="256" font-family="'Geist Mono',monospace" font-size="10" fill="#4E5B69" text-anchor="middle">Security<tspan x="52" dy="12">review</tspan></text>
+                <circle cx="132" cy="214" r="4" fill="#4C63D2" style="animation:vlLit3 7s ease-in-out 0.45s infinite"></circle>
+                <text x="132" y="240" font-family="'Geist Mono',monospace" font-size="9.5" fill="#8A97A5" text-anchor="middle">MAY</text>
+                <text x="132" y="256" font-family="'Geist Mono',monospace" font-size="10" fill="#4E5B69" text-anchor="middle">Champion<tspan x="132" dy="12">left</tspan></text>
+                <circle cx="212" cy="214" r="4" fill="#4C63D2" style="animation:vlLit3 7s ease-in-out 0.9s infinite"></circle>
+                <text x="212" y="240" font-family="'Geist Mono',monospace" font-size="9.5" fill="#8A97A5" text-anchor="middle">JUL</text>
+                <text x="212" y="256" font-family="'Geist Mono',monospace" font-size="10" fill="#4E5B69" text-anchor="middle">40 seats<tspan x="212" dy="12">added</tspan></text>
+                <circle cx="286" cy="214" r="4" fill="#4C63D2" style="animation:vlLit3 7s ease-in-out 1.35s infinite"></circle>
+                <text x="286" y="240" font-family="'Geist Mono',monospace" font-size="9.5" fill="#8A97A5" text-anchor="middle">AUG</text>
+                <text x="286" y="256" font-family="'Geist Mono',monospace" font-size="10" fill="#4E5B69" text-anchor="middle">Pricing<tspan x="286" dy="12">pushback</tspan></text>
+              <g>
+                <line x1="356" y1="214" x2="356" y2="196" stroke="#4C63D2" stroke-width="1.5"></line>
+                <circle cx="356" cy="214" r="5.5" fill="#FFFFFF" stroke="#4C63D2" stroke-width="2"></circle>
+                <text x="356" y="240" font-family="'Geist Mono',monospace" font-size="9.5" font-weight="600" fill="#4C63D2" text-anchor="middle">NOW</text>
+                <text x="356" y="256" font-family="'Geist Mono',monospace" font-size="10" fill="#4C63D2" text-anchor="middle">Call in<tspan x="356" dy="12">12 min</tspan></text>
+              </g>
+              <g style="animation:vlRise3 7s ease-out infinite;transform-box:view-box;transform-origin:center">
+                <rect x="46" y="40" width="330" height="54" rx="14" fill="#4C63D2"></rect>
+                <text x="64" y="62" font-family="'Geist Mono',monospace" font-size="8.5" letter-spacing="1.6" fill="#BAC6F7">NEXT MOVE · WHY NOW</text>
+                <text x="64" y="80" font-family="Inter,system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#FFFFFF">Re-anchor pricing on the 40 seats added in July</text>
+              </g>
+              <circle cx="356" cy="104" r="5" fill="#4C63D2"></circle>
+            </svg>
+          </div></div></div>
+      </div>
       </div>
     </div>
-  </div>
-</header>
+  </section>
+</div>
+</div>
+<script id="velorb-cortex-js">
+(function(){
+class DCLogic{
+  constructor(props){this.props=props||{};this.state={};}
+  setState(u){Object.assign(this.state, typeof u==='function'?u(this.state):u);}
+  forceUpdate(){}
+}
+class Component extends DCLogic {
+  state = {};
+  tools = [
+    { name: 'Salesforce', ring: 0, a: 0.3, c: '#4FC3F7' },
+    { name: 'Slack', ring: 0, a: 1.87, c: '#ECB22E' },
+    { name: 'Gong', ring: 0, a: 3.44, c: '#A66BF0' },
+    { name: 'Teams', ring: 0, a: 5.01, c: '#8B93EE' },
+    { name: 'Gmail', ring: 1, a: 1.1, c: '#EA4335' },
+    { name: 'Zoom', ring: 1, a: 2.67, c: '#3E7BFF' },
+    { name: 'HubSpot', ring: 1, a: 4.24, c: '#FF7A59' },
+    { name: 'Docs', ring: 1, a: 5.81, c: '#4285F4' }
+  ];
+  hexA(hex, a) {
+    const h = hex.replace('#', '');
+    return `rgba(${parseInt(h.slice(0, 2), 16)},${parseInt(h.slice(2, 4), 16)},${parseInt(h.slice(4, 6), 16)},${a})`;
+  }
+  renderVals() {
+    return {
+      refHero: el => { this.hero = el; },
+      refCanvas: el => { this.canvas = el; },
+      refStage: el => { this.stage = el; },
+      refChips: el => { this.chips = el; },
+      refLoop: el => { this.loopCanvas = el; },
+      refLoopWrap: el => { this.loopWrap = el; },
+      refSteps: el => { this.stepsEl = el; }
+    };
+  }
+  componentDidMount() {
+    this.rot = 0; this.pulses = []; this.corePulse = 0; this.ripples = [];
+    this.nextSpawn = 2200; this.elapsed = 0; this.pulseIdx = 0; this.activeTool = null; this.activeUntil = 0;
+    this.tipUntil = 0; this.hoverIdx = -1;
+    this.par = { x: 0, y: 0 }; this.parT = { x: 0, y: 0 }; this.waves = []; this.globeR = 82;
+    this.sphere = [];
+    const N = 2400, ga = Math.PI * (3 - Math.sqrt(5));
+    for (let i = 0; i < N; i++) {
+      const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = ga * i + Math.random() * 0.09;
+      this.sphere.push([Math.cos(th) * r, y, Math.sin(th) * r, 0.5 + Math.random() * 0.8, Math.random()]);
+    }
+    this.blooms = [];
+    for (let i = 0; i < 6; i++) {
+      const y = Math.random() * 1.6 - 0.8, r = Math.sqrt(1 - y * y), th = Math.random() * 6.283;
+      this.blooms.push([Math.cos(th) * r, y, Math.sin(th) * r, 10 + Math.random() * 9, i]);
+    }
+    this.onResize = () => this.measure();
+    window.addEventListener('resize', this.onResize);
+    this.measure();
+    if (window.ResizeObserver && this.hero && this.stage) {
+      this.ro = new ResizeObserver(() => {
+        if (this._roPend) return;
+        this._roPend = true;
+        requestAnimationFrame(() => { this._roPend = false; this.measure(); });
+      });
+      this.ro.observe(this.hero); this.ro.observe(this.stage);
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.measure());
+    this.onMouse = e => {
+      const r = this.hero.getBoundingClientRect();
+      this.parT.x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      this.parT.y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    };
+    this.onLeave = () => { this.parT.x = 0; this.parT.y = 0; };
+    if (this.hero) { this.hero.addEventListener('mousemove', this.onMouse); this.hero.addEventListener('mouseleave', this.onLeave); }
+    if (this.chips) {
+      this.pinIdx = -1;
+      Array.from(this.chips.children).forEach((chip, i) => {
+        chip.style.cursor = 'pointer';
+        chip.addEventListener('mouseenter', () => { this.hoverIdx = i; });
+        chip.addEventListener('mouseleave', () => { if (this.hoverIdx === i) this.hoverIdx = -1; });
+        chip.addEventListener('click', (e) => { e.stopPropagation(); this.pinIdx = this.pinIdx === i ? -1 : i; });
+      });
+      this.onDocClick = () => { this.pinIdx = -1; };
+      document.addEventListener('click', this.onDocClick);
+    }
+    this.last = performance.now();
+    const loop = (t) => { this.raf = requestAnimationFrame(loop); this.draw(t); this.drawLoop(t); };
+    this.raf = requestAnimationFrame(loop);
+    this.initHow();
+  }
+  initHow() {
+    const sec = document.getElementById('how');
+    if (!sec) return;
+    const items = Array.from(sec.querySelectorAll('[data-reveal]'));
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -12% 0px' });
+    items.forEach(el => io.observe(el));
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    window.removeEventListener('resize', this.onResize);
+    if (this.ro) this.ro.disconnect();
+    if (this.hero) { this.hero.removeEventListener('mousemove', this.onMouse); this.hero.removeEventListener('mouseleave', this.onLeave); }
+    document.removeEventListener('click', this.onDocClick);
+  }
 
-<!-- ================= 2 · COMPACT INTEGRATIONS ================= -->
-<section class="section alt integ-compact" style="padding-top:56px;padding-bottom:60px">
-  <div class="wrap" style="text-align:center">
-    <h3 class="integ-h reveal">The clues already live in your tools.</h3>
-    <p class="integ-p reveal d1">We bring together customer signals across conversations, CRM activity, documents, support systems, and internal decisions—turning scattered context into a memory your team can rely on before every conversation.</p>
-    <p class="integ-punch reveal d2">No searching. No catching up. <b>The context is already there.</b></p>
-  </div>
-  <div class="marquee reveal d2" aria-hidden="true">
-    <div class="marq-track left" id="rowA"></div>
-  </div>
-</section>
-
-<!-- ================= 3 · HOW CORTEX BUILDS MEMORY ================= -->
-<section class="section" id="how" style="padding-top:104px;padding-bottom:104px">
-  <div class="wrap">
-    <div class="app-head">
-      <div class="eyebrow reveal">Our Approach</div>
-      <h2 class="h2 reveal d1">How Cortex builds customer memory</h2>
-      <p class="app-note reveal d2">One continuous loop, running quietly underneath the work your teams already do.</p>
-    </div>
-
-    <ol class="approach">
-      <li class="astep reveal d1">
-        <div class="astep-rail" aria-hidden="true"><span class="astep-n">01</span><i class="astep-line"></i></div>
-        <div class="astep-ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 12h3l2-5 3 10 3-7 2 4h5"/>
-          </svg>
-        </div>
-        <h3>Capture every signal</h3>
-        <p>Cortex continuously absorbs customer conversations, CRM activity, documents, support interactions, and internal decisions from the tools your teams already use.</p>
-        <div class="astep-tags"><span>Calls</span><span>Email</span><span>CRM</span><span>Docs</span><span>Tickets</span><span>Decisions</span></div>
-      </li>
-      <li class="astep reveal d2">
-        <div class="astep-rail" aria-hidden="true"><span class="astep-n">02</span><i class="astep-line"></i></div>
-        <div class="astep-ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="2.6"/><circle cx="5" cy="6" r="1.9"/><circle cx="19" cy="6.5" r="1.9"/><circle cx="5.5" cy="18" r="1.9"/><circle cx="18.5" cy="17.5" r="1.9"/>
-            <path d="m6.4 7.2 3.6 3.2m7.6-3.2-3.4 3.2m-.2 3.6 3 2.4m-6.6-2.4-3 2.2"/>
-          </svg>
-        </div>
-        <h3>Build the memory</h3>
-        <p>It connects changing needs, preferences, stakeholders, commitments, risks, and opportunities to the history of the relationship.</p>
-        <div class="astep-tags"><span>Needs</span><span>Stakeholders</span><span>Promises</span><span>Risks</span><span>Timing</span></div>
-      </li>
-      <li class="astep reveal d3">
-        <div class="astep-rail" aria-hidden="true"><span class="astep-n">03</span><i class="astep-line"></i></div>
-        <div class="astep-ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a9 9 0 1 1-8.5 6.1"/><path d="M3 4.5V10h5.4"/><path d="m9.5 12.2 1.9 1.9 3.6-4"/>
-          </svg>
-        </div>
-        <h3>Recall and act</h3>
-        <p>It brings back the right context when it matters, recommends the next move, explains why, and links every insight to the evidence behind it.</p>
-        <div class="astep-tags"><span>Pre-call recall</span><span>Next move</span><span>Why now</span><span>Evidence</span></div>
-      </li>
-    </ol>
-  </div>
-</section>
+  measure() {
+    if (!this.canvas || !this.hero || !this.stage) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const hr = this.hero.getBoundingClientRect(), sr = this.stage.getBoundingClientRect();
+    if (this._mw === hr.width && this._mh === hr.height && this._mdpr === dpr) return;
+    this._mw = hr.width; this._mh = hr.height; this._mdpr = dpr;
+    this.W = hr.width; this.H = hr.height; this.dpr = dpr;
+    this.canvas.width = hr.width * dpr; this.canvas.height = hr.height * dpr;
+    this.ox = sr.left - hr.left; this.oy = sr.top - hr.top;
+    this.cx = this.ox + sr.width / 2;
+    this.cy = this.oy + sr.height / 2;
+    this.Rx = Math.min(sr.width * 0.36, 430); this.Ry = this.Rx * 0.38;
+    if (this.loopCanvas && this.loopWrap) {
+      const lr = this.loopWrap.getBoundingClientRect();
+      this.lw = lr.width; this.lh = lr.height;
+      this.loopCanvas.width = lr.width * dpr; this.loopCanvas.height = lr.height * dpr;
+    }
+    this.stars = [];
+    const n = Math.floor(this.W * this.H / 9000);
+    for (let i = 0; i < n; i++) {
+      this.stars.push({ x: Math.random() * this.W, y: Math.random() * this.H, r: Math.random() * 1.1 + 0.3, p: Math.random() * Math.PI * 2, s: 0.5 + Math.random() * 1.5 });
+    }
+  }
+  accent() { return this.props.accent ?? '#8BA3FF'; }
+  drawLoop(t) {
+    const c = this.loopCanvas;
+    if (!c || !this.lw) return;
+    const ctx = c.getContext('2d');
+    const dpr = this.dpr || 1;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, this.lw, this.lh);
+    const cx = this.lw / 2, cy = this.lh * 0.34, Rx = this.lw * 0.438, Ry = this.lh * 0.30;
+    const P = (a) => ({ x: cx + Rx * Math.cos(a), y: cy + Ry * Math.sin(a), front: Math.sin(a) > 0 });
+    // loop path, depth-shaded
+    ctx.lineWidth = 1;
+    let prev = P(0);
+    for (let s = 1; s <= 140; s++) {
+      const q = P(s / 140 * Math.PI * 2);
+      ctx.strokeStyle = prev.front ? 'rgba(90,110,140,0.34)' : 'rgba(90,110,140,0.12)';
+      ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+      prev = q;
+    }
+    // traveling signal: a decreases so it passes stations left → center → right
+    const stations = [Math.PI - 0.7, Math.PI / 2, 0.7];
+    const period = 8400;
+    const a = Math.PI - ((t % period) / period) * Math.PI * 2; // starts at left edge of front arc
+    const dot = P(a);
+    if (!this.stGlow) this.stGlow = [0, 0, 0];
+    let activeStep = this.lastStep ?? 0;
+    stations.forEach((sa, i) => {
+      let dA = Math.abs(a - sa);
+      if (dA < 0.14) { this.stGlow[i] = 1; activeStep = i; }
+      this.stGlow[i] = Math.max(0, this.stGlow[i] - 0.008);
+      const p = P(sa);
+      // drop line to copy column
+      ctx.strokeStyle = `rgba(139,163,255,${0.15 + this.stGlow[i] * 0.5})`;
+      ctx.setLineDash([2, 5]);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y + 12); ctx.lineTo(p.x, this.lh - 6); ctx.stroke();
+      ctx.setLineDash([]);
+      // station node
+      const g = this.stGlow[i];
+      if (g > 0.01) {
+        const gr = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, 26);
+        gr.addColorStop(0, `rgba(139,163,255,${0.35 * g})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(p.x, p.y, 26, 0, 6.283); ctx.fill();
+      }
+      ctx.beginPath(); ctx.arc(p.x, p.y, 8, 0, 6.283);
+      ctx.strokeStyle = `rgba(76,99,210,${0.35 + g * 0.65})`; ctx.lineWidth = 1.2; ctx.stroke();
+      ctx.beginPath(); ctx.arc(p.x, p.y, 3, 0, 6.283);
+      ctx.fillStyle = g > 0.4 ? '#4C63D2' : '#B4C1D3'; ctx.fill();
+      ctx.lineWidth = 1;
+    });
+    // comet dot
+    for (let j = 0; j < 8; j++) {
+      const q = P(a + j * 0.035);
+      ctx.globalAlpha = (1 - j / 8) * (q.front ? 0.95 : 0.3);
+      ctx.fillStyle = j === 0 ? '#4C63D2' : '#8BA3FF';
+      ctx.beginPath(); ctx.arc(q.x, q.y, j === 0 ? 3.4 : 2.6 - j * 0.25, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    // step copy activation
+    if (this.stepsEl && activeStep !== this.lastStep) {
+      this.lastStep = activeStep;
+      Array.from(this.stepsEl.children).forEach((col, i) => {
+        col.style.opacity = i === activeStep ? 1 : 0.5;
+        const bar = col.querySelector('[data-bar]');
+        if (bar) bar.style.transform = i === activeStep ? 'scaleX(1)' : 'scaleX(0)';
+      });
+    }
+  }
+  absorb(pl, ix, iy) {
+    this.corePulse = 1;
+    this.ripples.push({ t0: this.elapsed, c: pl.tool.c });
+    this.waves.push({ t0: this.elapsed, x: ix, y: iy, c: pl.tool.c });
+    this.activeTool = pl.tool.name; this.activeUntil = this.elapsed + 3600;
+    this.tipUntil = this.elapsed + 2600;
+  }
+  accentRGB() {
+    const h = this.accent().replace('#', '');
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+  ringPoint(ring, a) {
+    const f = ring === 0 ? 1 : 0.6;
+    const roll = ring === 0 ? 0.16 : -0.34; // orbit inclinations
+    const x0 = Math.cos(a) * this.Rx * f, y0 = Math.sin(a) * this.Ry * f;
+    const cr = Math.cos(roll), sr = Math.sin(roll);
+    const x = x0 * cr - y0 * sr, y = x0 * sr + y0 * cr;
+    const depth = Math.sin(a); // 1 = front, -1 = back
+    const px = this.par.x, py = this.par.y;
+    return { x: this.cx + x + px * (14 + depth * 8), y: this.cy + y + py * (10 + depth * 6), depth };
+  }
+  toolPos(tool, rot) {
+    const dir = tool.ring === 0 ? 1 : -1;
+    const a = tool.a + rot * dir * (tool.ring === 0 ? 1 : 1.35);
+    return this.ringPoint(tool.ring, a);
+  }
+  draw(t) {
+    const ctx = this.canvas && this.canvas.getContext('2d');
+    if (!ctx || !this.W) return;
+    const dt = Math.min(t - this.last, 50); this.last = t; this.elapsed += dt;
+    const speed = this.props.speed ?? 1;
+    this.rot += dt * 0.000065 * speed;
+    const [ar, ag, ab] = this.accentRGB();
+    const A = (al) => `rgba(${ar},${ag},${ab},${al})`;
+    ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    ctx.clearRect(0, 0, this.W, this.H);
+    // nebula
+    let g = ctx.createRadialGradient(this.cx, this.cy, 0, this.cx, this.cy, this.Rx * 1.6);
+    g.addColorStop(0, A(0.07)); g.addColorStop(0.5, A(0.02)); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, this.W, this.H);
+    // stars
+    for (const s of this.stars) {
+      const tw = 0.25 + 0.75 * (0.5 + 0.5 * Math.sin(t * 0.001 * s.s + s.p));
+      ctx.globalAlpha = tw * 0.55;
+      ctx.fillStyle = '#B9CBDA';
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    // parallax easing + globe anchor
+    const pe = Math.min(1, dt * 0.004);
+    this.par.x += (this.parT.x - this.par.x) * pe;
+    this.par.y += (this.parT.y - this.par.y) * pe;
+    this.gx = this.cx + this.par.x * 8; this.gy = this.cy + this.par.y * 6;
+    // inclined orbit rings, depth-shaded segments
+    ctx.lineWidth = 1;
+    for (const ring of [0, 1]) {
+      let prev = this.ringPoint(ring, 0);
+      for (let s = 1; s <= 96; s++) {
+        const q = this.ringPoint(ring, s / 96 * Math.PI * 2);
+        ctx.strokeStyle = `rgba(255,255,255,${(0.04 + 0.10 * ((prev.depth + 1) / 2)).toFixed(3)})`;
+        ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+        prev = q;
+      }
+    }
+    // spawn pulses
+    if (this.elapsed > this.nextSpawn) {
+      this.nextSpawn = this.elapsed + 4600 / speed;
+      const order = [4, 3, 2, 0, 7, 1, 5, 6];
+      const tool = this.tools[order[this.pulseIdx % order.length]];
+      this.pulses.push({ tool, t0: this.elapsed, dur: 1400 });
+      this.pulseIdx++;
+    }
+    // beams + chips
+    const chips = this.chips ? this.chips.children : [];
+    for (let i = 0; i < this.tools.length; i++) {
+      const tool = this.tools[i];
+      const p = this.toolPos(tool, this.rot);
+      const active = this.activeTool === tool.name && this.elapsed < this.activeUntil;
+      // faint beam to core
+      ctx.beginPath();
+      const mx = (p.x + this.gx) / 2, my = (p.y + this.gy) / 2 - 26;
+      ctx.moveTo(p.x, p.y); ctx.quadraticCurveTo(mx, my, this.gx, this.gy);
+      ctx.strokeStyle = active ? A(0.4) : A(0.055);
+      ctx.lineWidth = active ? 1.4 : 1; ctx.stroke();
+      const chip = chips[i];
+      if (chip) {
+        const hovered = this.hoverIdx === i || this.pinIdx === i;
+        const sc = (0.78 + 0.26 * ((p.depth + 1) / 2)) * (hovered ? 1.12 : 1);
+        chip.style.transform = `translate(-50%,-50%) translate(${p.x - this.ox}px,${p.y - this.oy}px) scale(${sc})`;
+        let op = p.depth < 0 && !hovered ? 0.45 : 1;
+        if (p.depth < 0 && !hovered) { // globe occlusion when passing behind
+          const dC = Math.hypot(p.x - this.gx, p.y - this.gy);
+          const oc = Math.min(1, Math.max(0, (dC - (this.globeR - 14)) / 64));
+          op = 0.06 + 0.39 * oc;
+        }
+        chip.style.opacity = op;
+        const autoTip = (this.props.showInsights ?? false) && active && this.elapsed < this.tipUntil && this.hoverIdx === -1 && this.pinIdx === -1;
+        chip.style.zIndex = hovered || autoTip ? 7 : (p.depth < 0 ? 2 : 5);
+        const glow = active || hovered;
+        if (glow !== chip._act) {
+          chip._act = glow;
+          chip.style.borderColor = glow ? A(0.6) : 'rgba(255,255,255,0.1)';
+          chip.style.boxShadow = glow ? `0 0 0 4px ${A(0.12)}, 0 8px 30px -8px ${A(0.5)}` : 'none';
+        }
+        const tip = chip.querySelector('[data-tip]');
+        const showTip = hovered || autoTip;
+        if (showTip !== chip._tip) {
+          chip._tip = showTip;
+          tip.style.opacity = showTip ? 1 : 0;
+          tip.style.transform = showTip ? 'translate(-50%,0)' : 'translate(-50%,4px)';
+        }
+      }
+    }
+    // pulses: charge-up at tool → comet streak to the globe rim
+    const drawPulse = (pl) => {
+      const k = (this.elapsed - pl.t0) / pl.dur;
+      const p = this.toolPos(pl.tool, this.rot);
+      const dxT = p.x - this.gx, dyT = p.y - this.gy, dT = Math.hypot(dxT, dyT) || 1;
+      const ix = this.gx + dxT / dT * this.globeR * 0.94, iy = this.gy + dyT / dT * this.globeR * 0.94;
+      if (k < 0.28) {
+        const c = k / 0.28;
+        ctx.beginPath(); ctx.arc(p.x, p.y, 30 - 17 * c, 0, 6.283);
+        ctx.strokeStyle = this.hexA(pl.tool.c, 0.12 + 0.55 * c); ctx.lineWidth = 1.2; ctx.stroke();
+        return { ix, iy, done: false };
+      }
+      const u0 = (k - 0.28) / 0.72;
+      const e = u0 < 0.5 ? 2 * u0 * u0 : 1 - Math.pow(-2 * u0 + 2, 2) / 2;
+      const mx = (p.x + ix) / 2, my = (p.y + iy) / 2 - 26;
+      const bez = (u) => {
+        const w = 1 - u;
+        return [w * w * p.x + 2 * w * u * mx + u * u * ix, w * w * p.y + 2 * w * u * my + u * u * iy];
+      };
+      for (let j = 0; j < 11; j++) {
+        const u = Math.max(0, e - j * 0.026);
+        const [x, y] = bez(u);
+        ctx.globalAlpha = (1 - j / 11) * 0.9;
+        ctx.fillStyle = j === 0 ? '#F0F4FF' : pl.tool.c;
+        ctx.beginPath(); ctx.arc(x, y, j === 0 ? 2.8 : Math.max(0.4, 2.2 - j * 0.17), 0, 6.283); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      return { ix, iy, done: k >= 1 };
+    };
+    // back pulses draw BEFORE the globe (occluded by it)
+    for (const pl of this.pulses) {
+      if (this.toolPos(pl.tool, this.rot).depth < 0) {
+        const r = drawPulse(pl);
+        if (r.done) { this.absorb(pl, r.ix, r.iy); pl.dead = true; }
+      }
+    }
+    // particle globe — fine speckle, dense rim, soft blooms, precessing axis
+    this.corePulse = Math.max(0, this.corePulse - dt / 900);
+    const R = 82 * (1 + 0.02 * Math.sin(t * 0.0012) + this.corePulse * 0.05);
+    this.globeR = R;
+    g = ctx.createRadialGradient(this.gx, this.gy, R * 0.4, this.gx, this.gy, R * 2.3);
+    g.addColorStop(0, A(0.10 + this.corePulse * 0.14)); g.addColorStop(0.55, A(0.04)); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(this.gx, this.gy, R * 2.3, 0, 6.283); ctx.fill();
+    g = ctx.createRadialGradient(this.gx - R * 0.25, this.gy - R * 0.3, 0, this.gx, this.gy, R);
+    g.addColorStop(0, 'rgba(120,160,175,0.07)'); g.addColorStop(1, 'rgba(120,160,175,0.02)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(this.gx, this.gy, R, 0, 6.283); ctx.fill();
+    const phi = t * 0.00016 * speed + this.par.x * 0.12;
+    const tilt = -0.42 + 0.10 * Math.sin(t * 0.00005) + this.par.y * 0.07;
+    const cph = Math.cos(phi), sph = Math.sin(phi), ct = Math.cos(tilt), st = Math.sin(tilt);
+    const bloomCols = [A(0.5), 'rgba(139,163,255,0.4)', 'rgba(224,164,200,0.32)', A(0.4), 'rgba(139,163,255,0.32)', A(0.35)];
+    for (const [bx, by, bz, br, bi] of this.blooms) {
+      const x1 = bx * cph + bz * sph, z1 = -bx * sph + bz * cph;
+      const x2 = x1 * ct - by * st, y2 = x1 * st + by * ct;
+      const sx = this.gx + x2 * R, sy = this.gy + y2 * R;
+      const front = (z1 + 1) / 2, al = 0.15 + front * 0.55;
+      g = ctx.createRadialGradient(sx, sy, 0, sx, sy, br);
+      g.addColorStop(0, bloomCols[bi]); g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.globalAlpha = al;
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(sx, sy, br, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    // dot speckle + absorption waves radiating from pulse impacts
+    this.waves = this.waves.filter(w => this.elapsed - w.t0 < 950);
+    // soft brand-color patch glow at each impact point (fades with the wave)
+    for (const w of this.waves) {
+      const wr = (this.elapsed - w.t0) / 950;
+      g = ctx.createRadialGradient(w.x, w.y, 0, w.x, w.y, 40);
+      g.addColorStop(0, this.hexA(w.c, 0.32 * (1 - wr))); g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(w.x, w.y, 40, 0, 6.283); ctx.fill();
+    }
+    const acc = this.accent();
+    for (const [px, py, pz, sz, jit] of this.sphere) {
+      const x1 = px * cph + pz * sph, z1 = -px * sph + pz * cph;
+      const x2 = x1 * ct - py * st, y2 = x1 * st + py * ct;
+      const sx = this.gx + x2 * R, sy = this.gy + y2 * R;
+      const front = (z1 + 1) / 2;
+      const tw = 0.75 + 0.25 * Math.sin(t * 0.0016 + jit * 6.283);
+      let bonus = 0, waveCol = null;
+      for (const w of this.waves) {
+        const wr = (this.elapsed - w.t0) / 950;
+        const db = Math.abs(Math.hypot(sx - w.x, sy - w.y) - wr * R * 2.1);
+        if (db < 28) { const b = 0.55 * (1 - wr) * (1 - db / 28); if (b > bonus) waveCol = w.c; bonus += b; }
+      }
+      ctx.globalAlpha = Math.min(1, (0.10 + front * 0.42) * tw + this.corePulse * front * 0.12 + bonus * (0.3 + front * 0.7));
+      ctx.fillStyle = (bonus > 0.14 && waveCol) ? waveCol : (jit > 0.86 ? acc : (jit > 0.72 ? '#C6D8E4' : '#8FA6B5'));
+      const d = sz * (0.7 + front * 0.5);
+      ctx.fillRect(sx - d / 2, sy - d / 2, d, d);
+    }
+    ctx.globalAlpha = 1;
+    // front pulses draw OVER the globe
+    for (const pl of this.pulses) {
+      if (!pl.dead && this.toolPos(pl.tool, this.rot).depth >= 0) {
+        const r = drawPulse(pl);
+        if (r.done) { this.absorb(pl, r.ix, r.iy); pl.dead = true; }
+      }
+    }
+    this.pulses = this.pulses.filter(pl => !pl.dead);
+    // impact ripples ride on top
+    this.ripples = this.ripples.filter(r => {
+      const k = (this.elapsed - r.t0) / 1300;
+      if (k >= 1) return false;
+      ctx.beginPath(); ctx.arc(this.gx, this.gy, this.globeR + 4 + k * 90, 0, 6.283);
+      ctx.strokeStyle = r.c ? this.hexA(r.c, 0.26 * (1 - k)) : A(0.32 * (1 - k)); ctx.lineWidth = 1.2; ctx.stroke();
+      return true;
+    });
+  }
+}
+function boot(){
+  var root=document.getElementById('velorb-cortex');
+  if(!root) return;
+  var c=new Component({accent:'#8BA3FF',speed:1,showInsights:false});
+  var vals=c.renderVals();
+  root.querySelectorAll('[data-ref]').forEach(function(el){
+    var f=vals[el.getAttribute('data-ref')];
+    if(typeof f==='function') f(el);
+  });
+  c.componentDidMount();
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot);
+else boot();
+})();
+</script>
+<!-- ===== END VELORB REDESIGN ===== -->
 
 <!-- ================= 5 · PRODUCT EXPERIENCE ================= -->
 <section class="section" id="workspace" style="padding-top:40px">
@@ -1636,431 +2153,7 @@ footer{background:#F4F5F0}.powered::before{background:var(--accent-primary)}
   // fallback: if IntersectionObserver never fires (fails / slow), reveal everything
   setTimeout(() => $$('.reveal').forEach(el => el.classList.add('in')), 1000);
 
-          /* ==========================================================
-     CORTEX, LIVE — orbital engine v4.
-     Evidence arrives as an iOS-style notification banner that
-     springs in, holds, then condenses into the Orbital-O.
-     Story lines stay clean; hovering a line quietly lights its
-     source tool and flow path in the orbit.
-     ========================================================== */
-  const hviz = $('#hviz'), orbit = $('#orbit'), orbitSvg = $('#orbitSvg');
-  const planetWrap = $('#planetWrap');
-  const chips = $$('.chip');
-  const cxOut = $('#cxOut');
-  const cxThread = $('#cxThread');
-  const cxPoints = $$('.cx-point');
-  const cxTyping = $('#cxTyping');
-  const cxStoryWrap = $('#cxStoryWrap');
-  const cxHand = $('#cxHand');
-  const cxCount = $('#cxCount');
-  const reasonEl = $('#hreason');
-  const scrollThread = () => { if(cxThread) cxThread.scrollTop = cxThread.scrollHeight; };
-  const ringPath = $('#ringPath');
-  const ringDots = $('#ringDots');
-  const NS = 'http://www.w3.org/2000/svg';
-
-  /* ---- curved flow paths from each tool to the Cortex core ---- */
-  const flows = {};
-  function buildPaths(){
-    orbitSvg.innerHTML = '';
-    const ob = orbit.getBoundingClientRect();
-    orbitSvg.setAttribute('viewBox', `0 0 ${ob.width} ${ob.height}`);
-    const pw = planetWrap.getBoundingClientRect();
-    const px = pw.left - ob.left + pw.width/2, py = pw.top - ob.top + pw.height/2;
-    const R = Math.min(pw.width,pw.height) * .255;
-    chips.forEach((chip,i) => {
-      const cb = chip.querySelector('.cbox').getBoundingClientRect();
-      const cx = cb.left - ob.left + cb.width/2, cy = cb.top - ob.top + cb.height/2;
-      const dx = px - cx, dy = py - cy, dist = Math.hypot(dx,dy);
-      const ex = px - dx/dist*R, ey = py - dy/dist*R;
-      const mx = (cx+ex)/2, my = (cy+ey)/2;
-      const side = i % 2 ? 1 : -1, k = dist * 0.16 * side;
-      const qx = mx - dy/dist*k, qy = my + dx/dist*k;
-      const p = document.createElementNS(NS,'path');
-      p.setAttribute('d', `M${cx.toFixed(1)},${cy.toFixed(1)} Q${qx.toFixed(1)},${qy.toFixed(1)} ${ex.toFixed(1)},${ey.toFixed(1)}`);
-      p.setAttribute('class','flow-path lit');
-      orbitSvg.appendChild(p);
-      flows[chip.dataset.chip] = {el:p, len:p.getTotalLength()};
-    });
-  }
-
-  /* ---- rAF engine: ambient particles + ring orbiters ---- */
-  let particles = [], running = false, lastT = 0;
-  const MAX_P = 34;
-  function spawn(name, opts={}){
-    if(reduced) return;
-    const f = flows[name]; if(!f || particles.length >= MAX_P) return;
-    const c = document.createElementNS(NS,'circle');
-    c.setAttribute('r', opts.r || 2.2);
-    c.setAttribute('class','fp' + (opts.bright ? ' bright' : ''));
-    orbitSvg.appendChild(c);
-    particles.push({c, f, t:0, dur: opts.dur || (1300 + Math.random()*500)});
-  }
-  const easeIO = t => t < .5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
-  function tick(now){
-    if(!running) return;
-    const dt = Math.min(now - lastT, 50); lastT = now;
-    for(let i = particles.length-1; i >= 0; i--){
-      const p = particles[i]; p.t += dt/p.dur;
-      if(p.t >= 1){ p.c.remove(); particles.splice(i,1); continue; }
-      const pt = p.f.el.getPointAtLength(easeIO(p.t) * p.f.len);
-      p.c.setAttribute('cx', pt.x); p.c.setAttribute('cy', pt.y);
-      p.c.setAttribute('opacity', p.t < .12 ? p.t/.12 : p.t > .86 ? (1-p.t)/.14 : 1);
-    }
-    const rl = ringPath.getTotalLength();
-    orbDots.forEach((d,i) => {
-      d.t = (d.t + dt/6200) % 1;
-      const pt = ringPath.getPointAtLength(((d.t + i/orbDots.length) % 1) * rl);
-      d.c.setAttribute('cx', pt.x); d.c.setAttribute('cy', pt.y);
-    });
-    requestAnimationFrame(tick);
-  }
-  const orbDots = [0,1,2].map(() => {
-    const c = document.createElementNS(NS,'circle');
-    c.setAttribute('r','2.4'); c.setAttribute('class','fp bright');
-    ringDots.appendChild(c);
-    return {c, t: Math.random()};
-  });
-  let engineStarted = false;
-  function startEngine(){
-    if(running || reduced) return;
-    if(!engineStarted){ engineStarted = true; const sn = $('#staticNotif'); if(sn) sn.remove(); }
-    running = true; lastT = performance.now();
-    requestAnimationFrame(tick);
-  }
-  function stopEngine(){ running = false; }
-
-  let ambientTimer = null;
-  const names = chips.map(c => c.dataset.chip);
-  function startAmbientStream(){
-    clearInterval(ambientTimer);
-    ambientTimer = setInterval(() => {
-      if(!running) return;
-      spawn(names[Math.floor(Math.random()*names.length)]);
-    }, 340);
-  }
-
-  /* ---- iOS notification: pops up at its source chip → condenses into Cortex ---- */
-  function placeNotif(el, chipName){
-    const chip = chips.find(c => c.dataset.chip === chipName);
-    if(!chip) return;
-    const ob = orbit.getBoundingClientRect();
-    const cr = chip.getBoundingClientRect();
-    const cx = cr.left - ob.left + cr.width/2;
-    const cyTop = cr.top - ob.top, cyBot = cr.bottom - ob.top;
-    const w = el.offsetWidth, h = el.offsetHeight;
-    const padX = 12, padTop = 12, padBottom = 66; // keep clear of the reasoning pill
-    let left = Math.max(padX, Math.min(cx - w/2, ob.width - w - padX));
-    let top = cyTop - 14 - h;
-    if(top < padTop) top = cyBot + 14;
-    top = Math.max(padTop, Math.min(top, ob.height - h - padBottom));
-    el.style.left = left + 'px';
-    el.style.top = top + 'px';
-  }
-  let activeNotif = null;
-  function showNotif(step, onAbsorbed){
-    if(activeNotif){ activeNotif.remove(); activeNotif = null; }
-    const chip = chips.find(c => c.dataset.chip === step.chip);
-    const iconSvg = chip ? chip.querySelector('.cbox svg').outerHTML : '';
-    const el = document.createElement('div');
-    el.className = 'notif';
-    el.innerHTML = `<span class="nicon">${iconSvg}</span>
-      <span class="nmain">
-        <span class="nrow"><span class="napp">${step.app}</span><span class="ntime">now</span></span>
-        <span class="nbody">${step.text}</span>
-      </span>`;
-    orbit.appendChild(el);
-    placeNotif(el, step.chip);
-    requestAnimationFrame(() => el.classList.add('enter'));
-    activeNotif = el;
-    // hold, then condense toward the Cortex core
-    setTimeout(() => {
-      if(el !== activeNotif) return;
-      const pw = planetWrap.getBoundingClientRect();
-      const nr = el.getBoundingClientRect();
-      const dx = (pw.left + pw.width/2) - (nr.left + nr.width/2);
-      const dy = (pw.top + pw.height/2) - (nr.top + nr.height/2);
-      el.classList.remove('enter');
-      el.classList.add('absorb');
-      requestAnimationFrame(() => {
-        el.style.transform = `translate(${dx}px,${dy}px) scale(.12)`;
-        el.style.opacity = '0';
-      });
-      setTimeout(() => {
-        if(el === activeNotif) activeNotif = null;
-        el.remove();
-        onAbsorbed && onAbsorbed();
-      }, 560);
-    }, 1200);
-  }
-
-  /* ---- insights ↔ orbit: hover an insight, light the tool it came from ---- */
-  function highlightSource(name, on){
-    const chip = chips.find(c => c.dataset.chip === name);
-    const flow = flows[name];
-    if(chip) chip.classList.toggle('hot', on);
-    if(flow) flow.el.classList.toggle('hotp', on);
-  }
-  cxPoints.forEach(l => {
-    const srcs = (l.dataset.src || '').split(' ').filter(Boolean);
-    l.addEventListener('mouseenter', () => srcs.forEach(n => highlightSource(n, true)));
-    l.addEventListener('mouseleave', () => srcs.forEach(n => highlightSource(n, false)));
-  });
-
-  /* ==========================================================
-     THE STORY — Cortex writes the account back to you by hand,
-     every claim carrying the signal it came from.
-     ========================================================== */
-  const CITES = {
-    '1':{chip:'gmail', app:'Gmail', time:'Today 10:12', who:'R. Feld · Acme counsel',
-      q:'“Send over your standard DPA — we can’t countersign until security clears it.”'},
-    '2':{chip:'teams', app:'Teams', time:'Today 11:05', who:'J. Lee · VP Operations',
-      q:'Added to the Thursday QBR by the champion, three weeks into the cycle.'},
-    '3':{chip:'gong',  app:'Gong',  time:'Today 12:20', who:'Renewal call · 48 min',
-      q:'“If the EMEA rollout lands we’d need roughly forty more seats.”'},
-    '4':{chip:'slack', app:'Slack', time:'Yesterday 16:40', who:'#acme-account',
-      q:'“Heads up — Maya moves to the platform team next quarter.”'}
-  };
-  const STORY = [
-    {t:'Acme opened the quarter as a routine renewal. It is not one any more.'},
-    {t:' Ops and IT joined the room'}, {c:'2'},
-    {t:', the questions moved to more seats and a multi-region rollout'}, {c:'3'},
-    {t:', and legal is holding the DPA until security signs off'}, {c:'1'},
-    {t:'. The catch is timing: the champion who has carried this since March leaves the account next quarter'}, {c:'4'},
-    {t:'. So the window is this week — send the security package, then use Thursday’s call to hand the whole story to the new VP of Ops.'}
-  ];
-
-  const cxPop = document.createElement('div');
-  cxPop.className = 'cx-pop';
-  if(cxOut) cxOut.appendChild(cxPop);
-  const chipSvg = name => {
-    const c = chips.find(x => x.dataset.chip === name);
-    return c ? c.querySelector('svg').outerHTML : '';
-  };
-  let popRef = null;
-  function showCite(ref){
-    const d = CITES[ref.dataset.ref];
-    if(!d) return;
-    if(popRef && popRef !== ref) popRef.classList.remove('on');
-    popRef = ref; ref.classList.add('on');
-    highlightSource(d.chip, true);
-    cxPop.innerHTML = `<span class="cx-pop-h"><span class="cx-pop-ico">${chipSvg(d.chip)}</span>
-        <span class="cx-pop-app">${d.app}</span><span class="cx-pop-time">${d.time}</span></span>
-      <span class="cx-pop-q">${d.q}</span>
-      <span class="cx-pop-who">${d.who}</span>`;
-    const host = cxOut.getBoundingClientRect(), r = ref.getBoundingClientRect();
-    const w = cxPop.offsetWidth, h = cxPop.offsetHeight;
-    const left = Math.min(Math.max(r.left - host.left + r.width/2 - w/2, 10), host.width - w - 10);
-    let top = r.top - host.top - h - 10;
-    if(top < 8) top = r.bottom - host.top + 10;
-    cxPop.style.left = left + 'px';
-    cxPop.style.top = top + 'px';
-    cxPop.classList.add('show');
-  }
-  function hideCite(){
-    cxPop.classList.remove('show');
-    if(popRef){
-      const d = CITES[popRef.dataset.ref];
-      if(d) highlightSource(d.chip, false);
-      popRef.classList.remove('on');
-      popRef = null;
-    }
-  }
-  cxHand && cxHand.addEventListener('mouseover', e => {
-    const ref = e.target.closest('.cx-ref');
-    if(ref) showCite(ref);
-  });
-  cxHand && cxHand.addEventListener('mouseout', e => {
-    if(e.target.closest('.cx-ref')) hideCite();
-  });
-  cxHand && cxHand.addEventListener('click', e => {
-    const ref = e.target.closest('.cx-ref');
-    if(ref) (popRef === ref ? hideCite() : showCite(ref));
-  });
-  addEventListener('click', e => { if(!e.target.closest('.cx-hand')) hideCite(); });
-
-  const storyTokens = (() => {
-    const out = [];
-    STORY.forEach(part => {
-      if(part.c){ out.push({c:part.c}); return; }
-      (part.t.match(/\s*\S+/g) || []).forEach(w => out.push({w}));
-    });
-    return out;
-  })();
-  function makeToken(tk){
-    if(tk.w) return document.createTextNode(tk.w);
-    const s = document.createElement('sup');
-    s.className = 'cx-ref'; s.textContent = tk.c; s.dataset.ref = tk.c;
-    s.setAttribute('role','button'); s.tabIndex = 0;
-    s.setAttribute('aria-label', `Source ${tk.c}`);
-    return s;
-  }
-  let writeTimers = [];
-  function clearWrite(){ writeTimers.forEach(clearTimeout); writeTimers = []; }
-  function writeStory(instant){
-    clearWrite(); hideCite();
-    cxHand.textContent = '';
-    if(instant){
-      storyTokens.forEach(tk => cxHand.appendChild(makeToken(tk)));
-      return;
-    }
-    const pen = document.createElement('i');
-    pen.className = 'cx-pen';
-    cxHand.appendChild(pen);
-    storyTokens.forEach((tk,i) => {
-      writeTimers.push(setTimeout(() => {
-        cxHand.insertBefore(makeToken(tk), pen);
-        scrollThread();
-        if(i === storyTokens.length - 1)
-          writeTimers.push(setTimeout(() => pen.remove(), 1200));
-      }, 120 + i*44));
-    });
-  }
-  const STORY_MS = 120 + storyTokens.length*44 + 1400;
-
-  /* ---- narrative beats: notification → absorbed → insight remembered ---- */
-  const seq = [
-    {chip:'gmail', app:'Gmail', text:'Legal requested the DPA', reason:'Security is now the primary blocker', point:0},
-    {chip:'teams', app:'Teams', text:'VP of Operations added to the QBR', reason:'A new decision-maker just entered', point:1},
-    {chip:'gong',  app:'Gong',  text:'Seat expansion raised on the renewal call', reason:'This renewal is becoming an expansion', point:2},
-    {chip:'slack', app:'Slack', text:'Champion announced a role change', reason:'The action window is closing', point:3}
-  ];
-  let stepTimers = [];
-  const at = (t,fn) => stepTimers.push(setTimeout(fn,t));
-  function clearSteps(){ stepTimers.forEach(clearTimeout); stepTimers = []; }
-
-  function fire(step, boost){
-    chips.forEach(c => c.classList.remove('hot'));
-    Object.values(flows).forEach(f => f.el.classList.remove('hotp'));
-    highlightSource(step.chip, true);
-    for(let i = 0; i < (boost ? 5 : 3); i++)
-      at(200 + i*180, () => spawn(step.chip, {bright:true, r:2.6, dur:1250}));
-    showNotif(step, () => {
-      planetWrap.classList.remove('pulse'); void planetWrap.offsetWidth; planetWrap.classList.add('pulse');
-      reasonEl.style.opacity = 0;
-      setTimeout(() => { reasonEl.textContent = step.reason; reasonEl.style.opacity = 1; }, 240);
-      const pt = cxPoints[step.point];
-      if(pt){
-        pt.classList.add('on','hl');
-        setTimeout(() => pt.classList.remove('hl'), 1500);
-      }
-      if(cxCount) cxCount.textContent = `${step.point + 1} of 4 signals read`;
-      scrollThread();
-      setTimeout(() => highlightSource(step.chip, false), 900);
-    });
-  }
-
-  const TYPE_MS = 900;
-  let loopTimer = null;
-  const BEAT = 2050;
-  function runCycle(boost){
-    clearSteps(); clearWrite(); clearTimeout(loopTimer);
-    cxPoints.forEach(p => p.classList.remove('on','hl'));
-    if(cxTyping) cxTyping.classList.remove('on');
-    if(cxStoryWrap) cxStoryWrap.classList.remove('on');
-    cxHand.textContent = '';
-    if(cxCount) cxCount.textContent = 'reading 4 sources';
-    if(boost) hviz.classList.add('focused');
-    let t = 400;
-    seq.forEach((step,i) => { at(t, () => fire(step, boost && i === 0)); t += BEAT; });
-    if(boost) at(t, () => hviz.classList.remove('focused'));
-    at(t + 200, () => {
-      if(cxCount) cxCount.textContent = '4 signals · connected';
-      if(cxTyping) cxTyping.classList.add('on');
-      scrollThread();
-    });
-    at(t + 200 + TYPE_MS, () => {
-      if(cxTyping) cxTyping.classList.remove('on');
-      if(cxStoryWrap) cxStoryWrap.classList.add('on');
-      writeStory(false);
-      scrollThread();
-    });
-    loopTimer = setTimeout(() => runCycle(false), t + 200 + TYPE_MS + STORY_MS + 5200);
-  }
-
-  /* ---- lifecycle ---- */
-  let resizeT = null;
-  addEventListener('resize', () => {
-    clearTimeout(resizeT);
-    resizeT = setTimeout(() => {
-      particles.forEach(p => p.c.remove()); particles = [];
-      buildPaths();
-    }, 150);
-  }, {passive:true});
-
-  const heroIO = new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting){ startEngine(); if(!loopTimer) runCycle(false); startAmbientStream(); }
-    else { stopEngine(); clearTimeout(loopTimer); loopTimer = null; clearInterval(ambientTimer); clearSteps(); clearWrite(); }
-  }), {threshold:.05});
-
-  buildPaths();
-  const staticNotif = $('#staticNotif');
-  if(staticNotif) placeNotif(staticNotif, 'gmail');
-  if(reduced){
-    cxPoints.forEach(l => l.classList.add('on'));
-    if(cxCount) cxCount.textContent = '4 signals · connected';
-    if(cxStoryWrap) cxStoryWrap.classList.add('on');
-    writeStory(true);
-    Object.values(flows).forEach(f => f.el.classList.add('lit'));
-  } else {
-    startEngine();
-    startAmbientStream();
-    runCycle(false);
-    heroIO.observe(hviz);
-  }
-
-  $('#watchBtn').addEventListener('click', () => {
-    document.querySelector('#workspace').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'start'});
-  });
-
-/* ---------- integration marquee: official brand marks ---------- */
-  const OFFICIAL = {
-      'HubSpot':{p:'M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z',c:'#FF7A59'},
-      'Gmail':{p:'M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z',c:'#EA4335'},
-      'Zoom':{p:'M5.033 14.649H.743a.74.74 0 0 1-.686-.458.74.74 0 0 1 .16-.808L3.19 10.41H1.06A1.06 1.06 0 0 1 0 9.35h3.957c.301 0 .57.18.686.458a.74.74 0 0 1-.161.808L1.51 13.59h2.464c.585 0 1.06.475 1.06 1.06zM24 11.338c0-1.14-.927-2.066-2.066-2.066-.61 0-1.158.265-1.537.686a2.061 2.061 0 0 0-1.536-.686c-1.14 0-2.066.926-2.066 2.066v3.311a1.06 1.06 0 0 0 1.06-1.06v-2.251a1.004 1.004 0 0 1 2.013 0v2.251c0 .586.474 1.06 1.06 1.06v-3.311a1.004 1.004 0 0 1 2.012 0v2.251c0 .586.475 1.06 1.06 1.06zM16.265 12a2.728 2.728 0 1 1-5.457 0 2.728 2.728 0 0 1 5.457 0zm-1.06 0a1.669 1.669 0 1 0-3.338 0 1.669 1.669 0 0 0 3.338 0zm-4.82 0a2.728 2.728 0 1 1-5.458 0 2.728 2.728 0 0 1 5.457 0zm-1.06 0a1.669 1.669 0 1 0-3.338 0 1.669 1.669 0 0 0 3.338 0z',c:'#0B5CFF'},
-      'Google Drive':{p:'M12.01 1.485c-2.082 0-3.754.02-3.743.047.01.02 1.708 3.001 3.774 6.62l3.76 6.574h3.76c2.081 0 3.753-.02 3.742-.047-.005-.02-1.708-3.001-3.775-6.62l-3.76-6.574zm-4.76 1.73a789.828 789.861 0 0 0-3.63 6.319L0 15.868l1.89 3.298 1.885 3.297 3.62-6.335 3.618-6.33-1.88-3.287C8.1 4.704 7.255 3.22 7.25 3.214zm2.259 12.653-.203.348c-.114.198-.96 1.672-1.88 3.287a423.93 423.948 0 0 1-1.698 2.97c-.01.026 3.24.042 7.222.042h7.244l1.796-3.157c.992-1.734 1.85-3.23 1.906-3.323l.104-.167h-7.249z',c:'#4285F4'},
-      'Notion':{p:'M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z',c:'#111111'},
-      'Zendesk':{p:'M12.914 2.904V16.29L24 2.905H12.914zM0 2.906C0 5.966 2.483 8.45 5.543 8.45s5.542-2.484 5.543-5.544H0zm11.086 4.807L0 21.096h11.086V7.713zm7.37 7.84c-3.063 0-5.542 2.48-5.542 5.543H24c0-3.06-2.48-5.543-5.543-5.543z',c:'#03363D'},
-      'Intercom':{p:'M21 0H3C1.343 0 0 1.343 0 3v18c0 1.658 1.343 3 3 3h18c1.658 0 3-1.342 3-3V3c0-1.657-1.342-3-3-3zm-5.801 4.399c0-.44.36-.8.802-.8.44 0 .8.36.8.8v10.688c0 .442-.36.801-.8.801-.443 0-.802-.359-.802-.801V4.399zM11.2 3.994c0-.44.357-.799.8-.799s.8.359.8.799v11.602c0 .44-.357.8-.8.8s-.8-.36-.8-.8V3.994zm-4 .405c0-.44.359-.8.799-.8.443 0 .802.36.802.8v10.688c0 .442-.36.801-.802.801-.44 0-.799-.359-.799-.801V4.399zM3.199 6c0-.442.36-.8.802-.8.44 0 .799.358.799.8v7.195c0 .441-.359.8-.799.8-.443 0-.802-.36-.802-.8V6zM20.52 18.202c-.123.105-3.086 2.593-8.52 2.593-5.433 0-8.397-2.486-8.521-2.593-.335-.288-.375-.792-.086-1.128.285-.334.79-.375 1.125-.09.047.041 2.693 2.211 7.481 2.211 4.848 0 7.456-2.186 7.479-2.207.334-.289.839-.25 1.128.086.289.336.25.84-.086 1.128zm.281-5.007c0 .441-.36.8-.801.8-.441 0-.801-.36-.801-.8V6c0-.442.361-.8.801-.8.441 0 .801.357.801.8v7.195z',c:'#1F8DED'},
-      'Jira':{p:'M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.758a1.001 1.001 0 0 0-1.001-1.001zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.001 1.001 0 0 0 23.013 0Z',c:'#0052CC'}
-    };
-
-    const CUSTOM = {
-      'Slack':`<svg viewBox="0 0 122.8 122.8"><path fill="#E01E5A" d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zM32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z"/><path fill="#36C5F0" d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zM45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z"/><path fill="#2EB67D" d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zM90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z"/><path fill="#ECB22E" d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zM77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z"/></svg>`,
-      'Salesforce':`<svg viewBox="0 0 24 24"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"/></svg>`,
-      'Microsoft Teams':`<svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="14" height="14" rx="3" fill="#5059C9"/><path fill="#fff" d="M5 8.6h7v2H9.1v6H6.9v-6H5v-2z"/><circle cx="19" cy="8" r="2.6" fill="#7B83EB"/><path fill="#7B83EB" d="M15.8 12.2h5.1c.9 0 1.6.7 1.6 1.6v3.4a4.1 4.1 0 0 1-6.7 3.2V12.2z" opacity=".95"/></svg>`,
-      'Outlook':`<svg viewBox="0 0 24 24"><rect x="1" y="4" width="13.5" height="16" rx="2.5" fill="#0F6CBD"/><circle cx="7.8" cy="12" r="3.6" fill="none" stroke="#fff" stroke-width="1.9"/><path fill="#28A8EA" d="M15.5 8h6.3c.7 0 1.2.5 1.2 1.2v8.6L16.6 13z"/><path fill="#0F6CBD" d="M23 9.4v8.4c0 .7-.5 1.2-1.2 1.2h-5.3v-6z" opacity=".85"/></svg>`,
-      'Microsoft 365':`<svg viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" fill="#F25022"/><rect x="13" y="2" width="9" height="9" fill="#7FBA00"/><rect x="2" y="13" width="9" height="9" fill="#00A4EF"/><rect x="13" y="13" width="9" height="9" fill="#FFB900"/></svg>`,
-      'Gong':`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4" fill="#8039DF"/><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="2.3" fill="#fff"/></svg>`,
-      'Outreach':`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#5952FF" stroke-width="4.2"/><path d="M17.2 17.2 21.5 21.5" stroke="#5952FF" stroke-width="4" stroke-linecap="round"/></svg>`,
-      'Apollo':`<svg viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="5.5" fill="#111827"/><path fill="#FDCF41" d="M12 5.5 18.5 18h-3.6L12 12.2 9.1 18H5.5z"/></svg>`
-    };
-  const logoSvg = n => CUSTOM[n] ? CUSTOM[n]
-    : OFFICIAL[n] ? `<svg viewBox="0 0 24 24"><path fill="${OFFICIAL[n].c}" d="${OFFICIAL[n].p}"/></svg>`
-    : '';
-  const stack = ['Salesforce','HubSpot','Gmail','Outlook','Slack','Microsoft Teams','Zoom','Gong','Google Drive','Microsoft 365','Notion','Zendesk','Intercom','Apollo','Outreach','Jira'];
-  const fill = (el, arr) => {
-    const html = arr.map(n => `<span class="mlogo">${logoSvg(n)}${n}</span>`).join('');
-    el.innerHTML = html + html; // duplicate for seamless loop
-  };
-  fill($('#rowA'), stack.concat(stack.slice(0,4)));
-  // motif echo: every few seconds one logo emits a small signal point that rises
-  if(!reduced){
-    setInterval(() => {
-      const logos = $$('#rowA .mlogo').filter(l => {
-        const r = l.getBoundingClientRect();
-        return r.left > 40 && r.right < innerWidth - 40 && r.bottom > 0 && r.top < innerHeight;
-      });
-      if(!logos.length) return;
-      const src = logos[Math.floor(Math.random()*logos.length)];
-      const r = src.getBoundingClientRect(), host = src.closest('.marquee'), hr = host.getBoundingClientRect();
-      const dot = document.createElement('span');
-      dot.style.cssText = `position:absolute;left:${r.left - hr.left + r.width/2}px;top:${r.top - hr.top + r.height/2}px;width:5px;height:5px;border-radius:50%;background:var(--accent-primary);box-shadow:0 0 9px var(--glow-strong);pointer-events:none;transform:translate(-50%,-50%);transition:transform 1.1s var(--ease),opacity 1.1s var(--ease)`;
-      host.style.position = 'relative'; host.appendChild(dot);
-      requestAnimationFrame(() => { dot.style.transform = 'translate(-50%,-260%)'; dot.style.opacity = '0'; });
-      setTimeout(() => dot.remove(), 1200);
-    }, 2600);
-  }
+  /* [old hero + integrations engine removed — replaced by #velorb-cortex] */
 
   /* ==========================================================
      PRODUCT EXPERIENCE — evidence stream + markers + previews
