@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Demo — Velorb</title>
+<meta name="description" content="Book a 30-minute Velorb demo. See how living customer memory works with your team.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cellipse cx=%2750%27 cy=%2750%27 rx=%2745%27 ry=%2715%27 transform=%27rotate(-18 50 50)%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 opacity=%27.5%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2726%27 fill=%27%23E09A3E%27/%3E%3Cpath d=%27M90 45 70 58 55 64 39 68 25 70 15 69%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;650&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F5F0;
+  --surface:#FFFFFF;
+  --surface-muted:#F0F2EE;
+  --text:#131A22;
+  --muted:#4E5B69;
+  --faint:#8A97A5;
+  --teal:#0E9384;
+  --teal-bright:#14B8A6;
+  --teal-soft:rgba(20,184,166,.12);
+  --navy:#0A1628;
+  --border:#E2E8F0;
+  --border-subtle:#E6EBF1;
+  --nav-h:72px;
+  --font:'Geist',-apple-system,'Helvetica Neue',sans-serif;
+  --mono:'Geist Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.22,.61,.21,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+:focus-visible{outline:2px solid var(--teal-bright);outline-offset:3px;border-radius:8px}
+
+/* ── Nav (matches index.html) ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  border-bottom:1px solid transparent;
+  transition:background .3s,border-color .3s,backdrop-filter .3s;
+}
+.nav.scrolled{
+  background:rgba(244,245,240,.88);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-color:var(--border-subtle);
+}
+.nav-in{
+  max-width:1200px;margin:0 auto;padding:0 32px;height:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;flex-direction:column;gap:1px;flex-shrink:0;line-height:1.12}
+.brand-logo{height:46px;width:auto;display:block;object-fit:contain}
+.foot-brand .brand-logo{height:52px}
+.brand-cat{font-family:var(--mono);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:4px}
+.nav-links{display:flex;gap:2px}
+.nav-links a{
+  font-size:13px;font-weight:600;color:var(--muted);
+  padding:8px 14px;border-radius:999px;transition:background .15s,color .15s;
+}
+.nav-links a:hover{color:var(--text);background:#E3E5DC}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  height:46px;padding:0 18px;border-radius:10px;
+  font-size:13px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .18s var(--ease),background .18s,box-shadow .18s;
+}
+.btn-primary{background:var(--text);color:#fff;box-shadow:none}
+.btn-primary:hover{background:#272B23;box-shadow:0 10px 24px rgba(16,18,14,.14);transform:translateY(-1px)}
+@media(max-width:880px){.nav-links{display:none}}
+
+/* ── Split layout ── */
+.demo-shell{
+  max-width:1200px;margin:0 auto;
+  padding:calc(var(--nav-h) + 48px) 32px 64px;
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);
+  gap:48px;align-items:start;
+}
+.demo-copy{position:relative;padding:12px 0}
+.demo-rays{
+  position:absolute;left:-120px;top:50%;transform:translateY(-50%);
+  width:280px;height:420px;pointer-events:none;opacity:.55;
+}
+.demo-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:24px;
+}
+.demo-eyebrow span{width:14px;height:2px;border-radius:2px;background:var(--teal-bright);flex-shrink:0}
+.demo-copy h1{
+  font-size:clamp(36px,4.2vw,52px);font-weight:600;
+  letter-spacing:-.04em;line-height:1.02;color:var(--text);
+  max-width:11em;margin-bottom:36px;
+}
+.demo-points{list-style:none;display:flex;flex-direction:column;gap:22px;max-width:26em}
+.demo-points li{
+  display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;
+  font-size:15px;line-height:1.62;color:var(--muted);
+}
+.demo-points li svg{width:18px;height:18px;margin-top:3px;color:var(--teal);flex-shrink:0}
+.demo-points li b{font-weight:600;color:var(--text)}
+
+/* ── Booking widget ── */
+.demo-widget{position:relative;width:100%}
+.demo-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  box-shadow:0 24px 64px -28px rgba(19,26,34,.16),0 0 0 1px rgba(255,255,255,.6) inset;
+  overflow:hidden;
+  min-height:620px;
+  position:relative;
+}
+
+.booking-panel{display:flex;min-height:620px}
+.booking-panel.is-hidden{display:none}
+
+/* Calendar pane */
+.book-cal{
+  flex:1.05;background:var(--surface-muted);
+  padding:28px 24px 24px;border-right:1px solid var(--border);
+  display:flex;flex-direction:column;min-width:0;
+}
+.book-cal h2{
+  font-size:15px;font-weight:600;letter-spacing:-.02em;
+  color:var(--text);margin-bottom:20px;line-height:1.35;
+}
+.book-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.book-cal-head strong{font-size:14px;font-weight:600;color:var(--text)}
+.book-cal-nav{display:flex;gap:4px}
+.book-cal-nav button{
+  width:32px;height:32px;border-radius:8px;
+  display:grid;place-items:center;color:var(--muted);
+  transition:background .15s,color .15s;
+}
+.book-cal-nav button:hover{background:#E3E5DC;color:var(--text)}
+.book-cal-nav button:disabled{opacity:.35;pointer-events:none}
+.book-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.book-cal-dow{
+  font-family:var(--mono);font-size:9px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--faint);padding:6px 0 10px;
+}
+.book-day{
+  aspect-ratio:1;display:grid;place-items:center;
+  font-size:13px;font-weight:500;color:var(--muted);
+  border-radius:999px;transition:background .15s,color .15s;
+}
+.book-day.is-empty{visibility:hidden;pointer-events:none}
+.book-day.is-past{color:#C5CDD6;pointer-events:none}
+.book-day.is-available{cursor:pointer;color:var(--text)}
+.book-day.is-available:hover{background:rgba(20,184,166,.14)}
+.book-day.is-selected{background:var(--navy);color:#fff}
+
+/* Time pane */
+.book-time{
+  flex:1;padding:28px 24px 24px;display:flex;flex-direction:column;min-width:0;
+}
+.book-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.book-meta-item{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12.5px;color:var(--muted);
+}
+.book-meta-item svg{width:14px;height:14px;color:var(--faint);flex-shrink:0}
+.book-duration{
+  font-family:var(--mono);font-size:10px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--teal);
+  background:var(--teal-soft);border-radius:6px;padding:5px 10px;
+}
+.book-time h3{font-size:14px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;color:var(--text)}
+.book-tz,.book-field input,.book-field select,.book-field textarea,.book-guest-input{
+  width:100%;border:1px solid var(--border);border-radius:10px;
+  padding:0 14px;font-size:14px;color:var(--text);background:#fff;
+  font-family:var(--font);
+  transition:border-color .15s,box-shadow .15s;
+}
+.book-tz{
+  height:38px;padding-right:32px;font-size:12.5px;color:var(--muted);
+  margin-bottom:16px;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5' fill='none' stroke='%238A97A5' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;
+}
+.book-slots{
+  flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:8px;
+  padding-right:4px;max-height:340px;
+}
+.book-slots::-webkit-scrollbar{width:4px}
+.book-slots::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.book-slot{
+  width:100%;height:42px;border:1px solid var(--border);border-radius:10px;
+  background:#fff;font-size:14px;font-weight:500;color:var(--text);
+  transition:border-color .15s,background .15s,box-shadow .15s;
+}
+.book-slot:hover{border-color:var(--teal-bright);background:rgba(20,184,166,.06)}
+.book-slot.is-selected{border-color:var(--teal);background:var(--teal-soft);box-shadow:0 0 0 1px rgba(20,184,166,.25)}
+.book-slot.is-unavailable{
+  opacity:.42;cursor:not-allowed;color:var(--faint);
+  background:#F7F8F6;border-style:dashed;text-decoration:line-through;
+}
+.book-slot.is-unavailable:hover{border-color:var(--border);background:#F7F8F6}
+.book-slot-placeholder{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:var(--faint);text-align:center;padding:24px 12px;
+}
+.book-next{
+  margin-top:16px;width:100%;height:44px;border-radius:10px;
+  background:var(--text);color:#fff;font-size:14px;font-weight:600;
+  transition:background .15s,opacity .15s;
+}
+.book-next:hover:not(:disabled){background:var(--navy)}
+.book-next:disabled{opacity:.4;cursor:not-allowed}
+
+/* Details step */
+.book-details{
+  flex:1;display:flex;flex-direction:column;min-height:620px;max-height:720px;
+}
+.book-details-scroll{
+  flex:1;overflow-y:auto;padding:28px 32px 32px;
+}
+.book-details-scroll::-webkit-scrollbar{width:5px}
+.book-details-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.book-details-title{
+  font-size:18px;font-weight:600;letter-spacing:-.03em;margin-bottom:18px;color:var(--text);
+}
+
+.book-slot-bar{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  padding:14px 16px;background:var(--surface-muted);
+  border:1px solid var(--border);border-radius:12px;margin-bottom:24px;
+}
+.book-slot-info{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0}
+.book-slot-info strong{font-size:14px;font-weight:600;letter-spacing:-.01em;color:var(--text)}
+.book-slot-edit{
+  font-size:13px;font-weight:600;color:var(--teal);
+  padding:4px 0;transition:color .15s;
+}
+.book-slot-edit:hover{color:var(--teal-bright);text-decoration:underline}
+
+.book-form{display:flex;flex-direction:column;gap:16px}
+.book-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.book-field{display:flex;flex-direction:column;gap:7px}
+.book-field label{
+  font-size:13px;font-weight:600;color:var(--text);letter-spacing:-.01em;
+}
+.book-field input,.book-field select{height:44px}
+.book-field textarea{
+  min-height:88px;padding:12px 14px;resize:vertical;line-height:1.5;
+}
+.book-field input::placeholder,.book-field textarea::placeholder{color:var(--faint)}
+.book-field input:focus,.book-field select:focus,.book-field textarea:focus,.book-guest-input:focus{
+  outline:none;border-color:var(--teal-bright);
+  box-shadow:0 0 0 3px rgba(20,184,166,.15);
+}
+.book-field input.is-error,.book-field select.is-error{border-color:#CD3D64}
+.book-field select{appearance:none;padding-right:32px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5' fill='none' stroke='%238A97A5' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;
+}
+
+/* Guests */
+.book-guests{
+  margin-top:8px;padding-top:20px;border-top:1px solid var(--border);
+}
+.book-guests h3{font-size:14px;font-weight:600;letter-spacing:-.01em;margin-bottom:4px}
+.book-guests > p{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.book-guest-add{display:flex;gap:8px;margin-bottom:10px}
+.book-guest-input{flex:1;height:42px}
+.book-guest-add-btn{
+  height:42px;padding:0 16px;border-radius:10px;
+  border:1px solid var(--border);background:#fff;
+  font-size:13px;font-weight:600;color:var(--text);
+  transition:border-color .15s,background .15s;
+}
+.book-guest-add-btn:hover:not(:disabled){border-color:var(--teal-bright);background:rgba(20,184,166,.06)}
+.book-guest-add-btn:disabled{opacity:.45;cursor:not-allowed}
+.book-guest-count{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.book-guest-list{
+  min-height:48px;border:1px dashed var(--border);border-radius:10px;
+  padding:12px 14px;font-size:13px;color:var(--faint);line-height:1.5;
+}
+.book-guest-list.has-guests{border-style:solid;background:var(--surface-muted);color:var(--text)}
+.book-guest-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--border);border-radius:999px;
+  padding:6px 8px 6px 12px;font-size:12.5px;margin:0 6px 6px 0;
+}
+.book-guest-chip button{
+  width:20px;height:20px;border-radius:50%;
+  display:grid;place-items:center;color:var(--faint);font-size:14px;line-height:1;
+  transition:background .15s,color .15s;
+}
+.book-guest-chip button:hover{background:#F0F2EE;color:var(--text)}
+
+/* Privacy */
+.book-privacy{
+  margin-top:8px;padding:18px 16px;
+  background:var(--surface-muted);border:1px solid var(--border);border-radius:12px;
+}
+.book-privacy h3{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:12px;
+}
+.book-privacy p{font-size:12.5px;line-height:1.62;color:var(--muted);margin-bottom:10px}
+.book-privacy p:last-of-type{margin-bottom:14px}
+.book-privacy a{color:var(--teal);font-weight:600}
+.book-privacy a:hover{text-decoration:underline}
+.book-consent{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:12.5px;line-height:1.55;color:var(--muted);cursor:pointer;
+}
+.book-consent input{
+  width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--teal);
+}
+.book-consent.is-error{color:#CD3D64}
+
+.book-submit{
+  margin-top:8px;width:100%;height:46px;border-radius:10px;
+  background:var(--text);color:#fff;font-size:15px;font-weight:600;
+  display:inline-flex;align-items:center;justify-content:center;
+  transition:background .15s,transform .15s,opacity .15s;
+}
+.book-submit:hover:not(:disabled){background:var(--navy);transform:translateY(-1px)}
+.book-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.book-form-error{
+  display:none;font-size:13px;line-height:1.5;color:#CD3D64;
+  padding:10px 12px;background:rgba(205,61,100,.08);
+  border:1px solid rgba(205,61,100,.25);border-radius:10px;
+}
+.book-form-error.is-visible{display:block}
+
+/* Success */
+.demo-success{
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 36px;min-height:620px;
+}
+.demo-success.is-visible{display:flex}
+.demo-success-icon{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--teal-soft);color:var(--teal);
+  display:grid;place-items:center;margin-bottom:20px;
+}
+.demo-success h2{font-size:24px;font-weight:600;letter-spacing:-.03em;margin-bottom:10px}
+.demo-success p{font-size:15px;color:var(--muted);line-height:1.62;max-width:24em}
+.demo-success a{
+  display:inline-flex;align-items:center;margin-top:24px;
+  font-size:14px;font-weight:600;color:var(--teal);
+}
+.demo-success a:hover{text-decoration:underline}
+
+/* ── Footer (matches index.html) ── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+@media(max-width:720px){.wrap{padding:0 20px}}
+footer.site-foot{
+  border-top:0;background:var(--bg);padding:56px 0 44px;
+  font-family:var(--font);
+}
+.foot-grid{display:grid;grid-template-columns:1.7fr repeat(4,1fr);gap:36px}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-brand p{color:var(--faint);font-size:13.5px;line-height:1.65;margin-top:14px;max-width:25em}
+.foot-col h5{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:16px;font-weight:500;
+}
+.foot-col a{
+  display:block;font-size:14px;color:var(--muted);padding:5px 0;
+  transition:color .15s;font-weight:500;
+}
+.foot-col a:hover{color:var(--teal)}
+.foot-base{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  margin-top:58px;padding-top:26px;border-top:1px solid #E8ECF2;
+  font-size:13px;color:var(--faint);
+}
+.powered{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;
+}
+.powered::before{
+  content:"";width:6px;height:6px;border-radius:50%;background:var(--teal-bright);flex:none;
+}
+
+@media(max-width:960px){
+  .demo-shell{grid-template-columns:1fr;gap:32px;padding:calc(var(--nav-h) + 32px) 20px 48px}
+  .demo-rays{display:none}
+  .demo-copy h1{max-width:none}
+  .booking-panel{flex-direction:column;min-height:auto}
+  .book-cal{border-right:none;border-bottom:1px solid var(--border)}
+  .book-slots{max-height:220px}
+  .demo-card,.book-details,.demo-success{min-height:560px}
+  .book-row{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .book-cal,.book-time{padding:20px 16px}
+  .book-details-scroll{padding:22px 18px 24px}
+}
+@media(max-width:480px){
+  .nav-in{padding:0 16px}
+  .demo-shell{padding:calc(var(--nav-h) + 24px) 16px 40px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="brand" aria-label="Velorb — home">
+      <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
+      <span class="brand-cat">Living Customer Context</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#platform">Platform</a>
+      <a href="index.html#how">Our Approach</a>
+      <a href="index.html#why">Why Velorb</a>
+    </div>
+    <a href="demo.html" class="btn btn-primary" aria-current="page">Book a Demo</a>
+  </div>
+</nav>
+
+<main class="demo-shell">
+  <section class="demo-copy" aria-labelledby="demo-heading">
+    <svg class="demo-rays" viewBox="0 0 280 420" fill="none" aria-hidden="true">
+      <line x1="0" y1="40" x2="260" y2="200" stroke="#14B8A6" stroke-width="1" opacity=".35"/>
+      <line x1="0" y1="100" x2="270" y2="210" stroke="#14B8A6" stroke-width="1" opacity=".28"/>
+      <line x1="0" y1="160" x2="275" y2="215" stroke="#14B8A6" stroke-width="1" opacity=".22"/>
+      <line x1="0" y1="220" x2="270" y2="210" stroke="#14B8A6" stroke-width="1" opacity=".28"/>
+      <line x1="0" y1="280" x2="260" y2="200" stroke="#14B8A6" stroke-width="1" opacity=".35"/>
+      <line x1="0" y1="340" x2="240" y2="210" stroke="#14B8A6" stroke-width="1" opacity=".2"/>
+    </svg>
+
+    <div class="demo-eyebrow"><span></span>Book a 30-minute demo</div>
+    <h1 id="demo-heading">See what your CRM forgets</h1>
+    <ul class="demo-points">
+      <li>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>One living customer story.</b> Calls, email, CRM, Slack, and docs become memory — not fragments.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Context before you need it.</b> Cortex surfaces what changed before your team has to go searching.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>The next move, already clear.</b> Know what matters now, why, and where the signal came from.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="demo-widget" aria-label="Schedule your demo">
+    <div class="demo-card">
+      <!-- Step 1: Calendar + time -->
+      <div class="booking-panel" id="panelSchedule">
+        <div class="book-cal">
+          <h2>Find a time to meet with Velorb</h2>
+          <div class="book-cal-head">
+            <strong id="calMonthLabel">August 2026</strong>
+            <div class="book-cal-nav">
+              <button type="button" id="calPrev" aria-label="Previous month">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2.5 4.5 7 9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" id="calNext" aria-label="Next month">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2.5 9.5 7 5 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="book-cal-grid" id="calGrid" aria-label="Select a date"></div>
+        </div>
+        <div class="book-time">
+          <div class="book-meta">
+            <span class="book-meta-item">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5a4.5 4.5 0 0 0-4.5 4.5c0 3.38 4.5 8.5 4.5 8.5s4.5-5.12 4.5-8.5A4.5 4.5 0 0 0 8 1.5Z" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Google Meet
+            </span>
+            <span class="book-duration">30 mins</span>
+          </div>
+          <h3>What time works best?</h3>
+          <select class="book-tz" id="bookTz" aria-label="Timezone">
+            <option value="America/Los_Angeles">Pacific Time (UTC−07:00)</option>
+            <option value="America/Denver">Mountain Time (UTC−06:00)</option>
+            <option value="America/Chicago">Central Time (UTC−05:00)</option>
+            <option value="America/New_York">Eastern Time (UTC−04:00)</option>
+            <option value="Europe/London">London (UTC+01:00)</option>
+            <option value="Europe/Paris">Central European (UTC+02:00)</option>
+            <option value="Asia/Kolkata">India (UTC+05:30)</option>
+            <option value="Asia/Tokyo">Japan (UTC+09:00)</option>
+          </select>
+          <div class="book-slots" id="bookSlots">
+            <p class="book-slot-placeholder">Select a date to see available times</p>
+          </div>
+          <button type="button" class="book-next" id="bookNext" disabled>Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Your information -->
+      <div class="booking-panel is-hidden" id="panelDetails">
+        <div class="book-details">
+          <div class="book-details-scroll">
+            <h2 class="book-details-title">Your information</h2>
+
+            <div class="book-slot-bar">
+              <div class="book-slot-info">
+                <strong id="bookSlotDate">Monday, August 10, 2026 2:45 PM</strong>
+                <button type="button" class="book-slot-edit" id="bookEdit">Edit</button>
+              </div>
+              <span class="book-meta-item">
+                <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M8 1.5a4.5 4.5 0 0 0-4.5 4.5c0 3.38 4.5 8.5 4.5 8.5s4.5-5.12 4.5-8.5A4.5 4.5 0 0 0 8 1.5Z" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+                Google Meet
+              </span>
+            </div>
+
+            <form class="book-form" id="bookForm" novalidate>
+              <div class="book-row">
+                <div class="book-field">
+                  <label for="bookFirst">First name</label>
+                  <input type="text" id="bookFirst" name="firstName" autocomplete="given-name" required>
+                </div>
+                <div class="book-field">
+                  <label for="bookLast">Last name</label>
+                  <input type="text" id="bookLast" name="lastName" autocomplete="family-name" required>
+                </div>
+              </div>
+              <div class="book-field">
+                <label for="bookEmail">Your email address</label>
+                <input type="email" id="bookEmail" name="email" placeholder="you@company.com" autocomplete="email" required>
+              </div>
+              <div class="book-field">
+                <label for="bookCompany">Company name</label>
+                <input type="text" id="bookCompany" name="company" placeholder="Acme Inc." autocomplete="organization" required>
+              </div>
+              <div class="book-field">
+                <label for="bookPhone">Phone number</label>
+                <input type="tel" id="bookPhone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" required>
+              </div>
+              <div class="book-field">
+                <label for="bookSource">How did you hear about us?</label>
+                <select id="bookSource" name="source" required>
+                  <option value="" selected disabled>Select</option>
+                  <option value="search">Search engine</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="referral">Referral / word of mouth</option>
+                  <option value="event">Event or conference</option>
+                  <option value="partner">Partner or investor</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="book-field">
+                <label for="bookFocus">Focus of the Demo</label>
+                <textarea id="bookFocus" name="focus" placeholder="What would you like us to cover? e.g. CRM sync, renewal prep, account handoffs…"></textarea>
+              </div>
+
+              <div class="book-guests">
+                <h3>Add guests</h3>
+                <p>Invite up to 10 guests to attend the meeting.</p>
+                <div class="book-guest-add">
+                  <input type="email" class="book-guest-input" id="guestInput" placeholder="Add an email…" aria-label="Guest email">
+                  <button type="button" class="book-guest-add-btn" id="guestAdd">Add</button>
+                </div>
+                <div class="book-guest-count" id="guestCount">0/10 guests</div>
+                <div class="book-guest-list" id="guestList">Added guests will appear here.</div>
+              </div>
+
+              <div class="book-privacy">
+                <h3>Data privacy</h3>
+                <p id="privacyLead">Now displaying the data privacy policy for Velorb. Selecting confirm below will schedule your meeting.</p>
+                <p>Velorb is committed to protecting and respecting your privacy, and we'll only use your personal information to administer your account and provide the products and services you requested from us.</p>
+                <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
+                <label class="book-consent" id="consentLabel">
+                  <input type="checkbox" id="bookConsent" name="consent" required>
+                  <span>If you consent to us contacting you for this purpose, please tick here to say how you would like us to contact you. You can unsubscribe from these communications at any time.</span>
+                </label>
+                <p>For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our <a href="#">Privacy Policy</a>.</p>
+                <p>By clicking confirm below, you consent to allow Velorb to store and process the personal information submitted above to provide you the content requested.</p>
+              </div>
+
+              <div class="book-form-error" id="bookFormError" role="alert"></div>
+              <button type="submit" class="book-submit" id="bookSubmit">Confirm</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Success -->
+      <div class="demo-success" id="demoSuccess" role="status">
+        <div class="demo-success-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 20 20" fill="none"><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2>You’re booked</h2>
+        <p id="successMessage">Your demo is confirmed. Check your email for the calendar invite — we’ll walk you through Velorb live.</p>
+        <a href="index.html">← Back to Velorb</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
+          <span class="brand-cat">Living Customer Context</span>
+        </div>
+        <p>Customer memory, redefined.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="index.html#platform">Platform</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#platform">Integrations</a>
+        <a href="index.html#why">Security</a>
+      </div>
+      <div class="foot-col">
+        <h5>Teams</h5>
+        <a href="index.html#why">Sales</a>
+        <a href="index.html#why">Customer Success</a>
+        <a href="index.html#why">Revenue Operations</a>
+        <a href="index.html#why">Leadership</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Data Practices</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Velorb, Inc.</span>
+      <span class="powered">Powered by Cortex™</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const SLOT_TIMES = ['9:00 am','9:30 am','10:00 am','10:30 am','11:00 am','11:30 am','1:00 pm','1:30 pm','2:00 pm','2:30 pm','2:45 pm','3:00 pm','3:30 pm','4:00 pm','4:30 pm'];
+  const MAX_GUESTS = 10;
+  /* Paste your Google Apps Script web app URL — see booking/SETUP.md */
+  const BOOKING_API = 'https://script.google.com/macros/s/AKfycbyu3sV4rXuKSS-U0h_h4yhdRV1AzMXnS3KNZWEUovQFesXv2jQFgS0b65nSJbkv50mG/exec';
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  let viewYear = today.getFullYear();
+  let viewMonth = today.getMonth();
+  let selectedDate = null;
+  let selectedTime = null;
+  let guests = [];
+  let bookedSlots = new Set();
+  let slotsLoading = false;
+
+  const nav = document.getElementById('nav');
+  const calMonthLabel = document.getElementById('calMonthLabel');
+  const calGrid = document.getElementById('calGrid');
+  const calPrev = document.getElementById('calPrev');
+  const calNext = document.getElementById('calNext');
+  const bookSlots = document.getElementById('bookSlots');
+  const bookNext = document.getElementById('bookNext');
+  const bookEdit = document.getElementById('bookEdit');
+  const bookForm = document.getElementById('bookForm');
+  const bookSlotDate = document.getElementById('bookSlotDate');
+  const privacyLead = document.getElementById('privacyLead');
+  const panelSchedule = document.getElementById('panelSchedule');
+  const panelDetails = document.getElementById('panelDetails');
+  const demoSuccess = document.getElementById('demoSuccess');
+  const successMessage = document.getElementById('successMessage');
+  const guestInput = document.getElementById('guestInput');
+  const guestAdd = document.getElementById('guestAdd');
+  const guestCount = document.getElementById('guestCount');
+  const guestList = document.getElementById('guestList');
+  const consentLabel = document.getElementById('consentLabel');
+  const bookFormError = document.getElementById('bookFormError');
+  const bookTz = document.getElementById('bookTz');
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+  }, {passive:true});
+  nav.classList.toggle('scrolled', window.scrollY > 8);
+
+  function isWeekday(d){ const day = d.getDay(); return day >= 1 && day <= 5; }
+
+  function isAvailable(d){
+    if(d < today) return false;
+    if(!isWeekday(d)) return false;
+    const max = new Date(today);
+    max.setDate(max.getDate() + 45);
+    return d <= max;
+  }
+
+  function sameDay(a,b){
+    return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+  }
+
+  function formatDateISO(d){
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return y + '-' + m + '-' + day;
+  }
+
+  function slotKey(date, time, timezone){
+    return date + '|' + time + '|' + timezone;
+  }
+
+  function currentTimezone(){
+    return bookTz.value;
+  }
+
+  function isSlotBooked(date, time, timezone){
+    return bookedSlots.has(slotKey(date, time, timezone));
+  }
+
+  function hideFormError(){
+    bookFormError.classList.remove('is-visible');
+    bookFormError.textContent = '';
+  }
+
+  function showFormError(msg){
+    bookFormError.textContent = msg;
+    bookFormError.classList.add('is-visible');
+  }
+
+  function gasRequest(params){
+    return new Promise((resolve, reject) => {
+      const cb = 'velorb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      let script;
+      const timeout = setTimeout(() => {
+        cleanup();
+        reject(new Error('Booking server timed out. In Apps Script: Deploy → Manage deployments → ensure access is Anyone, then create a New version.'));
+      }, 20000);
+      function cleanup(){
+        clearTimeout(timeout);
+        delete window[cb];
+        if(script && script.parentNode) script.parentNode.removeChild(script);
+      }
+      window[cb] = (data) => { cleanup(); resolve(data); };
+      const qs = new URLSearchParams(params);
+      qs.set('callback', cb);
+      script = document.createElement('script');
+      script.src = BOOKING_API + '?' + qs.toString();
+      script.onerror = () => {
+        cleanup();
+        reject(new Error('Could not reach the booking server. Redeploy Apps Script (New version) with Who has access: Anyone.'));
+      };
+      document.head.appendChild(script);
+    });
+  }
+
+  async function fetchBookedSlots(){
+    if(!BOOKING_API) return;
+    slotsLoading = true;
+    try{
+      const data = await gasRequest({ action: 'slots' });
+      if(data.ok && Array.isArray(data.slots)){
+        bookedSlots = new Set(data.slots);
+      }
+    }catch(err){
+      console.warn('Could not load booked slots', err);
+    }
+    slotsLoading = false;
+    renderSlots();
+  }
+
+  function formatSlotLabel(){
+    const dateStr = selectedDate.toLocaleDateString('en-US',{
+      weekday:'long',month:'long',day:'numeric',year:'numeric'
+    });
+    return `${dateStr} ${selectedTime}`;
+  }
+
+  function renderCalendar(){
+    calMonthLabel.textContent = MONTHS[viewMonth] + ' ' + viewYear;
+    calPrev.disabled = viewYear === today.getFullYear() && viewMonth === today.getMonth();
+    calGrid.innerHTML = DOW.map(d => `<span class="book-cal-dow">${d}</span>`).join('');
+
+    const first = new Date(viewYear, viewMonth, 1);
+    const startPad = first.getDay();
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    for(let i = 0; i < startPad; i++){
+      calGrid.insertAdjacentHTML('beforeend','<span class="book-day is-empty"></span>');
+    }
+
+    for(let day = 1; day <= daysInMonth; day++){
+      const d = new Date(viewYear, viewMonth, day);
+      const avail = isAvailable(d);
+      const selected = selectedDate && sameDay(d, selectedDate);
+      let cls = 'book-day';
+      if(!avail) cls += d < today ? ' is-past' : '';
+      else cls += ' is-available';
+      if(selected) cls += ' is-selected';
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = cls;
+      btn.textContent = day;
+      btn.setAttribute('aria-label', d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}));
+      if(avail) btn.addEventListener('click', () => selectDate(d));
+      else btn.disabled = true;
+      calGrid.appendChild(btn);
+    }
+  }
+
+  function renderSlots(){
+    if(!selectedDate){
+      bookSlots.innerHTML = '<p class="book-slot-placeholder">Select a date to see available times</p>';
+      bookNext.disabled = true;
+      return;
+    }
+
+    const dateStr = formatDateISO(selectedDate);
+    const tz = currentTimezone();
+
+    if(slotsLoading){
+      bookSlots.innerHTML = '<p class="book-slot-placeholder">Loading available times…</p>';
+      bookNext.disabled = true;
+      return;
+    }
+
+    if(selectedTime && isSlotBooked(dateStr, selectedTime, tz)){
+      selectedTime = null;
+      bookNext.disabled = true;
+    }
+
+    bookSlots.innerHTML = SLOT_TIMES.map(t => {
+      const taken = isSlotBooked(dateStr, t, tz);
+      let cls = 'book-slot';
+      if(taken) cls += ' is-unavailable';
+      else if(selectedTime === t) cls += ' is-selected';
+      const label = taken ? t + ' · Unavailable' : t;
+      const disabled = taken ? ' disabled' : '';
+      return `<button type="button" class="${cls}" data-time="${t}"${disabled}${taken ? ' aria-disabled="true"' : ''}>${label}</button>`;
+    }).join('');
+
+    bookSlots.querySelectorAll('.book-slot:not(.is-unavailable)').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedTime = btn.dataset.time;
+        bookSlots.querySelectorAll('.book-slot').forEach(b => b.classList.toggle('is-selected', b === btn));
+        bookNext.disabled = false;
+        hideFormError();
+      });
+    });
+  }
+
+  function selectDate(d){
+    selectedDate = d;
+    selectedTime = null;
+    renderCalendar();
+    renderSlots();
+    bookNext.disabled = true;
+  }
+
+  function updateSlotSummary(){
+    bookSlotDate.textContent = formatSlotLabel();
+    privacyLead.textContent = `Now displaying the data privacy policy for Velorb. Selecting confirm below will schedule your meeting for ${formatSlotLabel()}.`;
+  }
+
+  function showDetails(){
+    updateSlotSummary();
+    panelSchedule.classList.add('is-hidden');
+    panelDetails.classList.remove('is-hidden');
+  }
+
+  function showSchedule(){
+    panelDetails.classList.add('is-hidden');
+    panelSchedule.classList.remove('is-hidden');
+  }
+
+  function renderGuests(){
+    guestCount.textContent = `${guests.length}/${MAX_GUESTS} guests`;
+    guestAdd.disabled = guests.length >= MAX_GUESTS;
+
+    if(!guests.length){
+      guestList.classList.remove('has-guests');
+      guestList.textContent = 'Added guests will appear here.';
+      return;
+    }
+
+    guestList.classList.add('has-guests');
+    guestList.innerHTML = guests.map((email, i) =>
+      `<span class="book-guest-chip">${email}<button type="button" aria-label="Remove ${email}" data-index="${i}">×</button></span>`
+    ).join('');
+
+    guestList.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        guests.splice(Number(btn.dataset.index), 1);
+        renderGuests();
+      });
+    });
+  }
+
+  function addGuest(){
+    const email = guestInput.value.trim();
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+    if(guests.includes(email) || guests.length >= MAX_GUESTS) return;
+    guests.push(email);
+    guestInput.value = '';
+    renderGuests();
+  }
+
+  function showSuccess(data){
+    panelSchedule.classList.add('is-hidden');
+    panelDetails.classList.add('is-hidden');
+    demoSuccess.classList.add('is-visible');
+    const name = [data.firstName, data.lastName].filter(Boolean).join(' ');
+    successMessage.textContent = `Your demo on ${formatSlotLabel()} is confirmed${name ? ', ' + name : ''}. Check ${data.email} for the calendar invite — we'll walk you through Velorb live.`;
+  }
+
+  calPrev.addEventListener('click', () => {
+    viewMonth--;
+    if(viewMonth < 0){ viewMonth = 11; viewYear--; }
+    renderCalendar();
+  });
+
+  calNext.addEventListener('click', () => {
+    viewMonth++;
+    if(viewMonth > 11){ viewMonth = 0; viewYear++; }
+    renderCalendar();
+  });
+
+  bookNext.addEventListener('click', () => {
+    if(selectedDate && selectedTime) showDetails();
+  });
+
+  bookEdit.addEventListener('click', showSchedule);
+  bookTz.addEventListener('change', () => {
+    selectedTime = null;
+    bookNext.disabled = true;
+    renderSlots();
+  });
+  guestAdd.addEventListener('click', addGuest);
+  guestInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); addGuest(); }
+  });
+
+  bookForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    hideFormError();
+
+    if(!BOOKING_API){
+      showFormError('Booking is not configured yet. Add your BOOKING_API URL in demo.html (see booking/SETUP.md).');
+      return;
+    }
+
+    const fields = {
+      first: document.getElementById('bookFirst'),
+      last: document.getElementById('bookLast'),
+      email: document.getElementById('bookEmail'),
+      company: document.getElementById('bookCompany'),
+      phone: document.getElementById('bookPhone'),
+      source: document.getElementById('bookSource'),
+      consent: document.getElementById('bookConsent')
+    };
+    let valid = true;
+
+    [fields.first, fields.last, fields.email, fields.company, fields.phone, fields.source].forEach(el => {
+      el.classList.remove('is-error');
+      const empty = !el.value.trim();
+      const badEmail = el.type === 'email' && el.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value);
+      if(empty || badEmail){ el.classList.add('is-error'); valid = false; }
+    });
+
+    consentLabel.classList.toggle('is-error', !fields.consent.checked);
+    if(!fields.consent.checked) valid = false;
+    if(!valid) return;
+
+    const dateStr = formatDateISO(selectedDate);
+    const tz = currentTimezone();
+
+    if(isSlotBooked(dateStr, selectedTime, tz)){
+      showFormError('This time slot was just booked. Please choose another time.');
+      showSchedule();
+      renderSlots();
+      return;
+    }
+
+    const payload = {
+      firstName: fields.first.value.trim(),
+      lastName: fields.last.value.trim(),
+      email: fields.email.value.trim(),
+      company: fields.company.value.trim(),
+      phone: fields.phone.value.trim(),
+      source: fields.source.value,
+      focus: document.getElementById('bookFocus').value.trim(),
+      guests: guests.slice(),
+      date: dateStr,
+      time: selectedTime,
+      timezone: tz
+    };
+
+    const submitBtn = document.getElementById('bookSubmit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Confirming…';
+
+    try{
+      const data = await gasRequest({
+        action: 'book',
+        payload: JSON.stringify(payload)
+      });
+
+      if(!data.ok){
+        if(data.error === 'slot_taken'){
+          showFormError(data.message || 'This time slot is no longer available. Please choose another.');
+          await fetchBookedSlots();
+          showSchedule();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Confirm';
+          return;
+        }
+        throw new Error(data.message || data.error || 'Booking failed');
+      }
+
+      bookedSlots.add(slotKey(dateStr, selectedTime, tz));
+      showSuccess(payload);
+    }catch(err){
+      showFormError(err.message || 'Something went wrong. Please try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Confirm';
+    }
+  });
+
+  const firstAvail = new Date(today);
+  while(!isAvailable(firstAvail)) firstAvail.setDate(firstAvail.getDate() + 1);
+  selectDate(firstAvail);
+  renderCalendar();
+  renderGuests();
+  fetchBookedSlots();
+})();
+</script>
+</body>
+</html>
