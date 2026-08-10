@@ -806,6 +806,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .wv-tab.is-active .wv-tab-label,.wv-tab[aria-selected="true"] .wv-tab-label{color:#0E9384}
 .wv-tab-title{font-size:15px;font-weight:600;letter-spacing:-.02em;color:#131A22}
 .wv-tab-gap{font-size:12.5px;color:#6B7A8C;line-height:1.4}
+.wv-panel-badge{display:none}
 .wv-stage{position:relative;min-height:380px;border-radius:24px;border:1px solid rgba(79,216,196,.16);background:#fff;overflow:hidden;box-shadow:0 40px 100px -36px rgba(19,26,34,.18),0 0 40px -20px rgba(79,216,196,.08);display:grid;grid-template-columns:1fr}
 .wv-panel{grid-area:1/1;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:0;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1);visibility:hidden}
 .wv-panel.is-active{opacity:1;pointer-events:auto;transform:none;visibility:visible}
@@ -991,19 +992,63 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .wv-pain{grid-template-columns:1fr}
   .wv-pain-block{margin-bottom:44px}
   .wv-compare-head{margin-bottom:40px}
-  .wv-compare-shell{grid-template-columns:1fr}
-  .wv-tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
-  .wv-tabs::-webkit-scrollbar{display:none}
-  .wv-tab{flex:0 0 auto;min-width:168px}
+  .wv-compare-shell{grid-template-columns:1fr;gap:0}
+  .wv-tabs{display:none !important}
+  .wv-stage{
+    display:flex;flex-direction:column;gap:20px;
+    min-height:0;border:none;background:transparent;box-shadow:none;overflow:visible;
+  }
+  .wv-panel,
+  .wv-panel.is-active{
+    display:flex !important;flex-direction:column;
+    position:static;grid-area:unset;
+    opacity:1 !important;visibility:visible !important;pointer-events:auto !important;transform:none !important;
+    border-radius:20px;border:1px solid rgba(255,255,255,.1);
+    background:linear-gradient(160deg,#0A1018 0%,#0D1520 100%);
+    box-shadow:0 24px 60px -28px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);
+    overflow:hidden;
+  }
+  .wv-panel--featured{
+    border-color:rgba(79,216,196,.35);
+    box-shadow:0 24px 60px -28px rgba(0,0,0,.45),0 0 32px -12px rgba(79,216,196,.18),inset 0 1px 0 rgba(255,255,255,.06);
+  }
+  .wv-panel-badge{
+    display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+    padding:16px 18px 14px;border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+  }
+  .wv-panel--featured .wv-panel-badge{
+    background:rgba(79,216,196,.08);border-bottom-color:rgba(79,216,196,.18);
+  }
+  .wv-panel-badge .wv-tab-label{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B8299}
+  .wv-panel--featured .wv-panel-badge .wv-tab-label{color:#4FD8C4}
+  .wv-panel-badge .wv-tab-title{font-size:15px;font-weight:600;letter-spacing:-.02em;color:#F4F7FA}
+  .wv-panel-badge .wv-tab-gap{font-size:12.5px;color:#93A2B4;line-height:1.4}
   .wv-panel,.wv-panel.is-active{grid-template-columns:1fr}
-  .wv-panel-copy{border-right:0;border-bottom:1px solid #F0F3F8;padding:24px 22px}
+  .wv-panel-copy{border-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding:20px 18px 18px}
   .wv-compare-section .wv-panel-copy{border-bottom-color:rgba(255,255,255,.08)}
-  .wv-panel-visual{min-height:260px;padding:20px}
-  .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{max-width:100%}
+  .wv-panel-copy h3{font-size:20px;max-width:none}
+  .wv-panel-copy p{font-size:14px;line-height:1.62}
+  .wv-verdict{margin-top:16px;max-width:none}
+  .wv-panel-visual{
+    min-height:0;padding:16px 14px 18px;
+    background:linear-gradient(160deg,#04070D 0%,#0A1018 55%,#0D1520 100%);
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+  }
+  .wv-panel--featured .wv-panel-visual{background:linear-gradient(160deg,#04070D 0%,#0D1520 55%,#131A22 100%)}
+  .wv-ui{max-width:none;margin:0 auto}
+  .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{
+    max-width:none;min-width:300px;width:100%;
+    transform:scale(1);transform-origin:top center;
+  }
+  .wv-mock-sf .wv-sf-highlights{grid-template-columns:repeat(2,1fr)}
+  .wv-mock-sf .wv-sf-btns{display:none}
+  .wv-mock-sf .wv-sf-path-wrap{display:none}
   .wv-zoom-room{grid-template-columns:1fr}
-  .wv-zoom-panel{border-left:0;border-top:1px solid #DFE3E8;max-height:120px}
-  .wv-mock-gpt{grid-template-columns:1fr}
+  .wv-zoom-panel{border-left:0;border-top:1px solid rgba(255,255,255,.08);max-height:140px}
+  .wv-mock-gpt{grid-template-columns:1fr;min-height:280px}
   .wv-gpt-side{display:none}
+  .wv-gpt-main{min-height:280px}
 }
 @media(max-width:640px){
   #why.wv-why{padding:56px 16px 64px !important}
@@ -1011,6 +1056,13 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .wv-why-head{margin-bottom:40px}
   .wv-pain{margin-bottom:40px}
   .wv-compare-head{margin-bottom:36px}
+  .wv-stage{gap:16px}
+  .wv-panel-copy{padding:18px 16px 16px}
+  .wv-panel-copy h3{font-size:18px}
+  .wv-panel-visual{padding:14px 12px 16px}
+  .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{min-width:280px;font-size:9px}
+  .wv-sf-page-hdr .wv-sf-rec-meta h4{font-size:14px}
+  .wv-zoom-meet-title{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.wv-panel{transition:none;transform:none}}
 
@@ -1986,6 +2038,11 @@ else boot();
 
         <div class="wv-stage">
           <article class="wv-panel wv-panel--featured is-active" data-wv-panel="velorb" role="tabpanel">
+            <div class="wv-panel-badge">
+              <span class="wv-tab-label">Velorb</span>
+              <span class="wv-tab-title">Living customer memory</span>
+              <span class="wv-tab-gap">Shows what changed, why, and what to do next</span>
+            </div>
             <div class="wv-panel-copy">
               <h3>Understands the relationship as it evolves.</h3>
               <p>Follows customer signals across conversations, systems, behavior, and teams — then surfaces what changed, why it matters, the next move, and the evidence behind it.</p>
@@ -2008,6 +2065,11 @@ else boot();
           </article>
 
           <article class="wv-panel" data-wv-panel="crm" role="tabpanel" hidden>
+            <div class="wv-panel-badge">
+              <span class="wv-tab-label">CRM</span>
+              <span class="wv-tab-title">Static records</span>
+              <span class="wv-tab-gap">Fields update — the story does not</span>
+            </div>
             <div class="wv-panel-copy">
               <h3>Stores the record. Not the reality around it.</h3>
               <p>Tracks accounts, contacts, stages, and activities — but rarely explains what changed, why it changed, or what the team should do next.</p>
@@ -2056,6 +2118,11 @@ else boot();
           </article>
 
           <article class="wv-panel" data-wv-panel="meet" role="tabpanel" hidden>
+            <div class="wv-panel-badge">
+              <span class="wv-tab-label">Meeting tools</span>
+              <span class="wv-tab-title">Call transcripts</span>
+              <span class="wv-tab-gap">Each meeting stays isolated</span>
+            </div>
             <div class="wv-panel-copy">
               <h3>Remember the call. Not everything around it.</h3>
               <p>Capture conversations and transcripts, but each meeting stays isolated from the wider history, signals, and decisions shaping the account.</p>
@@ -2105,6 +2172,11 @@ else boot();
           </article>
 
           <article class="wv-panel" data-wv-panel="ai" role="tabpanel" hidden>
+            <div class="wv-panel-badge">
+              <span class="wv-tab-label">Generic AI</span>
+              <span class="wv-tab-title">Prompt context</span>
+              <span class="wv-tab-gap">Only knows what you paste in</span>
+            </div>
             <div class="wv-panel-copy">
               <h3>Works from the context you paste in.</h3>
               <p>Can summarize or answer well — but only from the information you provide in the moment. It does not maintain a living memory of the customer relationship.</p>
@@ -2251,11 +2323,15 @@ else boot();
   const wvTabs = $$('[data-wv-tab]');
   const wvPanels = $$('[data-wv-panel]');
   const wvCompare = $('#wvCompare');
+  const wvMq = window.matchMedia('(max-width: 960px)');
   let wvIdx = 0;
   let wvTimer = null;
   const wvIds = wvTabs.map(t => t.dataset.wvTab);
 
+  function wvIsMobile(){ return wvMq.matches; }
+
   function wvRender(i){
+    if(wvIsMobile()) return;
     wvIdx = (i + wvIds.length) % wvIds.length;
     const id = wvIds[wvIdx];
     wvTabs.forEach((t, n) => {
@@ -2269,24 +2345,52 @@ else boot();
       p.hidden = !on;
     });
   }
-  function wvStart(){ clearInterval(wvTimer); wvTimer = setInterval(() => wvRender(wvIdx + 1), 5200); }
+
+  function wvShowAllMobile(){
+    wvPanels.forEach(p => {
+      p.classList.add('is-active');
+      p.hidden = false;
+    });
+  }
+
+  function wvApplyLayout(){
+    if(wvIsMobile()){
+      wvStop();
+      wvShowAllMobile();
+    } else {
+      wvRender(wvIdx);
+      wvStart();
+    }
+  }
+
+  function wvStart(){
+    if(wvIsMobile()) return;
+    clearInterval(wvTimer);
+    wvTimer = setInterval(() => wvRender(wvIdx + 1), 5200);
+  }
   function wvStop(){ clearInterval(wvTimer); }
-  function wvGo(i){ wvRender(i); wvStart(); }
+  function wvGo(i){
+    if(wvIsMobile()) return;
+    wvRender(i);
+    wvStart();
+  }
 
   wvTabs.forEach((t, i) => {
     t.addEventListener('click', () => wvGo(i));
     t.addEventListener('keydown', e => {
+      if(wvIsMobile()) return;
       if(e.key === 'ArrowDown' || e.key === 'ArrowRight'){ e.preventDefault(); wvGo((i + 1) % wvIds.length); wvTabs[wvIdx].focus(); }
       if(e.key === 'ArrowUp' || e.key === 'ArrowLeft'){ e.preventDefault(); wvGo((i + wvIds.length - 1) % wvIds.length); wvTabs[wvIdx].focus(); }
     });
   });
   if(wvCompare){
     wvCompare.addEventListener('mouseenter', wvStop);
-    wvCompare.addEventListener('mouseleave', wvStart);
+    wvCompare.addEventListener('mouseleave', () => { if(!wvIsMobile()) wvStart(); });
     wvCompare.addEventListener('focusin', wvStop);
-    wvCompare.addEventListener('focusout', e => { if(!wvCompare.contains(e.relatedTarget)) wvStart(); });
+    wvCompare.addEventListener('focusout', e => { if(!wvCompare.contains(e.relatedTarget) && !wvIsMobile()) wvStart(); });
   }
-  if(wvTabs.length) wvGo(0);
+  wvMq.addEventListener('change', wvApplyLayout);
+  if(wvTabs.length) wvApplyLayout();
 
   /* ---------- Hero Cortex: living context system ---------- */
   const heroCortexCanvas = $('#cortexHeroCanvas');
