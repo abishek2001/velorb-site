@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<title>Velorb — Living Customer Context</title>
+<title>Velorb, Living Customer Context</title>
 <meta name="description" content="Velorb understands how every customer relationship is evolving and turns that understanding into the next revenue action and the right narrative.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cellipse cx=%2750%27 cy=%2750%27 rx=%2745%27 ry=%2715%27 transform=%27rotate(-18 50 50)%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 opacity=%27.5%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2726%27 fill=%27%23E09A3E%27/%3E%3Cpath d=%27M90 45 70 58 55 64 39 68 25 70 15 69%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Inter:wght@400;450;500;600;650&family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================
-   VELORB — light design system in the spirit of Stripe:
+   VELORB, light design system in the spirit of Stripe:
    white + ice-blue surfaces, deep navy type, blurple accent,
    animated diagonal gradient, pill CTAs, soft layered depth.
    Variable names preserved so markup/JS need no changes.
@@ -109,6 +109,7 @@ button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer
   transition:background .3s,border-color .3s,box-shadow .3s,backdrop-filter .3s}
 .nav.scrolled{background:rgba(255,253,250,.85);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-color:var(--border-subtle);box-shadow:0 1px 0 rgba(10,37,64,.02)}
 .nav-in{max-width:var(--max);margin:0 auto;padding:0 32px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav .brand{display:flex;align-items:center;flex-shrink:0;line-height:0}
 .brand{display:flex;flex-direction:column;line-height:1.12}
 .brand-logo{height:46px;width:auto;display:block;object-fit:contain}
 .foot-brand .brand-logo{height:52px}
@@ -141,7 +142,7 @@ button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer
 .hero-lede b{color:var(--text-primary);font-weight:600}
 .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;align-items:center}
 
-/* ---------- Cortex, live — orbital system (planet + ring + real tool logos) ---------- */
+/* ---------- Cortex, live, orbital system (planet + ring + real tool logos) ---------- */
 .hviz{margin-top:60px;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
   background:var(--surface-primary);overflow:hidden;position:relative;box-shadow:var(--shadow-lg)}
 .hviz-bar{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--border-subtle);background:linear-gradient(180deg,#FBFCFE,#F6F9FC)}
@@ -165,7 +166,7 @@ button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer
 .fp{fill:var(--accent-primary)}
 .fp.bright{fill:var(--accent-bright)}
 
-/* Cortex mark — geometric Orbital O (Option A) */
+/* Cortex mark, geometric Orbital O (Option A) */
 .planet-wrap{position:absolute;left:44%;top:47%;transform:translate(-50%,-50%);width:230px;height:230px;z-index:3;pointer-events:none}
 .cmark-glow{position:absolute;inset:14%;border-radius:50%;
   background:radial-gradient(circle,rgba(224,154,62,.3),rgba(224,154,62,.08) 55%,transparent 72%);
@@ -220,7 +221,7 @@ button{font-family:inherit;background:none;border:0;color:inherit;cursor:pointer
 .hreason span{transition:opacity .35s var(--ease)}
 @media(max-width:560px){.hreason{font-size:10px;left:14px;bottom:12px}}
 
-/* the customer story — clean lines; sources whisper, notifications speak */
+/* the customer story, clean lines; sources whisper, notifications speak */
 .hout{border-left:1px solid var(--border-subtle);padding:22px;display:flex;flex-direction:column;background:var(--background-secondary)}
 @media(max-width:1040px){.hout{border-left:0}}
 .story-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px}
@@ -467,7 +468,7 @@ body{background:var(--background-primary)}
 .cx-inputbar span{flex:1;font-size:12px;color:#565B66;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cx-inputbar i{width:25px;height:25px;border-radius:50%;background:#2E3B86;color:#fff;display:grid;place-items:center;flex:none}
 .cx-inputbar i svg{width:12px;height:12px}
-/* citation popup — evidence arrives like a notification */
+/* citation popup, evidence arrives like a notification */
 .cx-pop{position:absolute;z-index:30;width:250px;padding:11px 12px;border-radius:14px;background:rgba(250,251,247,.97);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #fff;
   box-shadow:0 22px 48px rgba(0,0,0,.42);opacity:0;transform:translateY(7px) scale(.97);pointer-events:none;
@@ -541,9 +542,8 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 <!-- ================= NAV ================= -->
 <nav class="nav" id="nav">
   <div class="nav-in">
-    <a href="index.html" class="brand" aria-label="Velorb — Living Customer Context">
+    <a href="index.html" class="brand" aria-label="Velorb">
       <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
-      <span class="brand-cat">Living Customer Context</span>
     </a>
     <div class="nav-links">
       <a href="#platform">Platform</a>
@@ -566,12 +566,12 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 
 @keyframes vlPulse{0%,100%{opacity:1}50%{opacity:.35}}
 
-/* ── Cortex hero — globe + quiet caption ── */
-.vl-cortex-stage-wrap{position:relative;z-index:5;max-width:1280px;margin:0 auto;padding:28px 32px 0}
+/* ── Cortex hero, globe + quiet caption ── */
+.vl-cortex-stage-wrap{position:relative;z-index:5;max-width:1280px;margin:0 auto;padding:8px 32px 40px;transform:translateY(-32px)}
 .vl-cortex-caption{max-width:32em;margin:24px auto 88px;text-align:center;font-size:13.5px;line-height:1.62;color:#6B8299;font-weight:400}
 .vl-cortex-caption-label{display:block;font-family:'Geist Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#4FD8C4;opacity:.8;margin-bottom:8px}
 @media(max-width:640px){
-  .vl-cortex-stage-wrap{padding:20px 16px 0}
+  .vl-cortex-stage-wrap{padding:8px 16px 32px;transform:translateY(-24px)}
   .vl-cortex-caption{margin-bottom:72px;font-size:13px;padding:0 8px}
 }
 @keyframes vlFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
@@ -604,8 +604,8 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .vlh6:hover{transform:translateY(-1px) !important;background:#FFFFFF !important;color:#0A1018 !important}
 .vlh7:hover{border-color:rgba(94,234,212,0.5) !important;color:#CCFBF1 !important}
 
-/* ── Our Approach — intro + steps (always center-aligned) ── */
-#how.rh-approach{background:#F7F9FA !important;padding:110px 32px 80px !important;color:#131A22;text-align:center}
+/* ── Our Approach, intro + steps (always center-aligned) ── */
+#how.rh-approach{background:#F7F9FA !important;padding:110px 32px 80px !important;color:#131A22;text-align:center;--rh-header:72px;--rh-enter-end:0.34;--rh-exit-start:0.76}
 #how.rh-approach .rh-approach-inner{max-width:1200px;margin:0 auto;text-align:center}
 #how.rh-approach .rh-approach-header{text-align:center;width:100%}
 #how.rh-approach .rh-approach-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#0E9384;margin:0 0 20px;text-align:left;align-self:flex-start}
@@ -623,11 +623,11 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-line-step{display:none}
 .rh-step{width:100%;min-height:min(72vh,680px);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:40px 0 48px;text-align:center;opacity:0;transform:translateY(56px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
 .rh-step.is-visible{opacity:1;transform:none}
-.rh-step-split,.rh-step-reveal{min-height:200vh;padding:0;opacity:1;transform:none;transition:none}
+.rh-step-split,.rh-step-reveal{min-height:220vh;padding:0;opacity:1;transform:none;transition:none}
 .rh-step-split.is-visible,.rh-step-reveal.is-visible{opacity:1;transform:none}
-.rh-step-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 24px 48px;width:100%;box-sizing:border-box;z-index:1}
+.rh-step-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--rh-header) + 12px) 24px 28px;gap:clamp(14px,2.2vh,24px);width:100%;box-sizing:border-box;z-index:1}
 .rh-step-label{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#0E9384;margin-bottom:16px;display:block}
-.rh-step-visual{width:100%;max-width:720px;margin:0 auto 36px;position:relative;display:flex;align-items:center;justify-content:center}
+.rh-step-visual{width:100%;max-width:720px;margin:0 auto 36px;position:relative;display:flex;align-items:center;justify-content:center;flex:0 1 auto;min-height:0}
 .rh-step-copy{max-width:720px;margin:0 auto;width:100%;padding:0 8px}
 .rh-step-split .rh-step-copy{opacity:calc(.25 + var(--split-progress,0) * .75);transform:translateY(calc((1 - var(--split-progress,0)) * 18px))}
 .rh-step h3{font-size:clamp(26px,3.8vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.12;color:#131A22;margin:0}
@@ -635,9 +635,9 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
 .rh-tag{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#5A6B7A;background:#fff;border:1px solid #DDE4EA;border-radius:999px;padding:6px 12px}
 
-/* Step 2 — living memory panel (image + overlays) */
-.rh-memory-panel{position:relative;width:100%;max-width:720px;height:400px;margin:0 auto;border-radius:24px;overflow:hidden;background:#EEF2F8;box-shadow:0 32px 80px -28px rgba(19,26,34,.22),0 0 0 1px rgba(226,232,245,.95)}
-.rh-memory-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(calc(1.06 - var(--split-progress,0) * .06));transition:none}
+/* Step 2, living memory panel (image + overlays) */
+.rh-memory-panel{position:relative;width:100%;max-width:720px;height:400px;max-height:44vh;margin:0 auto;border-radius:24px;overflow:hidden;background:#EEF2F8;box-shadow:0 32px 80px -28px rgba(19,26,34,.22),0 0 0 1px rgba(226,232,245,.95)}
+.rh-memory-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(calc(1.06 - var(--split-progress,0) * .06));transition:none;will-change:transform,opacity,filter;backface-visibility:hidden}
 .rh-memory-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,26,34,.08) 0%,rgba(19,26,34,.55) 68%,rgba(19,26,34,.72) 100%);pointer-events:none}
 .rh-memory-photo-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;opacity:calc(.15 + var(--split-progress,0) * .35);pointer-events:none}
 .rh-memory-signals{position:absolute;top:20px;left:20px;right:20px;display:flex;flex-wrap:wrap;gap:8px;z-index:2}
@@ -646,7 +646,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-memory-panel .rh-memory-signal:nth-child(2){opacity:calc(clamp((var(--split-progress,0) - .18) / .25,0,1));transform:translateY(calc((1 - clamp((var(--split-progress,0) - .18) / .25,0,1)) * -12px))}
 .rh-memory-panel .rh-memory-signal:nth-child(3){opacity:calc(clamp((var(--split-progress,0) - .28) / .25,0,1));transform:translateY(calc((1 - clamp((var(--split-progress,0) - .28) / .25,0,1)) * -12px))}
 .rh-memory-panel .rh-memory-signal:nth-child(4){opacity:calc(clamp((var(--split-progress,0) - .38) / .25,0,1));transform:translateY(calc((1 - clamp((var(--split-progress,0) - .38) / .25,0,1)) * -12px))}
-.rh-memory-card{position:absolute;left:20px;right:20px;bottom:20px;z-index:3;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-radius:18px;padding:18px 20px;box-shadow:0 20px 50px -20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.8);opacity:calc(.2 + var(--split-progress,0) * .8);transform:translateY(calc((1 - var(--split-progress,0)) * 28px))}
+.rh-memory-card{position:absolute;left:20px;right:20px;bottom:20px;z-index:3;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-radius:18px;padding:18px 20px;box-shadow:0 20px 50px -20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.8);opacity:calc(.2 + var(--split-progress,0) * .8);transform:translateY(calc((1 - var(--split-progress,0)) * 28px));will-change:transform,opacity,filter;backface-visibility:hidden}
 .rh-memory-card-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #EEF2F8}
 .rh-memory-card-dot{width:10px;height:10px;border-radius:50%;background:#14B8A6;box-shadow:0 0 0 4px rgba(20,184,166,.18);animation:vlPulse 2.4s ease infinite;flex-shrink:0}
 .rh-memory-card-head h5{margin:0;font-size:15px;font-weight:600;color:#131A22;line-height:1.25}
@@ -659,8 +659,8 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-memory-graph{position:absolute;top:50%;right:24px;transform:translateY(-50%);width:140px;height:140px;z-index:2;opacity:calc(clamp((var(--split-progress,0) - .2) / .6,0,1));pointer-events:none}
 .rh-memory-graph svg{width:100%;height:100%;filter:drop-shadow(0 8px 24px rgba(0,0,0,.25))}
 
-/* Step 3 — single pre-call popup scene */
-.rh-recall-scene{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;margin:0 auto;border-radius:28px;overflow:hidden;box-shadow:0 40px 100px -32px rgba(19,26,34,.28),0 0 0 1px rgba(255,255,255,.6);transform:scale(calc(.94 + var(--reveal-progress,0) * .06));opacity:calc(.55 + var(--reveal-progress,0) * .45)}
+/* Step 3, single pre-call popup scene */
+.rh-recall-scene{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;max-height:44vh;margin:0 auto;border-radius:28px;overflow:hidden;box-shadow:0 40px 100px -32px rgba(19,26,34,.28),0 0 0 1px rgba(255,255,255,.6);transform:scale(calc(.94 + var(--reveal-progress,0) * .06));opacity:calc(.55 + var(--reveal-progress,0) * .45);will-change:transform,opacity,filter;backface-visibility:hidden}
 .rh-recall-scene-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .rh-recall-scene-shade{position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,140,60,.22) 0%,rgba(19,26,34,.08) 38%,rgba(19,26,34,.42) 100%);pointer-events:none}
 .rh-recall-bubble{position:absolute;border-radius:16px;padding:13px 16px;font-size:13px;line-height:1.45;letter-spacing:-.01em;box-shadow:0 14px 36px -10px rgba(0,0,0,.28);max-width:min(240px,46%)}
@@ -673,11 +673,11 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-recall-brief .cta{display:inline-flex;align-items:center;gap:4px;margin-top:14px;font-size:13px;font-weight:600;color:#4C63D2;letter-spacing:-.01em}
 .rh-step-split[data-rh-static-copy] .rh-step-copy,.rh-step-reveal[data-rh-static-copy] .rh-step-copy{opacity:1;transform:none}
 
-/* Step 1 — Rocket Health stacked cards (scroll-split) */
-.rh-card-stack{position:relative;width:100%;max-width:720px;height:380px;margin:0 auto;perspective:1200px}
-.rh-stack-card{position:absolute;top:50%;left:50%;width:272px;background:#fff;border-radius:22px;padding:22px 20px;box-shadow:0 24px 64px -20px rgba(19,26,34,.18),0 0 0 1px rgba(226,232,245,.9);text-align:left;transform-origin:center center;will-change:transform,opacity,filter;transition:box-shadow .3s ease}
+/* Step 1, Rocket Health stacked cards (scroll-split) */
+.rh-card-stack{position:relative;width:100%;max-width:720px;height:min(340px,38vh);margin:0 auto;perspective:1200px}
+.rh-stack-card{position:absolute;top:50%;left:50%;width:272px;background:#fff;border-radius:22px;padding:22px 20px;box-shadow:0 24px 64px -20px rgba(19,26,34,.18),0 0 0 1px rgba(226,232,245,.9);text-align:left;transform-origin:center center;will-change:transform,opacity,filter;backface-visibility:hidden;transition:box-shadow .3s ease}
 .rh-stack-card.center{width:292px;z-index:3;box-shadow:0 32px 80px -24px rgba(76,99,210,.32),0 0 0 1px rgba(226,232,245,.95);transform:translate(-50%,-50%)}
-.rh-stack-card.side{z-index:1;background:rgba(255,255,255,.88);transform:translate(-50%,calc(-50% - 14px));opacity:0;filter:blur(2.5px)}
+.rh-stack-card.side{z-index:1;background:rgba(255,255,255,.88);transform:translate(-50%,calc(-50% - 14px));opacity:0;filter:blur(3.2px)}
 .rh-stack-card.side .rh-stack-option{opacity:.9}
 .rh-stack-card h5{font-size:14px;font-weight:600;color:#131A22;line-height:1.35;margin:0 0 16px;letter-spacing:-.01em}
 .rh-stack-option{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid #EEF2F8;gap:12px}
@@ -690,7 +690,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .rh-stack-option.is-active .rh-stack-radio::after{content:'';position:absolute;inset:3px;border-radius:50%;background:#4C63D2}
 .rh-stack-card.side .rh-stack-option{opacity:.85}
 
-/* legacy — unused after step 2/3 redesign */
+/* legacy, unused after step 2/3 redesign */
 .rh-recall-photo{width:100%;height:108px;border-radius:14px;object-fit:cover;object-position:center 20%;margin-bottom:14px;display:block}
 .rh-evidence-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F4F6FB;font-size:12px;color:#425466}
 .rh-evidence-row:last-child{border-bottom:none}
@@ -721,7 +721,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .rh-line-bridge{--line-max:72px;margin:6px auto 20px}
 }
 
-/* ── Why Velorb — light section aligned with platform + approach ── */
+/* ── Why Velorb, light section aligned with platform + approach ── */
 #why.wv-why{background:#F7F9FA !important;padding:72px 32px 88px !important;color:#131A22;font-family:'Geist',-apple-system,'Helvetica Neue',sans-serif;position:relative;overflow:hidden}
 #why.wv-why::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 100% 80%,rgba(20,184,166,.06),transparent 50%);pointer-events:none}
 #why.wv-why .wv-pain-block{margin-bottom:0}
@@ -970,7 +970,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .wv-gpt-sendbtn{width:28px;height:28px;border-radius:50%;background:#202123;display:grid;place-items:center;flex-shrink:0;margin-left:auto}
 .wv-gpt-sendbtn svg{width:14px;height:14px;fill:#fff}
 .wv-footnote{margin:48px auto 0;text-align:center;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A97A5;max-width:36em;line-height:1.6}
-/* Compare section — dark theme overrides for tabs + stage */
+/* Compare section, dark theme overrides for tabs + stage */
 .wv-compare-section .wv-tab{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
 .wv-compare-section .wv-tab:hover{background:rgba(255,255,255,.06);border-color:rgba(79,216,196,.28);box-shadow:0 8px 24px -16px rgba(79,216,196,.18)}
 .wv-compare-section .wv-tab.is-active,.wv-compare-section .wv-tab[aria-selected="true"]{background:rgba(79,216,196,.1);border-color:rgba(79,216,196,.42);box-shadow:0 16px 40px -20px rgba(79,216,196,.28),0 0 0 1px rgba(79,216,196,.14),0 0 28px -8px rgba(79,216,196,.22)}
@@ -1106,7 +1106,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 }
 @media(prefers-reduced-motion:reduce){.wv-panel{transition:none;transform:none}}
 
-/* ── Final CTA — light bridge from Compare into footer ── */
+/* ── Final CTA, light bridge from Compare into footer ── */
 #demo.final{
   position:relative;overflow:hidden;text-align:center;
   padding:0 32px 128px;
@@ -1152,7 +1152,7 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   #demo.final .final-title-main,#demo.final .final-title-punch{font-size:clamp(26px,7vw,34px)}
 }
 
-/* ── Footer — seamless with final CTA ── */
+/* ── Footer, seamless with final CTA ── */
 footer.site-foot{border-top:0;background:#F4F5F0;padding:56px 0 44px;font-family:'Geist',-apple-system,'Helvetica Neue',sans-serif}
 footer.site-foot .foot-col h5{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A97A5}
 footer.site-foot .foot-col a:hover{color:#0E9384}
@@ -1170,7 +1170,7 @@ footer.site-foot .powered::before{background:#14B8A6}
         Ambient customer memory
       </div>
       <h1 style="margin:0 auto;font-size:clamp(48px,6.4vw,86px);line-height:1.0;letter-spacing:-0.04em;font-weight:600;max-width:11em;color:#F4F7FA;text-wrap:balance">Customer memory,<br>redefined.</h1>
-      <p style="margin:26px auto 0;max-width:37em;font-size:18px;line-height:1.65;color:#93A2B4;text-wrap:pretty">An ambient agent that learns from every customer interaction — <b style="color:#DCE5EE;font-weight:550">what they wanted, what changed, what was promised</b> — and carries the relationship forward.</p>
+      <p style="margin:26px auto 0;max-width:37em;font-size:18px;line-height:1.65;color:#93A2B4;text-wrap:pretty">An ambient agent that learns from every customer interaction, <b style="color:#DCE5EE;font-weight:550">what they wanted, what changed, what was promised</b>, and carries the relationship forward.</p>
       <div style="display:flex;gap:14px;justify-content:center;margin-top:36px;margin-bottom:8px;flex-wrap:wrap">
         <a href="demo.html" style="display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 26px;border-radius:99px;background:#F4F7FA;color:#0A1018;font-size:15px;font-weight:600;letter-spacing:-0.01em;box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 12px 40px -12px rgba(94,234,212,0.35);transition:transform 0.18s ease" class="vlh6">Book a demo</a>
         <a href="#how" style="display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 24px;border-radius:99px;border:1px solid rgba(255,255,255,0.16);color:#C9D4E0;font-size:15px;font-weight:500" class="vlh7">See how it works →</a>
@@ -1185,7 +1185,7 @@ footer.site-foot .powered::before{background:#14B8A6}
               <div style="padding:9px 11px;display:flex;flex-direction:column;gap:5px">
                 <div style="display:flex;justify-content:space-between;font-size:10.5px;color:#54698D"><span>Stage</span><b style="color:#16325C">Negotiation</b></div>
                 <div style="display:flex;justify-content:space-between;font-size:10.5px;color:#54698D"><span>Next step</span><b style="color:#16325C">—</b></div>
-                <div style="font-size:10.5px;line-height:1.4;color:#C23934;border-top:1px solid #E3E8EF;padding-top:5px">Untouched for 18 days — the record lags the relationship.</div>
+                <div style="font-size:10.5px;line-height:1.4;color:#C23934;border-top:1px solid #E3E8EF;padding-top:5px">Untouched for 18 days, the record lags the relationship.</div>
               </div>
             </div>
             <svg viewBox="0 0 24 24" style="width:23px;height:23px"><path fill="#00A1E0" d="M10.1 6.2c.8-.9 2-1.4 3.3-1.4 1.7 0 3.2.9 4 2.3.7-.3 1.4-.5 2.2-.5 3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4c-.4 0-.7 0-1.1-.1a4 4 0 0 1-3.4 2 4 4 0 0 1-1.7-.4 4.5 4.5 0 0 1-8.3-.3c-.3.1-.7.1-1 .1A4.1 4.1 0 0 1 0 14.6c0-1.5.8-2.9 2.1-3.6a4.7 4.7 0 0 1 8-4.8z" transform="translate(-.5 1)"></path></svg>
@@ -1197,7 +1197,7 @@ footer.site-foot .powered::before{background:#14B8A6}
                 <div style="width:26px;height:26px;border-radius:6px;background:#ECB22E;color:#1D1C1D;font-size:10px;font-weight:700;display:grid;place-items:center;flex:none">MR</div>
                 <div style="min-width:0">
                   <div style="font-size:11px;color:#1D1C1D"><b>Maya Reyes</b> <span style="color:#616061;font-size:10px">4:12 PM</span></div>
-                  <div style="font-size:11px;line-height:1.45;color:#1D1C1D;margin-top:2px">Heads up — I'm moving to the platform org next quarter. Let's line up who takes Acme.</div>
+                  <div style="font-size:11px;line-height:1.45;color:#1D1C1D;margin-top:2px">Heads up, I'm moving to the platform org next quarter. Let's line up who takes Acme.</div>
                 </div>
               </div>
             </div>
@@ -1211,7 +1211,7 @@ footer.site-foot .powered::before{background:#14B8A6}
                   <span style="width:3px;height:6px;background:#D9C2F5;border-radius:2px"></span><span style="width:3px;height:12px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:17px;background:#8039DF;border-radius:2px"></span><span style="width:3px;height:9px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:15px;background:#8039DF;border-radius:2px"></span><span style="width:3px;height:7px;background:#D9C2F5;border-radius:2px"></span><span style="width:3px;height:12px;background:#B98AEC;border-radius:2px"></span><span style="width:3px;height:5px;background:#D9C2F5;border-radius:2px"></span>
                 </div>
                 <div style="font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:#8039DF;font-weight:600;margin-top:6px">Tracker · Expansion ×2</div>
-                <div style="font-size:11px;line-height:1.45;color:#2E2E3A;margin-top:3px">Seats and multi-region rollout came up twice — expansion, not renewal.</div>
+                <div style="font-size:11px;line-height:1.45;color:#2E2E3A;margin-top:3px">Seats and multi-region rollout came up twice, expansion, not renewal.</div>
               </div>
             </div>
             <svg viewBox="0 0 24 24" style="width:23px;height:23px"><circle cx="12" cy="12" r="10.4" fill="#8039DF"></circle><circle cx="12" cy="12" r="6.2" fill="none" stroke="#fff" stroke-width="1.7"></circle><circle cx="12" cy="12" r="2.3" fill="#fff"></circle></svg>
@@ -1235,7 +1235,7 @@ footer.site-foot .powered::before{background:#14B8A6}
               <div style="padding:9px 11px">
                 <div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:11.5px;color:#202124">DPA request before security sign-off</b></div>
                 <div style="font-size:10.5px;color:#5F6368;margin-top:2px">R. Feld · Legal Counsel, Acme</div>
-                <div style="font-size:11px;line-height:1.45;color:#5F6368;margin-top:5px;border-left:2px solid #EA4335;padding-left:7px">Legal needs the DPA before security sign-off — security is the real blocker.</div>
+                <div style="font-size:11px;line-height:1.45;color:#5F6368;margin-top:5px;border-left:2px solid #EA4335;padding-left:7px">Legal needs the DPA before security sign-off, security is the real blocker.</div>
               </div>
             </div>
             <svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.909 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg>
@@ -1268,7 +1268,7 @@ footer.site-foot .powered::before{background:#14B8A6}
             <div data-tip style="position:absolute;bottom:calc(100% + 12px);left:50%;transform:translate(-50%,4px);width:264px;height:128px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
               <div style="display:flex;align-items:center;justify-content:space-between;height:26px;padding:0 11px;background:#4285F4"><span style="font-size:10px;font-weight:600;color:#FFFFFF">Docs · Shared with you</span><span style="font-size:9.5px;color:rgba(255,255,255,0.85)">13:02</span></div>
               <div style="padding:9px 11px">
-                <b style="font-size:11.5px;color:#202124">Security questionnaire — Acme IT.pdf</b>
+                <b style="font-size:11.5px;color:#202124">Security questionnaire, Acme IT.pdf</b>
                 <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px">
                   <span style="height:4px;width:88%;background:#E8EAED;border-radius:2px"></span>
                   <span style="height:4px;width:70%;background:#E8EAED;border-radius:2px"></span>
@@ -1280,13 +1280,18 @@ footer.site-foot .powered::before{background:#14B8A6}
             <svg viewBox="0 0 24 24" style="width:22px;height:22px"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"></path><path fill="#A0C3FF" d="M14.5 1.5v5h5z"></path><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"></path></svg>
           </div>
         </div>
+        <div data-ref="refCortex" style="position:absolute;left:0;top:0;width:164px;height:164px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:auto;cursor:default;z-index:6;background:transparent;border:1px solid transparent;transition:border-color 0.4s,box-shadow 0.4s">
+          <div data-tip style="position:absolute;bottom:calc(100% + 16px);left:50%;transform:translate(-50%,4px);width:292px;border-radius:12px;overflow:hidden;background:#FFFFFF;box-shadow:0 18px 50px -12px rgba(0,0,0,0.7);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;text-align:left">
+            <div style="display:flex;align-items:center;height:28px;padding:0 12px;background:linear-gradient(90deg,#0E9384,#14B8A6)"><span style="font-family:'Geist Mono',monospace;font-size:10px;font-weight:600;color:#FFFFFF;letter-spacing:0.14em;text-transform:uppercase">Meet Cortex</span></div>
+            <div style="padding:11px 12px 13px;font-size:11px;line-height:1.55;color:#334155">The brain of Velorb, ingests every signal from your tools and returns what changed, why it matters, and the next move.</div>
+          </div>
+        </div>
         <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,96px);text-align:center;pointer-events:none;z-index:4">
           <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#4FD8C4;text-shadow:0 0 24px rgba(79,216,196,0.55)">Cortex</div>
         </div>
       </div>
-      <p class="vl-cortex-caption"><span class="vl-cortex-caption-label">Meet Cortex</span>The brain of Velorb — ingests every signal from your tools and returns what changed, why it matters, and the next move.</p>
     </div>
-    <div style="position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(180deg,rgba(247,249,250,0),#F7F9FA);pointer-events:none;z-index:8"></div>
+    <div style="position:absolute;left:0;right:0;bottom:-40px;height:140px;background:linear-gradient(180deg,rgba(247,249,250,0) 0%,rgba(247,249,250,0) 45%,#F7F9FA 100%);pointer-events:none;z-index:8"></div>
   </div>
   <section id="platform" style="background:#F7F9FA;color:#131A22;padding:110px 32px 130px">
     <div style="max-width:1200px;margin:0 auto">
@@ -1295,7 +1300,7 @@ footer.site-foot .powered::before{background:#14B8A6}
         The platform
       </div>
       <h2 style="margin:0 auto;font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-0.035em;font-weight:600;max-width:15em;color:#131A22;text-wrap:balance;text-align:center">The clues already live in your tools.</h2>
-      <p style="margin:20px auto 0;max-width:38em;font-size:17px;line-height:1.7;color:#4E5B69;text-wrap:pretty;text-align:center">Velorb brings customer signals together across conversations, CRM activity, documents, and support systems — turning scattered context into a memory your team can rely on before every conversation. No searching. No catching up.</p>
+      <p style="margin:20px auto 0;max-width:38em;font-size:17px;line-height:1.7;color:#4E5B69;text-wrap:pretty;text-align:center">Velorb brings customer signals together across conversations, CRM activity, documents, and support systems, turning scattered context into a memory your team can rely on before every conversation. No searching. No catching up.</p>
       <p style="margin:14px auto 0;max-width:38em;font-size:17px;line-height:1.7;color:#0E9384;font-weight:600;text-align:center">The context is already there.</p>
       <div style="margin-top:64px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,black 12%,black 88%,transparent)">
         <div style="display:flex;gap:72px;width:max-content;align-items:center;animation:vlMarq 34s linear infinite;padding:8px 36px 8px 0">
@@ -1317,7 +1322,7 @@ footer.site-foot .powered::before{background:#14B8A6}
           <span style="display:inline-flex;align-items:center;gap:11px;font-size:16px;font-weight:600;letter-spacing:-0.01em;color:#3A4552;white-space:nowrap"><svg viewBox="0 0 24 24" style="width:21px;height:21px"><path fill="#4285F4" d="M14.5 1.5H6A1.5 1.5 0 0 0 4.5 3v18A1.5 1.5 0 0 0 6 22.5h12a1.5 1.5 0 0 0 1.5-1.5V6.5l-5-5z"></path><path fill="#A0C3FF" d="M14.5 1.5v5h5z"></path><path fill="#fff" d="M8 11.2h8v1.6H8zm0 3h8v1.6H8zm0 3h5.4v1.6H8z"></path></svg>Docs</span>
         </div>
       </div>
-      <p style="text-align:center;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#8A97A5;margin:28px 0 0">Velorb connects to the tools your team already uses — and closes deals faster with the context inside them</p>
+      <p style="text-align:center;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#8A97A5;margin:28px 0 0">Velorb connects to the tools your team already uses, and closes deals faster with the context inside them</p>
     </div>
   </section>
   <section id="how" class="rh-approach">
@@ -1344,7 +1349,7 @@ footer.site-foot .powered::before{background:#14B8A6}
               </div>
               <div class="rh-stack-card center" data-rh-card="center">
                 <h5>Which signal just came in?</h5>
-                <div class="rh-stack-option is-active"><span>Discovery call — Acme Industrial</span><div class="rh-stack-radio"></div></div>
+                <div class="rh-stack-option is-active"><span>Discovery call, Acme Industrial</span><div class="rh-stack-radio"></div></div>
                 <div class="rh-stack-option"><span>Email thread · champion follow-up</span><div class="rh-stack-radio"></div></div>
                 <div class="rh-stack-option"><span>CRM · deal stage changed</span><div class="rh-stack-radio"></div></div>
                 <div class="rh-stack-option"><span>Support ticket · security review</span><div class="rh-stack-radio"></div></div>
@@ -1360,7 +1365,7 @@ footer.site-foot .powered::before{background:#14B8A6}
           <div class="rh-line rh-line-bridge" data-rh-line="bridge" aria-hidden="true"></div>
           <div class="rh-step-copy">
             <h3>Capture every signal</h3>
-            <p>Cortex continuously absorbs every customer conversation, CRM update, document, support ticket, and internal decision from the tools your team already uses — nothing to log, nothing to remember.</p>
+            <p>Cortex continuously absorbs every customer conversation, CRM update, document, support ticket, and internal decision from the tools your team already uses, nothing to log, nothing to remember.</p>
             <div class="rh-tags">
               <span class="rh-tag">Calls</span><span class="rh-tag">Email</span><span class="rh-tag">CRM</span><span class="rh-tag">Docs</span><span class="rh-tag">Tickets</span><span class="rh-tag">Decisions</span>
             </div>
@@ -1391,8 +1396,8 @@ footer.site-foot .powered::before{background:#14B8A6}
                   <div><h5>Acme Industrial</h5><span>Living memory · 5 signals merged</span></div>
                 </div>
                 <div class="rh-memory-rows">
-                  <div class="rh-memory-row"><em>Needs</em><strong>Enterprise rollout — security is the gate</strong><span>40 seats added in July</span></div>
-                  <div class="rh-memory-row"><em>Risks</em><strong>Champion left — new IT contact</strong><span>Legal review still open</span></div>
+                  <div class="rh-memory-row"><em>Needs</em><strong>Enterprise rollout, security is the gate</strong><span>40 seats added in July</span></div>
+                  <div class="rh-memory-row"><em>Risks</em><strong>Champion left, new IT contact</strong><span>Legal review still open</span></div>
                   <div class="rh-memory-row"><em>Stakeholders</em><strong>VP Ops joined buying group</strong><span>IT + Legal now in loop</span></div>
                   <div class="rh-memory-row"><em>Promises</em><strong>Security package due Friday</strong><span>Pricing re-anchoring pending</span></div>
                 </div>
@@ -1402,7 +1407,7 @@ footer.site-foot .powered::before{background:#14B8A6}
           <div class="rh-line rh-line-bridge" data-rh-line="bridge" aria-hidden="true"></div>
           <div class="rh-step-copy">
             <h3>Build the memory</h3>
-            <p>It connects changing needs, stakeholders, commitments, risks, and opportunities to the full history of the relationship — a living memory that evolves with every interaction, not a static record.</p>
+            <p>It connects changing needs, stakeholders, commitments, risks, and opportunities to the full history of the relationship, a living memory that evolves with every interaction, not a static record.</p>
             <div class="rh-tags">
               <span class="rh-tag">Needs</span><span class="rh-tag">Stakeholders</span><span class="rh-tag">Promises</span><span class="rh-tag">Risks</span><span class="rh-tag">Timing</span>
             </div>
@@ -1417,12 +1422,12 @@ footer.site-foot .powered::before{background:#14B8A6}
             <div class="rh-recall-scene">
               <img class="rh-recall-scene-bg" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85&auto=format&fit=crop" alt="Account executive before a customer call" loading="lazy" width="520" height="520">
               <div class="rh-recall-scene-shade" aria-hidden="true"></div>
-              <div class="rh-recall-bubble rh-recall-bubble--cortex">Your call with Acme starts in 12 minutes — I've pulled the context.</div>
+              <div class="rh-recall-bubble rh-recall-bubble--cortex">Your call with Acme starts in 12 minutes, I've pulled the context.</div>
               <div class="rh-recall-bubble rh-recall-bubble--user">What should I lead with on pricing?</div>
               <div class="rh-recall-brief">
                 <div class="eyebrow">Next move · Why now</div>
                 <h5>Re-anchor pricing on the 40 seats added in July</h5>
-                <p class="lead">Champion left in May. New IT contact hasn't seen the expansion value yet — lead with seat growth, not discount.</p>
+                <p class="lead">Champion left in May. New IT contact hasn't seen the expansion value yet, lead with seat growth, not discount.</p>
                 <span class="cta">View full pre-call brief →</span>
               </div>
             </div>
@@ -1430,7 +1435,7 @@ footer.site-foot .powered::before{background:#14B8A6}
           <div class="rh-line rh-line-bridge" data-rh-line="bridge" aria-hidden="true"></div>
           <div class="rh-step-copy">
             <h3>Recall and act</h3>
-            <p>The right context arrives the moment it matters — before a call, inside a thread — with a recommended next move, a clear reason why now, and evidence linked to every insight.</p>
+            <p>The right context arrives the moment it matters, before a call, inside a thread, with a recommended next move, a clear reason why now, and evidence linked to every insight.</p>
             <div class="rh-tags">
               <span class="rh-tag">Pre-call recall</span><span class="rh-tag">Next move</span><span class="rh-tag">Why now</span><span class="rh-tag">Evidence</span>
             </div>
@@ -1470,6 +1475,7 @@ class Component extends DCLogic {
       refCanvas: el => { this.canvas = el; },
       refStage: el => { this.stage = el; },
       refChips: el => { this.chips = el; },
+      refCortex: el => { this.cortexHit = el; },
       refLoop: el => { this.loopCanvas = el; },
       refLoopWrap: el => { this.loopWrap = el; },
       refSteps: el => { this.stepsEl = el; }
@@ -1478,7 +1484,7 @@ class Component extends DCLogic {
   componentDidMount() {
     this.rot = 0; this.pulses = []; this.corePulse = 0; this.ripples = [];
     this.nextSpawn = 2200; this.elapsed = 0; this.pulseIdx = 0; this.activeTool = null; this.activeUntil = 0;
-    this.tipUntil = 0; this.hoverIdx = -1;
+    this.tipUntil = 0; this.hoverIdx = -1; this.cortexHover = false;
     this.par = { x: 0, y: 0 }; this.parT = { x: 0, y: 0 }; this.waves = []; this.globeR = 82;
     this.sphere = [];
     const N = 2400, ga = Math.PI * (3 - Math.sqrt(5));
@@ -1521,6 +1527,10 @@ class Component extends DCLogic {
       this.onDocClick = () => { this.pinIdx = -1; };
       document.addEventListener('click', this.onDocClick);
     }
+    if (this.cortexHit) {
+      this.cortexHit.addEventListener('mouseenter', () => { this.cortexHover = true; this.hoverIdx = -1; });
+      this.cortexHit.addEventListener('mouseleave', () => { this.cortexHover = false; });
+    }
     this.last = performance.now();
     const loop = (t) => { this.raf = requestAnimationFrame(loop); this.draw(t); this.drawLoop(t); };
     this.raf = requestAnimationFrame(loop);
@@ -1532,40 +1542,64 @@ class Component extends DCLogic {
 
     const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
     const lerp = (a, b, t) => a + (b - a) * t;
-    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    const smoothstep = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+    const remap = (p, a, b) => clamp((p - a) / (b - a), 0, 1);
+    const TAU = 95;
+
     const layout = () => {
       const mobile = window.innerWidth <= 640;
       return { scale: mobile ? .88 : .93, rot: mobile ? 2 : 2.5, gap: mobile ? 36 : 68 };
     };
 
+    const readPhaseCfg = () => {
+      const cs = getComputedStyle(sec);
+      return {
+        enterEnd: parseFloat(cs.getPropertyValue('--rh-enter-end')) || 0.34,
+        exitStart: parseFloat(cs.getPropertyValue('--rh-exit-start')) || 0.76
+      };
+    };
+
+    const getRawProgress = (el) => {
+      const rect = el.getBoundingClientRect();
+      const scrollRange = Math.max(el.offsetHeight - window.innerHeight, 1);
+      return clamp(-rect.top / scrollRange, 0, 1);
+    };
+
+    const computePhase = (raw, enterEnd, exitStart) => {
+      const enter = smoothstep(remap(raw, 0, enterEnd));
+      const exit = smoothstep(remap(raw, exitStart, 1));
+      const focus = enter * (1 - exit);
+      return { enter, exit, focus };
+    };
+
     const introLine = sec.querySelector('[data-rh-line="intro"]');
     const bridgeLines = Array.from(sec.querySelectorAll('[data-rh-line="bridge"]'));
-    const lineCfg = {
-      intro: { min: 12, max: 104 },
-      bridge: { min: 12, max: 96 }
-    };
+    const splits = Array.from(sec.querySelectorAll('[data-rh-split]'));
+    const reveals = Array.from(sec.querySelectorAll('[data-rh-reveal]'));
+    const steps = splits.concat(reveals);
 
-    const getSplitProgress = (split) => {
-      const rect = split.getBoundingClientRect();
-      const scrollRange = Math.max(split.offsetHeight - window.innerHeight, 1);
-      return easeOut(clamp(-rect.top / scrollRange, 0, 1));
-    };
-
-    const setLineHeight = (line, progress, kind) => {
+    const setLineHeight = (line, enter, kind) => {
       if (!line) return;
-      const cfg = lineCfg[kind] || lineCfg.bridge;
-      const min = parseFloat(getComputedStyle(line).getPropertyValue('--line-min')) || cfg.min;
-      const max = parseFloat(getComputedStyle(line).getPropertyValue('--line-max')) || cfg.max;
-      const h = min + clamp(progress, 0, 1) * (max - min);
-      line.style.height = `${h.toFixed(1)}px`;
+      const min = parseFloat(getComputedStyle(line).getPropertyValue('--line-min')) || 12;
+      const max = parseFloat(getComputedStyle(line).getPropertyValue('--line-max')) || (kind === 'intro' ? 104 : 96);
+      line.style.height = `${(min + clamp(enter, 0, 1) * (max - min)).toFixed(1)}px`;
     };
 
-    const applySplit = (split) => {
-      const p = getSplitProgress(split);
-      split.style.setProperty('--split-progress', p.toFixed(3));
+    const setSideBlur = (el, blurPx) => {
+      if (blurPx < 0.12) el.style.filter = 'none';
+      else el.style.filter = `blur(${blurPx}px)`;
+    };
 
-      if (!split.hasAttribute('data-rh-card-split')) return;
+    const writeStepVars = (el, enter, exit, focus) => {
+      const f = focus.toFixed(3);
+      el.style.setProperty('--enter', enter.toFixed(3));
+      el.style.setProperty('--exit', exit.toFixed(3));
+      el.style.setProperty('--focus', f);
+      el.style.setProperty('--split-progress', f);
+      el.style.setProperty('--reveal-progress', f);
+    };
 
+    const applyCardSplit = (split, enter, focus) => {
       const left = split.querySelector('[data-rh-card="left"]');
       const center = split.querySelector('[data-rh-card="center"]');
       const right = split.querySelector('[data-rh-card="right"]');
@@ -1574,61 +1608,146 @@ class Component extends DCLogic {
       const cardW = left.offsetWidth || 272;
       const centerW = center.offsetWidth || 292;
       const spread = centerW / 2 + cfg.gap + cardW / 2;
+      const sideOpacity = lerp(0, 0.92, focus);
+      const sideBlur = lerp(3.2, 0, focus);
+      const stackDepth = lerp(-14, 0, enter);
 
-      const sideOpacity = lerp(0, .44, p);
-      const sideBlur = lerp(2.5, .6, p);
-      const stackDepth = lerp(-14, 0, p);
-
-      center.style.transform = `translate(-50%, calc(-50% + ${lerp(0, -2, p)}px))`;
+      center.style.transform = `translate(-50%, calc(-50% + ${lerp(0, -2, enter)}px))`;
       center.style.opacity = '1';
       center.style.filter = 'none';
       center.style.zIndex = '3';
 
-      left.style.transform = `translate(calc(-50% + ${lerp(0, -spread, p)}px), calc(-50% + ${stackDepth}px)) scale(${lerp(1, cfg.scale, p)}) rotate(${lerp(0, -cfg.rot, p)}deg)`;
+      left.style.transform = `translate(calc(-50% + ${lerp(0, -spread, enter)}px), calc(-50% + ${stackDepth}px)) scale(${lerp(1, cfg.scale, enter)}) rotate(${lerp(0, -cfg.rot, enter)}deg)`;
       left.style.opacity = String(sideOpacity);
-      left.style.filter = `blur(${sideBlur}px)`;
-      left.style.zIndex = p < .12 ? '2' : '1';
+      setSideBlur(left, sideBlur);
+      left.style.zIndex = enter < 0.12 ? '2' : '1';
 
-      right.style.transform = `translate(calc(-50% + ${lerp(0, spread, p)}px), calc(-50% + ${stackDepth}px)) scale(${lerp(1, cfg.scale, p)}) rotate(${lerp(0, cfg.rot, p)}deg)`;
+      right.style.transform = `translate(calc(-50% + ${lerp(0, spread, enter)}px), calc(-50% + ${stackDepth}px)) scale(${lerp(1, cfg.scale, enter)}) rotate(${lerp(0, cfg.rot, enter)}deg)`;
       right.style.opacity = String(sideOpacity);
-      right.style.filter = `blur(${sideBlur}px)`;
-      right.style.zIndex = p < .12 ? '2' : '1';
+      setSideBlur(right, sideBlur);
+      right.style.zIndex = enter < 0.12 ? '2' : '1';
     };
 
-    const applyReveal = (step) => {
-      const p = getSplitProgress(step);
-      step.style.setProperty('--reveal-progress', p.toFixed(3));
+    const paintStep = (el, s) => {
+      writeStepVars(el, s.enter, s.exit, s.focus);
+      if (el.hasAttribute('data-rh-card-split')) applyCardSplit(el, s.enter, s.focus);
     };
 
-    const splits = Array.from(sec.querySelectorAll('[data-rh-split]'));
-    const reveals = Array.from(sec.querySelectorAll('[data-rh-reveal]'));
-    const updateLines = () => {
-      const p1 = splits[0] ? getSplitProgress(splits[0]) : 0;
-      const p2 = splits[1] ? getSplitProgress(splits[1]) : 0;
-      const p3 = reveals[0] ? getSplitProgress(reveals[0]) : 0;
+    const stepState = new Map();
+    steps.forEach(el => stepState.set(el, { enter: 0, exit: 0, focus: 0, targetEnter: 0, targetExit: 0, targetFocus: 0 }));
 
-      if (introLine) setLineHeight(introLine, p1, 'intro');
-      if (bridgeLines[0]) setLineHeight(bridgeLines[0], p1, 'bridge');
-      if (bridgeLines[1]) setLineHeight(bridgeLines[1], p2, 'bridge');
-      if (bridgeLines[2]) setLineHeight(bridgeLines[2], p3, 'bridge');
+    const syncLines = () => {
+      if (introLine && splits[0]) setLineHeight(introLine, stepState.get(splits[0]).enter, 'intro');
+      if (bridgeLines[0] && splits[0]) setLineHeight(bridgeLines[0], stepState.get(splits[0]).enter, 'bridge');
+      if (bridgeLines[1] && splits[1]) setLineHeight(bridgeLines[1], stepState.get(splits[1]).enter, 'bridge');
+      if (bridgeLines[2] && reveals[0]) setLineHeight(bridgeLines[2], stepState.get(reveals[0]).enter, 'bridge');
     };
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        splits.forEach(applySplit);
-        reveals.forEach(applyReveal);
-        updateLines();
-        ticking = false;
+    const updateTargets = () => {
+      const { enterEnd, exitStart } = readPhaseCfg();
+      steps.forEach(el => {
+        const ph = computePhase(getRawProgress(el), enterEnd, exitStart);
+        const s = stepState.get(el);
+        s.targetEnter = ph.enter;
+        s.targetExit = ph.exit;
+        s.targetFocus = ph.focus;
       });
     };
 
-    onScroll();
+    const syncPaint = () => {
+      steps.forEach(el => {
+        const s = stepState.get(el);
+        s.enter = s.targetEnter;
+        s.exit = s.targetExit;
+        s.focus = s.targetFocus;
+        paintStep(el, s);
+      });
+      syncLines();
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      steps.forEach(el => {
+        writeStepVars(el, 1, 0, 1);
+        if (el.hasAttribute('data-rh-card-split')) applyCardSplit(el, 1, 1);
+      });
+      if (introLine) setLineHeight(introLine, 1, 'intro');
+      if (bridgeLines[0]) setLineHeight(bridgeLines[0], 1, 'bridge');
+      if (bridgeLines[1]) setLineHeight(bridgeLines[1], 1, 'bridge');
+      if (bridgeLines[2]) setLineHeight(bridgeLines[2], 1, 'bridge');
+      sec.dataset.rhLinesReady = '1';
+      return;
+    }
+
+    let rafId = null;
+    let lastTs = 0;
+    let loopActive = false;
+
+    const tick = (ts) => {
+      if (!loopActive) { rafId = null; return; }
+      const dt = Math.min(lastTs ? ts - lastTs : 16, 64);
+      lastTs = ts;
+      const k = 1 - Math.exp(-dt / TAU);
+      let settled = true;
+
+      steps.forEach(el => {
+        const s = stepState.get(el);
+        const de = s.targetEnter - s.enter;
+        const dx = s.targetExit - s.exit;
+        const df = s.targetFocus - s.focus;
+        if (Math.abs(de) > 0.0005 || Math.abs(dx) > 0.0005 || Math.abs(df) > 0.0005) settled = false;
+        s.enter += de * k;
+        s.exit += dx * k;
+        s.focus += df * k;
+        paintStep(el, s);
+      });
+      syncLines();
+
+      if (settled) { loopActive = false; rafId = null; return; }
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const startLoop = () => {
+      if (rafId !== null) return;
+      lastTs = 0;
+      loopActive = true;
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const onScroll = () => {
+      updateTargets();
+      startLoop();
+    };
+
+    const onResize = () => {
+      steps.forEach(el => {
+        const s = stepState.get(el);
+        s.enter = 0; s.exit = 0; s.focus = 0;
+        s.targetEnter = 0; s.targetExit = 0; s.targetFocus = 0;
+      });
+      updateTargets();
+      syncPaint();
+      startLoop();
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0] && entries[0].isIntersecting) {
+        updateTargets();
+        startLoop();
+      } else {
+        loopActive = false;
+        if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+      }
+    }, { rootMargin: '150% 0px' });
+    io.observe(sec);
+
+    updateTargets();
+    syncPaint();
+
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('resize', onResize, { passive: true });
     this._howScroll = onScroll;
+    this._howResize = onResize;
+    this._howIo = io;
     sec.dataset.rhLinesReady = '1';
   }
   componentWillUnmount() {
@@ -1826,7 +1945,7 @@ class Component extends DCLogic {
           op = 0.06 + 0.39 * oc;
         }
         chip.style.opacity = op;
-        const autoTip = (this.props.showInsights ?? false) && active && this.elapsed < this.tipUntil && this.hoverIdx === -1 && this.pinIdx === -1;
+        const autoTip = (this.props.showInsights ?? false) && active && this.elapsed < this.tipUntil && this.hoverIdx === -1 && this.pinIdx === -1 && !this.cortexHover;
         chip.style.zIndex = hovered || autoTip ? 7 : (p.depth < 0 ? 2 : 5);
         const glow = active || hovered;
         if (glow !== chip._act) {
@@ -1879,7 +1998,7 @@ class Component extends DCLogic {
         if (r.done) { this.absorb(pl, r.ix, r.iy); pl.dead = true; }
       }
     }
-    // particle globe — fine speckle, dense rim, soft blooms, precessing axis
+    // particle globe, fine speckle, dense rim, soft blooms, precessing axis
     this.corePulse = Math.max(0, this.corePulse - dt / 900);
     const R = 82 * (1 + 0.02 * Math.sin(t * 0.0012) + this.corePulse * 0.05);
     this.globeR = R;
@@ -1948,6 +2067,25 @@ class Component extends DCLogic {
       ctx.strokeStyle = r.c ? this.hexA(r.c, 0.26 * (1 - k)) : A(0.32 * (1 - k)); ctx.lineWidth = 1.2; ctx.stroke();
       return true;
     });
+    if (this.cortexHit) {
+      const size = Math.max(128, this.globeR * 2.05);
+      this.cortexHit.style.width = `${size}px`;
+      this.cortexHit.style.height = `${size}px`;
+      this.cortexHit.style.transform = `translate(-50%,-50%) translate(${this.gx - this.ox}px,${this.gy - this.oy}px)`;
+      this.cortexHit.style.zIndex = this.cortexHover ? 8 : 6;
+      const glow = this.cortexHover;
+      if (glow !== this.cortexHit._act) {
+        this.cortexHit._act = glow;
+        this.cortexHit.style.borderColor = glow ? A(0.45) : 'transparent';
+        this.cortexHit.style.boxShadow = glow ? `0 0 0 4px ${A(0.12)}, 0 8px 30px -8px ${A(0.5)}` : 'none';
+      }
+      const tip = this.cortexHit.querySelector('[data-tip]');
+      if (tip && glow !== this.cortexHit._tip) {
+        this.cortexHit._tip = glow;
+        tip.style.opacity = glow ? 1 : 0;
+        tip.style.transform = glow ? 'translate(-50%,0)' : 'translate(-50%,4px)';
+      }
+    }
   }
 }
 function boot(){
@@ -1976,13 +2114,13 @@ else boot();
         <span class="wv-why-title-main">Your customer should not have to repeat themselves.</span>
         <span class="wv-why-title-punch">Neither should your team.</span>
       </h2>
-      <p class="wv-why-lede reveal d2">Customer context gets buried across calls, CRM, Slack, tickets, inboxes, and docs.<br>Teams still reconstruct the relationship by hand — and walk into decisions with different versions of the truth.</p>
+      <p class="wv-why-lede reveal d2">Customer context gets buried across calls, CRM, Slack, tickets, inboxes, and docs.<br>Teams still reconstruct the relationship by hand, and walk into decisions with different versions of the truth.</p>
     </div>
 
     <div class="wv-pain-block reveal d1">
       <div class="wv-pain-head">
         <span class="wv-pain-kicker">Without Velorb</span>
-        <p>When customer memory lives in fragments, your team — and your customers — pay the cost every day.</p>
+        <p>When customer memory lives in fragments, your team, and your customers, pay the cost every day.</p>
       </div>
       <div class="wv-pain">
         <article class="wv-pain-card">
@@ -1997,7 +2135,7 @@ else boot();
             </div>
           </div>
           <h3>Context lives in fragments</h3>
-          <p>Every tool holds a piece of the relationship — but none of them connect the full story as it evolves.</p>
+          <p>Every tool holds a piece of the relationship, but none of them connect the full story as it evolves.</p>
         </article>
         <article class="wv-pain-card">
           <span class="wv-pain-num">Problem 02</span>
@@ -2013,7 +2151,7 @@ else boot();
             </div>
           </div>
           <h3>Teams reconstruct before every call</h3>
-          <p>Reps reread threads, ping colleagues, and scroll transcripts — just to remember what changed since last week.</p>
+          <p>Reps reread threads, ping colleagues, and scroll transcripts, just to remember what changed since last week.</p>
         </article>
         <article class="wv-pain-card">
           <span class="wv-pain-num">Problem 03</span>
@@ -2022,12 +2160,12 @@ else boot();
               <div class="wv-repeat-loop" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
               </div>
-              <div class="wv-repeat-bubble">"We already covered our rollout timeline — can you send that again?"</div>
+              <div class="wv-repeat-bubble">"We already covered our rollout timeline, can you send that again?"</div>
               <span class="wv-repeat-again">Asked again · 3rd time</span>
             </div>
           </div>
           <h3>Customers feel the repetition</h3>
-          <p>When internal memory fails, customers re-explain priorities, stakeholders, and promises — again and again.</p>
+          <p>When internal memory fails, customers re-explain priorities, stakeholders, and promises, again and again.</p>
         </article>
       </div>
       <div class="wv-pain-bridge" aria-hidden="true">
@@ -2047,7 +2185,7 @@ else boot();
         <span class="wv-compare-title-main">Your tools record the work.</span>
         <span class="wv-compare-title-punch">Velorb carries the relationship forward.</span>
       </h2>
-      <p class="wv-compare-lede">CRM stores the record. Meeting tools remember the conversation. Generic AI only sees the context you give it. Velorb follows the relationship as it changes — so your team does not have to rebuild context before every decision.</p>
+      <p class="wv-compare-lede">CRM stores the record. Meeting tools remember the conversation. Generic AI only sees the context you give it. Velorb follows the relationship as it changes, so your team does not have to rebuild context before every decision.</p>
       <p class="wv-compare-tagline">The work is recorded. The relationship is <em>remembered.</em></p>
     </div>
 
@@ -2064,7 +2202,7 @@ else boot();
             <span class="wv-tab-short">CRM</span>
             <span class="wv-tab-label">CRM</span>
             <span class="wv-tab-title">Static records</span>
-            <span class="wv-tab-gap">Fields update — the story does not</span>
+            <span class="wv-tab-gap">Fields update, the story does not</span>
           </button>
           <button class="wv-tab" type="button" role="tab" aria-selected="false" data-wv-tab="meet">
             <span class="wv-tab-short">Meetings</span>
@@ -2108,7 +2246,7 @@ else boot();
             </div>
             <div class="wv-panel-copy">
               <h3>Understands the relationship as it evolves.</h3>
-              <p>Follows customer signals across conversations, systems, behavior, and teams — then surfaces what changed, why it matters, the next move, and the evidence behind it.</p>
+              <p>Follows customer signals across conversations, systems, behavior, and teams, then surfaces what changed, why it matters, the next move, and the evidence behind it.</p>
               <div class="wv-verdict"><b>Shows what changed.</b><span>Why it matters. What to do next.</span></div>
             </div>
             <div class="wv-panel-visual">
@@ -2118,7 +2256,7 @@ else boot();
                   <div><b>Acme Industrial</b><span>Customer story · live</span></div>
                 </div>
                 <div class="wv-ui-body">
-                  <div class="wv-ui-row"><em>What changed</em><strong>Renewal became expansion — VP Ops joined the buying group</strong></div>
+                  <div class="wv-ui-row"><em>What changed</em><strong>Renewal became expansion, VP Ops joined the buying group</strong></div>
                   <div class="wv-ui-row"><em>Why it matters</em><strong>Legal is blocked on security; champion moves roles next quarter</strong></div>
                   <div class="wv-ui-row is-move"><em>Recommended move</em><strong>Send security package today · align new VP Thursday</strong></div>
                   <div class="wv-ui-pills"><i>Gmail · DPA</i><i>Gong · 40 seats</i><i>Slack · champion</i></div>
@@ -2131,7 +2269,7 @@ else boot();
             <div class="wv-panel-badge">
               <span class="wv-tab-label">CRM</span>
               <span class="wv-tab-title">Static records</span>
-              <span class="wv-tab-gap">Fields update — the story does not</span>
+              <span class="wv-tab-gap">Fields update, the story does not</span>
             </div>
             <div class="wv-panel-mobile">
               <div class="wv-mobile-head"><h3>CRM</h3></div>
@@ -2148,13 +2286,13 @@ else boot();
                 <ul class="wv-mobile-feats">
                   <li>Accounts, contacts, and deal stages</li>
                   <li>Logged calls and activity timestamps</li>
-                  <li>Static fields — not evolving context</li>
+                  <li>Static fields, not evolving context</li>
                 </ul>
               </div>
             </div>
             <div class="wv-panel-copy">
               <h3>Stores the record. Not the reality around it.</h3>
-              <p>Tracks accounts, contacts, stages, and activities — but rarely explains what changed, why it changed, or what the team should do next.</p>
+              <p>Tracks accounts, contacts, stages, and activities, but rarely explains what changed, why it changed, or what the team should do next.</p>
               <div class="wv-verdict"><b>Knows the fields.</b><span>Misses the relationship.</span></div>
             </div>
             <div class="wv-panel-visual">
@@ -2172,7 +2310,7 @@ else boot();
                   <small>Opportunities › Acme Industrial</small>
                   <div class="wv-sf-rec-row">
                     <div class="wv-sf-opp-icon"><svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg"><path d="M26 4l6.2 19H52l-16 11.6 6.2 19L26 42.1 9.8 53.6l6.2-19L0 23h19.8L26 4z"/></svg></div>
-                    <div class="wv-sf-rec-meta"><em>Opportunity</em><h4>Acme Industrial — Renewal</h4></div>
+                    <div class="wv-sf-rec-meta"><em>Opportunity</em><h4>Acme Industrial, Renewal</h4></div>
                   </div>
                   <div class="wv-sf-btns"><button class="primary">Edit</button><button>Clone</button><button>Delete</button></div>
                 </div>
@@ -2193,7 +2331,7 @@ else boot();
                       <div class="wv-sf-field wv-stale"><label>Primary Contact</label><span>Out of date</span></div>
                     </div>
                   </div>
-                  <div class="wv-sf-alert">Record untouched for 18 days — fields update, but the story doesn't.</div>
+                  <div class="wv-sf-alert">Record untouched for 18 days, fields update, but the story doesn't.</div>
                 </div>
               </div>
             </div>
@@ -2299,7 +2437,7 @@ else boot();
             </div>
             <div class="wv-panel-copy">
               <h3>Works from the context you paste in.</h3>
-              <p>Can summarize or answer well — but only from the information you provide in the moment. It does not maintain a living memory of the customer relationship.</p>
+              <p>Can summarize or answer well, but only from the information you provide in the moment. It does not maintain a living memory of the customer relationship.</p>
               <div class="wv-verdict"><b>Knows what you gave it.</b><span>Misses what your company already knows.</span></div>
             </div>
             <div class="wv-panel-visual">
@@ -2377,7 +2515,6 @@ else boot();
       <div class="foot-brand">
         <div class="brand">
           <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
-          <span class="brand-cat">Living Customer Context</span>
         </div>
         <p>Customer memory, redefined.</p>
       </div>
@@ -2435,10 +2572,10 @@ else boot();
   // fallback: if IntersectionObserver never fires (fails / slow), reveal everything
   setTimeout(() => $$('.reveal').forEach(el => el.classList.add('in')), 1000);
 
-  /* [old hero + integrations engine removed — replaced by #velorb-cortex] */
+  /* [old hero + integrations engine removed, replaced by #velorb-cortex] */
 
   /* ==========================================================
-     WHY VELORB — comparison tabs
+     WHY VELORB, comparison tabs
      ========================================================== */
   const wvTabs = $$('[data-wv-tab]');
   const wvPanels = $$('[data-wv-panel]');

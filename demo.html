@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Demo — Velorb</title>
+<title>Book a Demo, Velorb</title>
 <meta name="description" content="Book a 30-minute Velorb demo. See how living customer memory works with your team.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cellipse cx=%2750%27 cy=%2750%27 rx=%2745%27 ry=%2715%27 transform=%27rotate(-18 50 50)%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 opacity=%27.5%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2726%27 fill=%27%23E09A3E%27/%3E%3Cpath d=%27M90 45 70 58 55 64 39 68 25 70 15 69%27 fill=%27none%27 stroke=%27%23E09A3E%27 stroke-width=%277%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +59,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   display:flex;align-items:center;justify-content:space-between;gap:24px;
 }
 .brand{display:flex;flex-direction:column;gap:1px;flex-shrink:0;line-height:1.12}
+.nav .brand{flex-direction:row;align-items:center;line-height:0;gap:0}
 .brand-logo{height:46px;width:auto;display:block;object-fit:contain}
 .foot-brand .brand-logo{height:52px}
 .brand-cat{font-family:var(--mono);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:4px}
@@ -414,9 +415,8 @@ footer.site-foot{
 
 <nav class="nav" id="nav">
   <div class="nav-in">
-    <a href="index.html" class="brand" aria-label="Velorb — home">
+    <a href="index.html" class="brand" aria-label="Velorb">
       <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
-      <span class="brand-cat">Living Customer Context</span>
     </a>
     <div class="nav-links">
       <a href="index.html#platform">Platform</a>
@@ -443,7 +443,7 @@ footer.site-foot{
     <ul class="demo-points">
       <li>
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span><b>One living customer story.</b> Calls, email, CRM, Slack, and docs become memory — not fragments.</span>
+        <span><b>One living customer story.</b> Calls, email, CRM, Slack, and docs become memory, not fragments.</span>
       </li>
       <li>
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -595,7 +595,7 @@ footer.site-foot{
           <svg width="24" height="24" viewBox="0 0 20 20" fill="none"><path d="M6 10.2l2.4 2.4L14 7.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h2>You’re booked</h2>
-        <p id="successMessage">Your demo is confirmed. Check your email for the calendar invite — we’ll walk you through Velorb live.</p>
+        <p id="successMessage">Your demo is confirmed. Check your email for the calendar invite, we’ll walk you through Velorb live.</p>
         <a href="index.html">← Back to Velorb</a>
       </div>
     </div>
@@ -608,7 +608,6 @@ footer.site-foot{
       <div class="foot-brand">
         <div class="brand">
           <img src="assets/velorb-logo.png" alt="Velorb" class="brand-logo" width="1024" height="384">
-          <span class="brand-cat">Living Customer Context</span>
         </div>
         <p>Customer memory, redefined.</p>
       </div>
@@ -653,7 +652,7 @@ footer.site-foot{
   const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   const SLOT_TIMES = ['9:00 am','9:30 am','10:00 am','10:30 am','11:00 am','11:30 am','1:00 pm','1:30 pm','2:00 pm','2:30 pm','2:45 pm','3:00 pm','3:30 pm','4:00 pm','4:30 pm'];
   const MAX_GUESTS = 10;
-  /* Paste your Google Apps Script web app URL — see booking/SETUP.md */
+  /* Paste your Google Apps Script web app URL, see booking/SETUP.md */
   const BOOKING_API = 'https://script.google.com/macros/s/AKfycbyu3sV4rXuKSS-U0h_h4yhdRV1AzMXnS3KNZWEUovQFesXv2jQFgS0b65nSJbkv50mG/exec';
 
   const today = new Date();
@@ -921,7 +920,7 @@ footer.site-foot{
     panelDetails.classList.add('is-hidden');
     demoSuccess.classList.add('is-visible');
     const name = [data.firstName, data.lastName].filter(Boolean).join(' ');
-    successMessage.textContent = `Your demo on ${formatSlotLabel()} is confirmed${name ? ', ' + name : ''}. Check ${data.email} for the calendar invite — we'll walk you through Velorb live.`;
+    successMessage.textContent = `Your demo on ${formatSlotLabel()} is confirmed${name ? ', ' + name : ''}. Check ${data.email} for the calendar invite, we'll walk you through Velorb live.`;
   }
 
   calPrev.addEventListener('click', () => {
