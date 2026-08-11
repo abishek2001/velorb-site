@@ -806,6 +806,8 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
 .wv-tab.is-active .wv-tab-label,.wv-tab[aria-selected="true"] .wv-tab-label{color:#0E9384}
 .wv-tab-title{font-size:15px;font-weight:600;letter-spacing:-.02em;color:#131A22}
 .wv-tab-gap{font-size:12.5px;color:#6B7A8C;line-height:1.4}
+.wv-tab-short{display:none}
+.wv-panel-mobile{display:none}
 .wv-panel-badge{display:none}
 .wv-stage{position:relative;min-height:380px;border-radius:24px;border:1px solid rgba(79,216,196,.16);background:#fff;overflow:hidden;box-shadow:0 40px 100px -36px rgba(19,26,34,.18),0 0 40px -20px rgba(79,216,196,.08);display:grid;grid-template-columns:1fr}
 .wv-panel{grid-area:1/1;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:0;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1);visibility:hidden}
@@ -992,53 +994,88 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .wv-pain{grid-template-columns:1fr}
   .wv-pain-block{margin-bottom:44px}
   .wv-compare-head{margin-bottom:40px}
-  .wv-compare-shell{grid-template-columns:1fr;gap:0}
-  .wv-tabs{display:none !important}
+  .wv-compare-shell{
+    grid-template-columns:1fr;gap:0;
+    border:1px solid rgba(255,255,255,.12);border-radius:22px;overflow:hidden;
+    background:linear-gradient(165deg,#0A1018 0%,#0D1520 100%);
+    box-shadow:0 28px 64px -32px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.04);
+  }
+  .wv-tabs{
+    display:flex !important;flex-direction:row;gap:4px;
+    padding:8px 8px 0;border-bottom:0;background:transparent;
+  }
+  .wv-tab{
+    flex:1;min-width:0;align-items:center;text-align:center;
+    padding:11px 4px;border-radius:14px 14px 0 0;border:0;
+    background:transparent;box-shadow:none;transform:none;
+  }
+  .wv-tab:hover{background:rgba(255,255,255,.04);border-color:transparent;box-shadow:none}
+  .wv-tab.is-active,.wv-tab[aria-selected="true"]{
+    background:rgba(255,255,255,.07);border-color:transparent;
+    box-shadow:inset 0 -1px 0 rgba(255,255,255,.06);
+  }
+  .wv-tab.is-active::before,.wv-tab[aria-selected="true"]::before{display:none}
+  .wv-tab-short{display:block;font-size:11.5px;font-weight:600;letter-spacing:-.01em;color:#6B8299;line-height:1.2}
+  .wv-tab.is-active .wv-tab-short,.wv-tab[aria-selected="true"] .wv-tab-short{color:#F4F7FA}
+  .wv-tab-label,.wv-tab-title,.wv-tab-gap{display:none !important}
   .wv-stage{
-    display:flex;flex-direction:column;gap:20px;
-    min-height:0;border:none;background:transparent;box-shadow:none;overflow:visible;
+    display:grid;grid-template-columns:1fr;
+    min-height:0;border:none;border-radius:0;
+    background:transparent;box-shadow:none;overflow:hidden;
   }
-  .wv-panel,
+  .wv-panel{
+    grid-area:1/1;display:flex !important;flex-direction:column;
+    opacity:0;visibility:hidden;pointer-events:none;transform:none;
+    border:0;border-radius:0;background:transparent;box-shadow:none;
+    transition:opacity .35s ease,visibility .35s ease;
+  }
   .wv-panel.is-active{
-    display:flex !important;flex-direction:column;
-    position:static;grid-area:unset;
-    opacity:1 !important;visibility:visible !important;pointer-events:auto !important;transform:none !important;
-    border-radius:20px;border:1px solid rgba(255,255,255,.1);
-    background:linear-gradient(160deg,#0A1018 0%,#0D1520 100%);
-    box-shadow:0 24px 60px -28px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);
-    overflow:hidden;
+    opacity:1;visibility:visible;pointer-events:auto;
   }
-  .wv-panel--featured{
-    border-color:rgba(79,216,196,.35);
-    box-shadow:0 24px 60px -28px rgba(0,0,0,.45),0 0 32px -12px rgba(79,216,196,.18),inset 0 1px 0 rgba(255,255,255,.06);
+  .wv-panel-badge,.wv-panel-copy{display:none !important}
+  .wv-panel-mobile{display:block;padding:22px 18px 6px;flex-shrink:0}
+  .wv-mobile-head h3{margin:0;font-size:26px;font-weight:600;letter-spacing:-.03em;line-height:1.1;color:#F4F7FA}
+  .wv-panel--featured .wv-mobile-head h3{color:#F4F7FA}
+  .wv-mobile-block{margin-top:22px}
+  .wv-mobile-kicker{
+    display:block;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:#6B8299;margin-bottom:10px;
   }
-  .wv-panel-badge{
-    display:flex;flex-direction:column;align-items:flex-start;gap:4px;
-    padding:16px 18px 14px;border-bottom:1px solid rgba(255,255,255,.08);
+  .wv-mobile-shift{
+    margin:0;font-size:15px;line-height:1.55;color:#93A2B4;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .wv-shift-from{color:#6B8299;font-size:14px;line-height:1.45}
+  .wv-shift-arrow{color:#14B8A6;font-size:18px;line-height:1;font-weight:500}
+  .wv-panel--featured .wv-shift-arrow{color:#4FD8C4}
+  .wv-shift-to{color:#F4F7FA;font-size:16px;font-weight:600;line-height:1.35;letter-spacing:-.02em}
+  .wv-mobile-feats{
+    margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;
+  }
+  .wv-mobile-feats li{
+    display:flex;align-items:flex-start;gap:10px;
+    padding:12px 14px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.12);
     background:rgba(255,255,255,.03);
+    font-size:13.5px;line-height:1.4;color:#C9D4E0;
   }
-  .wv-panel--featured .wv-panel-badge{
-    background:rgba(79,216,196,.08);border-bottom-color:rgba(79,216,196,.18);
+  .wv-mobile-feats li::before{
+    content:'';flex-shrink:0;width:16px;height:16px;margin-top:1px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%2314B8A6' d='M6.2 11.4L3.4 8.6l-.9.9 3.7 3.7 7.4-7.4-.9-.9z'/%3E%3C/svg%3E") center/contain no-repeat;
   }
-  .wv-panel-badge .wv-tab-label{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B8299}
-  .wv-panel--featured .wv-panel-badge .wv-tab-label{color:#4FD8C4}
-  .wv-panel-badge .wv-tab-title{font-size:15px;font-weight:600;letter-spacing:-.02em;color:#F4F7FA}
-  .wv-panel-badge .wv-tab-gap{font-size:12.5px;color:#93A2B4;line-height:1.4}
-  .wv-panel,.wv-panel.is-active{grid-template-columns:1fr}
-  .wv-panel-copy{border-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding:20px 18px 18px}
-  .wv-compare-section .wv-panel-copy{border-bottom-color:rgba(255,255,255,.08)}
-  .wv-panel-copy h3{font-size:20px;max-width:none}
-  .wv-panel-copy p{font-size:14px;line-height:1.62}
-  .wv-verdict{margin-top:16px;max-width:none}
+  .wv-panel--featured .wv-mobile-feats li{border-color:rgba(79,216,196,.22);background:rgba(79,216,196,.06)}
+  .wv-panel--featured .wv-mobile-feats li::before{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%234FD8C4' d='M6.2 11.4L3.4 8.6l-.9.9 3.7 3.7 7.4-7.4-.9-.9z'/%3E%3C/svg%3E");
+  }
   .wv-panel-visual{
-    min-height:0;padding:16px 14px 18px;
+    min-height:0;padding:14px 14px 18px;margin-top:8px;
     background:linear-gradient(160deg,#04070D 0%,#0A1018 55%,#0D1520 100%);
     overflow-x:auto;-webkit-overflow-scrolling:touch;
   }
   .wv-panel--featured .wv-panel-visual{background:linear-gradient(160deg,#04070D 0%,#0D1520 55%,#131A22 100%)}
-  .wv-ui{max-width:none;margin:0 auto}
+  .wv-ui{max-width:none;margin:0 auto;width:100%}
   .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{
-    max-width:none;min-width:300px;width:100%;
+    max-width:none;min-width:0;width:100%;
     transform:scale(1);transform-origin:top center;
   }
   .wv-mock-sf .wv-sf-highlights{grid-template-columns:repeat(2,1fr)}
@@ -1046,9 +1083,9 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .wv-mock-sf .wv-sf-path-wrap{display:none}
   .wv-zoom-room{grid-template-columns:1fr}
   .wv-zoom-panel{border-left:0;border-top:1px solid rgba(255,255,255,.08);max-height:140px}
-  .wv-mock-gpt{grid-template-columns:1fr;min-height:280px}
+  .wv-mock-gpt{grid-template-columns:1fr;min-height:260px}
   .wv-gpt-side{display:none}
-  .wv-gpt-main{min-height:280px}
+  .wv-gpt-main{min-height:260px}
 }
 @media(max-width:640px){
   #why.wv-why{padding:56px 16px 64px !important}
@@ -1056,13 +1093,16 @@ footer{background:#F4F5F0;border-top:0}.powered::before{background:#14B8A6}
   .wv-why-head{margin-bottom:40px}
   .wv-pain{margin-bottom:40px}
   .wv-compare-head{margin-bottom:36px}
-  .wv-stage{gap:16px}
-  .wv-panel-copy{padding:18px 16px 16px}
-  .wv-panel-copy h3{font-size:18px}
-  .wv-panel-visual{padding:14px 12px 16px}
-  .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{min-width:280px;font-size:9px}
+  .wv-tab-short{font-size:10.5px}
+  .wv-tab{padding:10px 2px}
+  .wv-panel-mobile{padding:20px 16px 4px}
+  .wv-mobile-head h3{font-size:24px}
+  .wv-mobile-block{margin-top:18px}
+  .wv-panel-visual{padding:12px 12px 16px}
+  .wv-ui--crm,.wv-ui--meet,.wv-ui--ai{font-size:9px}
   .wv-sf-page-hdr .wv-sf-rec-meta h4{font-size:14px}
   .wv-zoom-meet-title{font-size:10px}
+  .wv-mock-gpt,.wv-gpt-main{min-height:240px}
 }
 @media(prefers-reduced-motion:reduce){.wv-panel{transition:none;transform:none}}
 
@@ -2015,21 +2055,25 @@ else boot();
       <div class="wv-compare-shell">
         <div class="wv-tabs" role="tablist" aria-label="Compare approaches">
           <button class="wv-tab is-active" type="button" role="tab" aria-selected="true" data-wv-tab="velorb">
+            <span class="wv-tab-short">Velorb</span>
             <span class="wv-tab-label">Velorb</span>
             <span class="wv-tab-title">Living customer memory</span>
             <span class="wv-tab-gap">Shows what changed, why, and what to do next</span>
           </button>
           <button class="wv-tab" type="button" role="tab" aria-selected="false" data-wv-tab="crm">
+            <span class="wv-tab-short">CRM</span>
             <span class="wv-tab-label">CRM</span>
             <span class="wv-tab-title">Static records</span>
             <span class="wv-tab-gap">Fields update — the story does not</span>
           </button>
           <button class="wv-tab" type="button" role="tab" aria-selected="false" data-wv-tab="meet">
+            <span class="wv-tab-short">Meetings</span>
             <span class="wv-tab-label">Meeting tools</span>
             <span class="wv-tab-title">Call transcripts</span>
             <span class="wv-tab-gap">Each meeting stays isolated</span>
           </button>
           <button class="wv-tab" type="button" role="tab" aria-selected="false" data-wv-tab="ai">
+            <span class="wv-tab-short">AI</span>
             <span class="wv-tab-label">Generic AI</span>
             <span class="wv-tab-title">Prompt context</span>
             <span class="wv-tab-gap">Only knows what you paste in</span>
@@ -2042,6 +2086,25 @@ else boot();
               <span class="wv-tab-label">Velorb</span>
               <span class="wv-tab-title">Living customer memory</span>
               <span class="wv-tab-gap">Shows what changed, why, and what to do next</span>
+            </div>
+            <div class="wv-panel-mobile">
+              <div class="wv-mobile-head"><h3>Velorb</h3></div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">The shift</span>
+                <p class="wv-mobile-shift">
+                  <span class="wv-shift-from">Rebuilding context before every call</span>
+                  <span class="wv-shift-arrow" aria-hidden="true">→</span>
+                  <strong class="wv-shift-to">Memory that follows the relationship</strong>
+                </p>
+              </div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">What Velorb does</span>
+                <ul class="wv-mobile-feats">
+                  <li>Surfaces what changed across every signal</li>
+                  <li>Explains why it matters right now</li>
+                  <li>Recommends the next move with evidence</li>
+                </ul>
+              </div>
             </div>
             <div class="wv-panel-copy">
               <h3>Understands the relationship as it evolves.</h3>
@@ -2069,6 +2132,25 @@ else boot();
               <span class="wv-tab-label">CRM</span>
               <span class="wv-tab-title">Static records</span>
               <span class="wv-tab-gap">Fields update — the story does not</span>
+            </div>
+            <div class="wv-panel-mobile">
+              <div class="wv-mobile-head"><h3>CRM</h3></div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">The shift</span>
+                <p class="wv-mobile-shift">
+                  <span class="wv-shift-from">Fields update on schedule</span>
+                  <span class="wv-shift-arrow" aria-hidden="true">→</span>
+                  <strong class="wv-shift-to">The story never connects</strong>
+                </p>
+              </div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">What CRM stores</span>
+                <ul class="wv-mobile-feats">
+                  <li>Accounts, contacts, and deal stages</li>
+                  <li>Logged calls and activity timestamps</li>
+                  <li>Static fields — not evolving context</li>
+                </ul>
+              </div>
             </div>
             <div class="wv-panel-copy">
               <h3>Stores the record. Not the reality around it.</h3>
@@ -2123,6 +2205,25 @@ else boot();
               <span class="wv-tab-title">Call transcripts</span>
               <span class="wv-tab-gap">Each meeting stays isolated</span>
             </div>
+            <div class="wv-panel-mobile">
+              <div class="wv-mobile-head"><h3>Meeting tools</h3></div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">The shift</span>
+                <p class="wv-mobile-shift">
+                  <span class="wv-shift-from">Perfect transcripts from every call</span>
+                  <span class="wv-shift-arrow" aria-hidden="true">→</span>
+                  <strong class="wv-shift-to">Each meeting stays isolated</strong>
+                </p>
+              </div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">What meeting tools capture</span>
+                <ul class="wv-mobile-feats">
+                  <li>Conversation recordings and transcripts</li>
+                  <li>Speaker labels and timestamps</li>
+                  <li>No link to CRM, email, or account history</li>
+                </ul>
+              </div>
+            </div>
             <div class="wv-panel-copy">
               <h3>Remember the call. Not everything around it.</h3>
               <p>Capture conversations and transcripts, but each meeting stays isolated from the wider history, signals, and decisions shaping the account.</p>
@@ -2176,6 +2277,25 @@ else boot();
               <span class="wv-tab-label">Generic AI</span>
               <span class="wv-tab-title">Prompt context</span>
               <span class="wv-tab-gap">Only knows what you paste in</span>
+            </div>
+            <div class="wv-panel-mobile">
+              <div class="wv-mobile-head"><h3>Generic AI</h3></div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">The shift</span>
+                <p class="wv-mobile-shift">
+                  <span class="wv-shift-from">Answers from what you paste in</span>
+                  <span class="wv-shift-arrow" aria-hidden="true">→</span>
+                  <strong class="wv-shift-to">No memory of the relationship</strong>
+                </p>
+              </div>
+              <div class="wv-mobile-block">
+                <span class="wv-mobile-kicker">What generic AI does</span>
+                <ul class="wv-mobile-feats">
+                  <li>Summarizes the context you provide</li>
+                  <li>Drafts replies from pasted notes</li>
+                  <li>Can't access CRM, Slack, or prior calls</li>
+                </ul>
+              </div>
             </div>
             <div class="wv-panel-copy">
               <h3>Works from the context you paste in.</h3>
@@ -2331,7 +2451,6 @@ else boot();
   function wvIsMobile(){ return wvMq.matches; }
 
   function wvRender(i){
-    if(wvIsMobile()) return;
     wvIdx = (i + wvIds.length) % wvIds.length;
     const id = wvIds[wvIdx];
     wvTabs.forEach((t, n) => {
@@ -2346,21 +2465,10 @@ else boot();
     });
   }
 
-  function wvShowAllMobile(){
-    wvPanels.forEach(p => {
-      p.classList.add('is-active');
-      p.hidden = false;
-    });
-  }
-
   function wvApplyLayout(){
-    if(wvIsMobile()){
-      wvStop();
-      wvShowAllMobile();
-    } else {
-      wvRender(wvIdx);
-      wvStart();
-    }
+    wvStop();
+    wvRender(wvIdx);
+    if(!wvIsMobile()) wvStart();
   }
 
   function wvStart(){
@@ -2370,15 +2478,13 @@ else boot();
   }
   function wvStop(){ clearInterval(wvTimer); }
   function wvGo(i){
-    if(wvIsMobile()) return;
     wvRender(i);
-    wvStart();
+    if(!wvIsMobile()) wvStart();
   }
 
   wvTabs.forEach((t, i) => {
     t.addEventListener('click', () => wvGo(i));
     t.addEventListener('keydown', e => {
-      if(wvIsMobile()) return;
       if(e.key === 'ArrowDown' || e.key === 'ArrowRight'){ e.preventDefault(); wvGo((i + 1) % wvIds.length); wvTabs[wvIdx].focus(); }
       if(e.key === 'ArrowUp' || e.key === 'ArrowLeft'){ e.preventDefault(); wvGo((i + wvIds.length - 1) % wvIds.length); wvTabs[wvIdx].focus(); }
     });
